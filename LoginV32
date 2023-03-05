@@ -1,22 +1,20 @@
 {
+    "StatusScript": "ONLINE",
     "Login": [
         {
-            "Username": "Zakaria",
-            "Password": "XZakaria@zz",
-            "HashMd5": "skekd9rk3k3lsldikele",
-            "Verfivy": "xxxxx"
+            "Auth": "Ver1",
+            "Verify": "Ver1",
+            "Status": "ON",
         },
         {
-            "Username": "Zakaria2",
-            "Password": "XZakaria@zz",
-            "HashMd5": "skekddcdd9rk3k3lsldikele",
-            "Verfivy": "yyy"
+            "Auth": "Ver2",
+            "Verify": "Ver2",
+            "Status": "OFF",
         },
         {
-            "Username": "Zakaria3",
-            "Password": "XZakaria@zz",
-            "HashMd5": "skekddcdd9rk3k3lsldikele",
-            "Verfivy": "zzzzz"
+            "Auth": "Ver3",
+            "Verify": "Ver3",
+            "Status": "ON",
         }
     ]
 }
