@@ -3,17 +3,17 @@
         {
             "Auth": "Ver1",
             "Verify": "Ver1",
-            "Status": "ON",
+            "Status": "ON"
         },
         {
             "Auth": "Ver2",
             "Verify": "Ver2",
-            "Status": "OFF",
+            "Status": "OFF"
         },
         {
             "Auth": "Ver3",
             "Verify": "Ver3",
-            "Status": "ON",
+            "Status": "ON"
         }
     ]
 }
