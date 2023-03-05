@@ -1,10 +1,16 @@
 {
-    "Coords": [
+    "Login": [
         {
             "Username": "Gerrad",
             "Password": "Lucky",
             "RawCodeClient": "Cjemsmdudkendhckdk",
             "VerificationCode": "ZxjwuJejemdiw3j"
         },
+        {
+            "Username": "Gerrad",
+            "Password": "Lucky",
+            "RawCodeClient": "Cjemsmdudkendhckdk",
+            "VerificationCode": "ZxjwuJejemdiw3j"
+        }
     ]
 }
