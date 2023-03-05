@@ -1,3 +1,10 @@
-{[
-  {'Verifikasi':'1','userid':'xxxxx','auth':'xxxxx'},
-]}
+{
+    "Coords": [
+        {
+            "Username": "Gerrad",
+            "Password": "Lucky",
+            "RawCodeClient": "Cjemsmdudkendhckdk",
+            "VerificationCode": "ZxjwuJejemdiw3j"
+        },
+    ]
+}
