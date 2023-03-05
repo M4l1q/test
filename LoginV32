@@ -1,8 +1,8 @@
 {
     "Login": [
         {
-            "Auth": "Ver1",
-            "Verify": "Ver1",
+            "Auth": "$2y$10$Pi/Z5Wv6GfcwXyvJnIQMvuUH8N35Eb5UOPDpMOteO6LaykSHcRqfe",
+            "Verify": "$2y$10$Pi/Z5Wv6GfcwXyvJnIQMvuUH8N35Eb5UOPDpMOteO6LaykSHcRqfe",
             "Status": "ON"
         },
         {
