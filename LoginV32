@@ -1,0 +1,22 @@
+{
+    "Login": [
+        {
+            "Username": "Zakaria",
+            "Password": "XZakaria@zz",
+            "HashMd5": "skekd9rk3k3lsldikele",
+            "Verfivy": "xxxxx"
+        },
+        {
+            "Username": "Zakaria2",
+            "Password": "XZakaria@zz",
+            "HashMd5": "skekddcdd9rk3k3lsldikele",
+            "Verfivy": "yyy"
+        },
+        {
+            "Username": "Zakaria3",
+            "Password": "XZakaria@zz",
+            "HashMd5": "skekddcdd9rk3k3lsldikele",
+            "Verfivy": "zzzzz"
+        }
+    ]
+}
