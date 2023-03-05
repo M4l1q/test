@@ -1,5 +1,5 @@
 {
-    "Coords": [
+    "Login": [
         {
             "Accuracy": "30",
             "Latitude": "53.2778273",
@@ -17,18 +17,6 @@
             "Latitude": "53.2778273",
             "Longitude": "-9.0121648",
             "Timestamp": "FriJun28201311: 43: 57GMT+0100(IST)"
-        },
-        {
-            "Accuracy": "30",
-            "Latitude": "53.2778339",
-            "Longitude": "-9.0121466",
-            "Timestamp": "FriJun28201311: 45: 44GMT+0100(IST)"
-        },
-        {
-            "Accuracy": "30",
-            "Latitude": "53.2778159",
-            "Longitude": "-9.0121201",
-            "Timestamp": "FriJun28201311: 45: 58GMT+0100(IST)"
         }
     ]
 }
