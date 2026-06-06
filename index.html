@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Game</title>
+    <title>Pixel Game Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="game-container">
         <canvas id="gameCanvas" width="512" height="512"></canvas>
     </div>
-    <script src="utils.js"></script>
+    <script src="sprite.js"></script>
+    <script src="renderer.js"></script>
+    <script src="pathfinding.js"></script>
+    <script src="ai-agent.js"></script>
+    <script src="player.js"></script>
     <script src="game.js"></script>
-    <script src="main.js"></script>
+    <script>
+        let lastTime = performance.now();
+        const game = new Game();
+
+        game.init();
+
+        function gameLoop(timestamp) {
+            const deltaTime = (timestamp - lastTime) / 1000;
+            lastTime = timestamp;
+
+            game.update(deltaTime);
+            game.render();
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        requestAnimationFrame(gameLoop);
+    </script>
 </body>
 </html>
