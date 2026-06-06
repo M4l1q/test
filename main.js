@@ -1,18 +1,6 @@
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
+<import { Game } from './src/game.js';
 
-function gameLoop(timestamp) {
-    const deltaTime = timestamp - lastTime;
-    lastTime = timestamp;
-
-    game.update(deltaTime);
-    game.render();
-
-    requestAnimationFrame(gameLoop);
-}
-
-let lastTime = performance.now();
-const game = new Game();
-
-game.init();
-requestAnimationFrame(gameLoop);
+window.addEventListener('DOMContentLoaded', () => {
+  const game = new Game();
+  game.start();
+});
