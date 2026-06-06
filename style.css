@@ -1,12 +1,17 @@
 body {
     margin: 0;
-    padding: 0;
-    background-color: #1a1a2e;
+    padding: 20px;
+    background: #0f0f23;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Courier New', monospace;
+}
+
+#gameCanvas {
+    border: 2px solid #333;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 #game-container {
@@ -20,4 +25,19 @@ body {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+=======
+  margin: 0;
+  padding: 20px;
+  background: #0f0f23;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#gameCanvas {
+  border: 2px solid #333;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+>>>>>>> d0b920c (feat: add initial CSS styling)
 }
