@@ -27,8 +27,7 @@ class Game {
       width: this.TILE_SIZE,
       height: this.TILE_SIZE,
       speed: 150,
-      color: '#4CAF50',
-      sprite: null
+      color: '#4CAF50'
     };
 
     this.obstacles = [];
