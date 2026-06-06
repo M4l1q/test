@@ -19,6 +19,12 @@ class AIAgent {
     this._patrolIndex = 0;
     this.collisionGrid = options.collisionGrid || null;
     this.playerPosition = null;
+    this.pathfinder = null;
+    this.currentPath = null;
+  }
+
+  setPathfinder(pathfinder) {
+    this.pathfinder = pathfinder;
   }
 
   setCollisionGrid(grid) {
@@ -148,22 +154,78 @@ class AIAgent {
     this._decideState();
   }
 
+  _moveAlongPath() {
+    if (!this.currentPath || this.currentPath.length === 0) return false;
+
+    const target = this.currentPath[0];
+    const gridX = Math.round(this.x);
+    const gridY = Math.round(this.y);
+
+    if (gridX === target.x && gridY === target.y) {
+      this.currentPath.shift();
+      if (this.currentPath.length === 0) return false;
+      return this._moveAlongPath();
+    }
+
+    const dx = target.x - this.x;
+    const dy = target.y - this.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+
+    if (dist === 0) return false;
+
+    const stepX = (dx / dist) * this.speed;
+    const stepY = (dy / dist) * this.speed;
+
+    const nextX = this.x + stepX;
+    const nextY = this.y + stepY;
+
+    const nextGridX = Math.round(nextX);
+    const nextGridY = Math.round(nextY);
+
+    if (this.isObstacle(nextGridX, nextGridY)) {
+      this.currentPath = null;
+      return false;
+    }
+
+    this.x = Math.max(0, Math.min(this.worldWidth - 1, nextX));
+    this.y = Math.max(0, Math.min(this.worldHeight - 1, nextY));
+    return true;
+  }
+
   _updateChase() {
     if (!this.playerPosition) {
       this._changeState('wander');
       return;
     }
 
+    const startGridX = Math.round(this.x);
+    const startGridY = Math.round(this.y);
+
+    if (!this.currentPath || this.currentPath.length === 0) {
+      if (this.pathfinder) {
+        this.currentPath = this.pathfinder.findPath(
+          startGridX, startGridY,
+          this.playerPosition.x, this.playerPosition.y
+        );
+      }
+    }
+
     const distance = this.distanceTo(this.playerPosition.x, this.playerPosition.y);
 
     if (distance > this.chaseThreshold || !this.isWithinVision(this.playerPosition.x, this.playerPosition.y)) {
       this._changeState('wander');
+      this.currentPath = null;
       return;
     }
 
     this.targetX = this.playerPosition.x;
     this.targetY = this.playerPosition.y;
-    this._moveToward(this.targetX, this.targetY);
+
+    if (this.currentPath && this.currentPath.length > 0) {
+      this._moveAlongPath();
+    } else {
+      this._moveToward(this.targetX, this.targetY);
+    }
   }
 
   _updateWander() {
