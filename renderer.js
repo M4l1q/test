@@ -15,44 +15,48 @@ function drawSprite(ctx, sprite, x, y, scale = 1, options = {}) {
   const width = sprite.getWidth() * scale;
   const height = sprite.getHeight() * scale;
 
-  if (rotation !== 0) {
-    const centerX = x + width / 2;
-    const centerY = y + height / 2;
-    ctx.translate(centerX, centerY);
-    ctx.rotate(rotation * Math.PI / 180);
-    ctx.translate(-centerX, -centerY);
+  if (flipH || flipV) {
+    ctx.save();
+    ctx.translate(flipH ? x + width : x, flipV ? y + height : y);
+    ctx.scale(flipH ? -1 : 1, flipV ? -1 : 1);
+    ctx.drawImage(
+      sprite.canvas,
+      0,
+      0,
+      sprite.getWidth(),
+      sprite.getHeight(),
+      0,
+      0,
+      Math.ceil(width),
+      Math.ceil(height)
+    );
+    ctx.restore();
+  } else {
+    if (rotation !== 0) {
+      const centerX = x + width / 2;
+      const centerY = y + height / 2;
+      ctx.translate(centerX, centerY);
+      ctx.rotate(rotation * Math.PI / 180);
+      ctx.translate(-centerX, -centerY);
+    }
+    ctx.drawImage(
+      sprite.canvas,
+      0,
+      0,
+      sprite.getWidth(),
+      sprite.getHeight(),
+      Math.floor(x),
+      Math.floor(y),
+      Math.ceil(width),
+      Math.ceil(height)
+    );
   }
 
-  if (tint) {
+  if (tint && !(flipH || flipV)) {
     ctx.globalCompositeOperation = 'source-atop';
     ctx.fillStyle = tint;
     ctx.fillRect(x, y, width, height);
     ctx.globalCompositeOperation = 'destination-over';
-  }
-
-  ctx.drawImage(
-    sprite.canvas,
-    0,
-    0,
-    sprite.getWidth(),
-    sprite.getHeight(),
-    Math.floor(x),
-    Math.floor(y),
-    Math.ceil(width),
-    Math.ceil(height)
-  );
-
-  if (flipH || flipV) {
-    const currentCanvas = document.createElement('canvas');
-    currentCanvas.width = width;
-    currentCanvas.height = height;
-    const currentCtx = currentCanvas.getContext('2d');
-    currentCtx.imageSmoothingEnabled = false;
-
-    currentCtx.translate(flipH ? width : 0, flipV ? height : 0);
-    currentCtx.scale(flipH ? -1 : 1, flipV ? -1 : 1);
-
-    ctx.drawImage(currentCanvas, 0, 0);
   }
 
   ctx.restore();

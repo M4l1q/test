@@ -54,7 +54,8 @@ class Sprite {
     this.frameHeight = height;
     this.pixelData = [];
 
-    for (let y = 0; y < height; y++) {
+    const totalHeight = (imageData.height !== undefined ? imageData.height : height * this.frames);
+    for (let y = 0; y < totalHeight; y++) {
       const row = [];
       for (let x = 0; x < width; x++) {
         const index = (y * width + x) * 4;
@@ -91,9 +92,11 @@ class Sprite {
     this.ctx.imageSmoothingEnabled = false;
 
     const pixelSize = 1;
+    const rowOffset = frameIndex * this.frameHeight;
     for (let y = 0; y < this.frameHeight; y++) {
+      const pixelRowIndex = rowOffset + y;
       for (let x = 0; x < this.frameWidth; x++) {
-        const color = this.pixelData[y] ? this.pixelData[y][x] : null;
+        const color = this.pixelData[pixelRowIndex] ? this.pixelData[pixelRowIndex][x] : null;
         if (color) {
           this.ctx.fillStyle = color;
           this.ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
