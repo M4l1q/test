@@ -16,46 +16,32 @@ function drawSprite(ctx, sprite, x, y, scale = 1, options = {}) {
   const height = sprite.getHeight() * scale;
 
   if (flipH || flipV) {
-    ctx.save();
     ctx.translate(flipH ? x + width : x, flipV ? y + height : y);
     ctx.scale(flipH ? -1 : 1, flipV ? -1 : 1);
-    ctx.drawImage(
-      sprite.canvas,
-      0,
-      0,
-      sprite.getWidth(),
-      sprite.getHeight(),
-      0,
-      0,
-      Math.ceil(width),
-      Math.ceil(height)
-    );
-    ctx.restore();
-  } else {
-    if (rotation !== 0) {
-      const centerX = x + width / 2;
-      const centerY = y + height / 2;
-      ctx.translate(centerX, centerY);
-      ctx.rotate(rotation * Math.PI / 180);
-      ctx.translate(-centerX, -centerY);
-    }
-    ctx.drawImage(
-      sprite.canvas,
-      0,
-      0,
-      sprite.getWidth(),
-      sprite.getHeight(),
-      Math.floor(x),
-      Math.floor(y),
-      Math.ceil(width),
-      Math.ceil(height)
-    );
+  } else if (rotation !== 0) {
+    const centerX = x + width / 2;
+    const centerY = y + height / 2;
+    ctx.translate(centerX, centerY);
+    ctx.rotate(rotation * Math.PI / 180);
+    ctx.translate(-centerX, -centerY);
   }
 
-  if (tint && !(flipH || flipV)) {
+  ctx.drawImage(
+    sprite.canvas,
+    0,
+    0,
+    sprite.getWidth(),
+    sprite.getHeight(),
+    Math.floor(x),
+    Math.floor(y),
+    Math.ceil(width),
+    Math.ceil(height)
+  );
+
+  if (tint) {
     ctx.globalCompositeOperation = 'source-atop';
     ctx.fillStyle = tint;
-    ctx.fillRect(x, y, width, height);
+    ctx.fillRect(Math.floor(x), Math.floor(y), Math.ceil(width), Math.ceil(height));
     ctx.globalCompositeOperation = 'destination-over';
   }
 

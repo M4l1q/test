@@ -50,19 +50,23 @@ class Sprite {
   }
 
   loadFromImageData(imageData, width, height) {
+    const data = imageData.data || imageData;
+    const imgWidth = imageData.width || width;
+    const totalHeight = imageData.height !== undefined ? imageData.height : (height * this.frames);
+
     this.frameWidth = width;
     this.frameHeight = height;
+    this.frames = Math.max(1, Math.floor(totalHeight / height));
     this.pixelData = [];
 
-    const totalHeight = (imageData.height !== undefined ? imageData.height : height * this.frames);
     for (let y = 0; y < totalHeight; y++) {
       const row = [];
       for (let x = 0; x < width; x++) {
-        const index = (y * width + x) * 4;
-        const r = imageData[index];
-        const g = imageData[index + 1];
-        const b = imageData[index + 2];
-        const a = imageData[index + 3];
+        const index = (y * imgWidth + x) * 4;
+        const r = data[index];
+        const g = data[index + 1];
+        const b = data[index + 2];
+        const a = data[index + 3];
         if (a < 10) {
           row.push(null);
         } else {
